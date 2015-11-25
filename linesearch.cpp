@@ -4,7 +4,7 @@
 using namespace std;
 double lineSearch(double *x,int n,int h,double *l,double *u,int k);
 
-/*
+
 int main(){
 	double x[2]= {2,2};
 	int n=2;
@@ -12,10 +12,11 @@ int main(){
 	double l[2]={-10,-10};
 	double u[2]={10,10};
 	int k=0;
-	lineSearch(x,n,h,l,u,k);
+	double r=lineSearch(x,n,h,l,u,k);
+	printf("%lf\n",r );
 	return 0;
 }
-*/
+
 /*
 x eh o vetor de solucao
 n eh a dimensao
