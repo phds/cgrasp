@@ -7,8 +7,11 @@ By following those steps, you'll install the application development environment
   ```bash
   $ git clone git@github.com:phds/cgrasp.git
   ```
-2. Install 
-[`Python`](https://www.python.org/)
+2. Install [`Python`](https://www.python.org/) or open a Terminal and type the following:
+  ```bash
+  $ [sudo] apt-get install python2.7-dev
+  ```
+
 
 3. Create a [`virtualenv`](https://virtualenv.pypa.io/en/latest/index.html) to host the application:
   You may need `sudo` to install `virtualenv` globally
