@@ -8,7 +8,7 @@ By following those steps, you'll install the application development environment
   $ git clone git@github.com:phds/cgrasp.git
   ```
 2. Install python
-[``](https://www.python.org/)
+[`python`](https://www.python.org/)
 
 3. Create a [`virtualenv`](https://virtualenv.pypa.io/en/latest/index.html) to host the application:
   You may need `sudo` to install `virtualenv` globally
@@ -32,7 +32,7 @@ By following those steps, you'll install the application development environment
 
 5. Install GNU MPFR library to deal with floating points precision:
 
-  [``](http://www.mpfr.org/mpfr-current/mpfr.html#Installing-MPFR)
+  [`mpfr`](http://www.mpfr.org/mpfr-current/mpfr.html#Installing-MPFR)
   
 
 6. Install MPFR's dependencies:
