@@ -1,5 +1,4 @@
-#include <Python.h>
-#include <iostream>
+#include "libs/common.h"
 
 using namespace std;
 double lineSearch(double *x,int n,int h,double *l,double *u,int k);
