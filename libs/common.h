@@ -1,7 +1,6 @@
 //for general libraries
 
 #include <iostream>
-
 //for platform-specific libraries
 #ifdef __APPLE__
     #include <Python/Python.h>
