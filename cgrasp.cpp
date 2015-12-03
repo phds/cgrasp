@@ -56,7 +56,7 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u){
 		while(h>=he){
 			bool improvc=false;
 			bool improvl=false;
-			ConstructGreedyRandomized(*x,n,h,l,u,*improvc);
+			ConstructGreedyRandomized(x,n,h,l,u,improvc);
 			LocalImprovement(x,n,h,l,u,ro,improvl,maxpointstoexamine);
 			float f=callPythonObjectiveFunction1(x,"ackley");
 			if(f<f_star){
