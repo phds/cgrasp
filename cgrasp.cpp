@@ -99,8 +99,8 @@ int main(){
 	vector<double> u(0);
 	u.insert(u.begin(), temp3, temp3 + n);
 
-	double hs=0.0002;
-	double he=3;
+	double hs=0.5;
+	double he=0.0001;
 	cgrasp(n,hs,he,l,u);
 	
 	return 0;
