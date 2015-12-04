@@ -1,7 +1,7 @@
 #include "common.h"
 #include "ConstructGreedyRandomized.cpp"
 #include "LocalImprovment.cpp"
-#include <string.h>
+
 
 #define infinity 1000000000000.0
 #define NumTimesToRun 10000

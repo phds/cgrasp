@@ -1,5 +1,4 @@
 #include "libs/common.h"
-#include <vector>
 
 using namespace std;
 /*
@@ -74,35 +73,35 @@ double lineSearch(std::vector<double> x, int n, double h, std::vector<double> l,
 	return zk;
 }
 
-int main(){
+// int main(){
 
-	//initialise python
-	setenv("PYTHONPATH","./libs/",1);
-	Py_Initialize();
+// 	//initialise python
+// 	setenv("PYTHONPATH","./libs/",1);
+// 	Py_Initialize();
 
-	//sample n
-	int n=2;
+// 	//sample n
+// 	int n=2;
 
-	//sample x
-	double temp[2] = {20, 0.2};
-	std::vector<double> x(0);
-	x.insert(x.begin(), temp, temp + n);
+// 	//sample x
+// 	double temp[2] = {20, 0.2};
+// 	std::vector<double> x(0);
+// 	x.insert(x.begin(), temp, temp + n);
 
-	//sample l
-	double temp2[2] = {0, 0.15};
-	std::vector<double> l(0);
-	l.insert(l.begin(), temp2, temp2 + n);
+// 	//sample l
+// 	double temp2[2] = {0, 0.15};
+// 	std::vector<double> l(0);
+// 	l.insert(l.begin(), temp2, temp2 + n);
 
-	//sample u
-	double temp3[2] = {300, 0.3};
-	std::vector<double> u(0);
-	u.insert(u.begin(), temp3, temp3 + n);
+// 	//sample u
+// 	double temp3[2] = {300, 0.3};
+// 	std::vector<double> u(0);
+// 	u.insert(u.begin(), temp3, temp3 + n);
 
-	//sample h and k
-	double h=0.02;
-	int k=1;
+// 	//sample h and k
+// 	double h=0.02;
+// 	int k=1;
 
-	printf("%f\n", lineSearch(x,n,h,l,u,k));
+// 	printf("%f\n", lineSearch(x,n,h,l,u,k));
 
-	return 0;
-}
+// 	return 0;
+// }

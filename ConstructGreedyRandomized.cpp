@@ -1,22 +1,9 @@
 #include "libs/common.h"
-#include <vector>
 #include <algorithm>
 #include "linesearch.cpp"
 #define infinity 1000000000000.0
 
 using namespace std;
-
-float callUnifRandPythonFunction(const char* moduleName,int l,int u,int s){
-
-	PyObject* pyModuleName = PyString_FromString((char*)moduleName);
-	
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	
-	PyObject* result = PyObject_CallMethod(pyModule, "unifrand","iii",l,u,s);
-	
-	return PyFloat_AsDouble(result);
-
-}
 
 float callPythonObjectiveFunction(vector<double> x,const char* moduleName){
 	int n = x.size();
@@ -37,81 +24,68 @@ float callPythonObjectiveFunction(vector<double> x,const char* moduleName){
 
 }
 
-float callPythonRandomElement(vector<double> x,const char* moduleName){
-	int n = x.size();
-	PyObject *pyList = PyList_New(n);
-	PyObject *value;
-	for (int i = 0; i < n; i++){
-		//printf("values %f\n", x[i]);
-		value = PyFloat_FromDouble(x[i]);
-		PyList_SetItem(pyList, i, value);
-	}
+vector<double> ConstructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
 
-	PyObject* pyModuleName = PyString_FromString(moduleName);
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	PyObject* result = PyObject_CallMethod(pyModule, "randomselect","O",pyList);
+	float alfa = ((double)rand() / ((double)RAND_MAX));
 
-	
-	return PyFloat_AsDouble(result);
-
-}
-
-void ConstructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool improvc){
-
-	float alfa=callUnifRandPythonFunction("unifrand",0,1,1);
-	int m = x.size();
 	vector<double> s;
-	int i;
-	for (i = 0; i < m; i++){
+	for (int i = 0; i < n; i++){
 		s.push_back(i);
 	}
 	bool reuse=false;
 	double min;
 	double max;
-	int size=s.size();
-	double gi;
-	vector<double> zi;
-	while(size!=0){
-		min=infinity;
-		max=-infinity;
-		for(i=0;i<n;i++){
-			if(find(s.begin(), s.end(), i)!=s.end()){
-				if(reuse==false){
-					zi=lineSearch(x,n,h,l,u,i);
-					gi=callPythonObjectiveFunction(zi,"ackley");
+
+	vector<double> g(n);
+	vector<double> z(x);
+	vector<double> rcl(0);
+	int j;
+	int random_index;
+	while (s.size() != 0){
+
+		min = infinity;
+		max = -infinity;
+
+		for(int i = 0; i < n; i++){
+			if(find(s.begin(), s.end(), i) != s.end()){
+				if(reuse == false){
+					z[i] = lineSearch(x,n,h,l,u,i);
+					g[i] = callPythonObjectiveFunction(z,"ackley");
 				}
-				if (min>gi){
-					min=gi;
+				if (min > g[i]){
+					min = g[i];
 				}
-				if(max<gi){
-					max=gi;
+				if(max < g[i]){
+					max = g[i];
 				}
-				vector<double> rcl;
-				double threshold=min+alfa*(max-min);
-				for(i=0;i<size;i++){
-					if(find(s.begin(), s.end(), i)!=s.end() && gi<=threshold){
-						rcl.push_back(i);
-					}
-				}
-				int j=callPythonRandomElement(rcl,"randomselect");
-				if(x[j]==zi[j]){
-					reuse=true;
-				}else{
-					x[j]=zi[j];
-					reuse=false;
-					improvc=true;
-				}
-				s.erase(remove(s.begin(),s.end(), j), s.end());
-				//s.erase(s.begin()+j);
-				size--;	
 			}
 		}
 
+		rcl.clear();
+		double threshold = min + alfa*(max-min);
+		for(int i=0; i<n; i++){
+			if(find(s.begin(), s.end(), i) != s.end() && g[i] <= threshold){
+				rcl.push_back(i);
+			}
+		}
+
+		random_index = rand() % rcl.size();
+		j = rcl[random_index];
+		if(x[j] == z[j]){
+			reuse = true;
+		}else{
+			x[j] = z[j];
+			reuse = false;
+			*improvc = true;
+		}
+		s.erase(remove(s.begin(),s.end(), j), s.end());
+		//s.erase(s.begin()+j);
 	}
-	
+
+	return x;
 }
 int main(){
-	setenv("PYTHONPATH",".",1);
+	setenv("PYTHONPATH","./libs",1);
 	Py_Initialize();
 	
 	//sample n
@@ -134,10 +108,16 @@ int main(){
 
 	//sample h and k
 	double h=0.02;
-	bool improvc=false;
+	bool improvc = false;
 
-	ConstructGreedyRandomized(x,n,h,l,u,improvc);
-	
+	x = ConstructGreedyRandomized(x,n,h,l,u,&improvc);
+
+	printf("\nimprovc: %d\n", improvc);
+	for (int i = 0; i < n; ++i)
+	{
+		printf("%lf ", x[i]);
+	}
+  std::cout << '\n';
 	
 	return 0;
 }

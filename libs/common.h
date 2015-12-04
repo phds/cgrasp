@@ -1,6 +1,9 @@
 //for general libraries
 
 #include <iostream>
+#include <vector>
+#include <string.h>
+
 //for platform-specific libraries
 #ifdef __APPLE__
     #include <Python/Python.h>
