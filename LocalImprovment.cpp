@@ -66,7 +66,8 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 		}
 		float fTemp=callPythonObjectiveFunction2(vectorTemp, "ackley");
 		if(fTemp < fStar){
-			vector<double> x_star(vectorTemp);
+			xStar=vectorTemp;
+			//vector<double> x_star(vectorTemp);
 			fStar = fTemp;
 		}
 	}
@@ -119,6 +120,9 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 			*improvl= true;
 			numpointsexamined = 0;
 		}
+	}
+	for(int i=0;i<n;i++){
+		printf("%d\n",xStar[i] );
 	}
 }
 
