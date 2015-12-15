@@ -1,10 +1,10 @@
-#include "common.h"
+#include "libs/common.h"
 #include "ConstructGreedyRandomized.cpp"
 #include "LocalImprovment.cpp"
 
 
 #define infinity 1000000000000.0
-#define NumTimesToRun 10000
+#define NumTimesToRun 20
 using namespace std;
 
 
@@ -47,7 +47,7 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u){
 	double ro=0.001;
 	vector<double> x;
 	for(int i=0;i<NumTimesToRun;i++){
-		//printf("%s\n","ss" );
+		printf("%d\n",i);
 		for(int k=0;k<n;k++){
 			x.push_back(callUnifRandVectorPythonFunction("unifrand",l,u,1,k));
 			//printf("%f\n",x[k] );
@@ -56,8 +56,8 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u){
 		while(h>=he){
 			bool improvc=false;
 			bool improvl=false;
-			ConstructGreedyRandomized(x,n,h,l,u,improvc);
-			LocalImprovement(x,n,h,l,u,ro,improvl,maxpointstoexamine);
+			ConstructGreedyRandomized(x,n,h,l,u,&improvc);
+			//LocalImprovement(x,n,h,l,u,ro,&improvl);
 			float f=callPythonObjectiveFunction1(x,"ackley");
 			if(f<f_star){
 				vector<double> x_star(x);
@@ -65,6 +65,7 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u){
 			}
 			if(improvc==false && improvl==false){
 				h=h/2;
+				printf("%f\n",h );
 			}
 
 		}
@@ -78,26 +79,27 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u){
 }
 int main(){
 
-	setenv("PYTHONPATH",".",1);
+	setenv("PYTHONPATH","./libs",1);
 	Py_Initialize();
 	
 	//sample n
-	int n=2;
+	int n=5;
 
 	//sample x
-	double temp[2] = {20, 0.2};
+	double temp[n] = {20, 0.2,30,40,55};
 	vector<double> x(0);
 	x.insert(x.begin(), temp, temp + n);
 
 	//sample l
-	double temp2[2] = {0, 0.15};
+	double temp2[n] = {-10,-5,-10,-13,-13};
 	vector<double> l(0);
 	l.insert(l.begin(), temp2, temp2 + n);
 
 	//sample u
-	double temp3[2] = {300, 0.3};
+	double temp3[n] = {10,3,10,7,7};
 	vector<double> u(0);
 	u.insert(u.begin(), temp3, temp3 + n);
+
 	//hs needs to be greater than he
 	double hs=0.5;
 	double he=0.0001;

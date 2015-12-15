@@ -1,4 +1,4 @@
-#include "common.h"
+#include "libs/common.h"
 #include <vector>
 
 using namespace std;
@@ -22,7 +22,7 @@ float callPythonRandomElement(vector<double> x,const char* moduleName){
 
 }
 
-float callPythonObjectiveFunction(vector<double> x,const char* moduleName){
+float callPythonObjectiveFunction2(vector<double> x,const char* moduleName){
 	int n = x.size();
 	PyObject *pyList = PyList_New(n);
 	PyObject *value;
@@ -52,56 +52,72 @@ bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
 	}
 	return feas;
 }
-void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool improvl,int maxpointstoexamine){
-	vector<double> x_star(x);
+void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvl,int k){
+	vector<double> xStar(x);
 	
-	float f_star = callPythonObjectiveFunction(x, "ackley");
-	int m=x.size();
-	double numgridpoints=1;
-	for(int i=0;i<m;i++){
-		numgridpoints*=ceil((u[i]-l[i])/h);
-	}
-	double pointstoexamine=ceil(ro*numgridpoints);
-	if(pointstoexamine>maxpointstoexamine){
-		pointstoexamine=maxpointstoexamine;
-	}
-	int numpointsexamined=0;
-	int tal=3;
-	vector<double> sh;
-	double x_temp;
-	for(int i=0;i<m;i++){
-		x_temp=x[i]+(tal*h);
-		if(x_temp<=u[i] && x_temp>=l[i]){
-			sh.push_back(x_temp);
+	float fStar = callPythonObjectiveFunction2(x, "ackley");
+	int m = x.size();
+	
+	for(int i=0; i<k; i++){
+		vector<double> vectorTemp(0);
+		for(int j=0; j<m; j++){
+			int random_index = rand() % x.size();
+			vectorTemp.push_back(xStar[random_index]);
+		}
+		float fTemp=callPythonObjectiveFunction2(vectorTemp, "ackley");
+		if(fTemp < fStar){
+			vector<double> x_star(vectorTemp);
+			fStar = fTemp;
 		}
 	}
-	vector<double> bh;
-	double norm;
-	bool find=false;
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
-			if(x[j]==sh[j]){
-				find=true;
-				break;
+	
+	double numgridpoints = 1;
+	int random_index = rand() % x.size();
+	for(int i=0;i<m;i++){
+		numgridpoints *= ceil((u[i]-l[i])/h);
+	}
+
+	double maxPointsToExamine=ceil(ro*numgridpoints);
+	int numpointsexamined=0;
+	
+	vector<double> sh(0);
+	double x_temp;
+	int tal;
+	for(int i=0;i<m;i++){
+		double bound = u[i] - l[i];
+		for(int j=0;j<bound;j++){
+			tal = j;
+			x_temp = x[i] + (tal*h);
+			if(x_temp <= u[i] && x_temp >= l[i]){
+				sh.push_back(x_temp);
 			}
 		}
-		if(!find){
-			norm=sqrt(pow(sh[i],2)+pow(x[i],2));
-			x_temp=x[i] + h*( (sh[i])-(x[i]) /norm);
-			bh.push_back(x_temp);
-		}
 	}
-	while(numpointsexamined<=pointstoexamine){
-		numpointsexamined+=1;
-		double k=callPythonRandomElement(bh,"randomselect");
-		vector<double> x_bh;
-		x_bh.push_back(k);
-		float f=callPythonObjectiveFunction(x_bh,"ackley");
-		if(feasible(x,n,l,u) && f<f_star){
+
+	vector<double> bh(0);
+	double norm;
+	bool find;
+	for(int i=0 ;i<n ;i++){
+		
+		norm=sqrt(pow(sh[i],2)+pow(x[i],2));
+		x_temp=x[i] + h*( (sh[i])-(x[i]) /norm);
+		bh.push_back(x_temp);
+		
+	}
+	while(numpointsexamined <= maxPointsToExamine){
+		numpointsexamined += 1;
+		vector<double> x_bh(0);
+		for(int i=0 ;i<n; i++){
+			double k = rand() % bh.size();//callPythonRandomElement(bh,"randomselect");
+			x_bh.push_back(bh[k]);
+		}
+
+		float f = callPythonObjectiveFunction2(x_bh,"ackley");
+		if(feasible(x_bh,n,l,u) && f<fStar){
 			vector<double> x_star(x);
-			f_star=f;
-			improvl=true;
-			numpointsexamined=0;
+			fStar = f;
+			*improvl= true;
+			numpointsexamined = 0;
 		}
 	}
 }
@@ -135,10 +151,10 @@ int main(){
 	double h=0.02;
 	bool improvl=false;
 
-	int maxpointstoexamine=5000000000000;
 	double ro=0.001;
-
-	LocalImprovement(x,n,h,l,u,ro,improvl,maxpointstoexamine);
+	//resampling
+	int k=100;
+	LocalImprovement(x,n,h,l,u,ro,&improvl,k);
 
 	
 	

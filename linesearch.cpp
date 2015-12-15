@@ -1,4 +1,5 @@
 #include "libs/common.h"
+#include <mpfr.h>
 
 using namespace std;
 /*
@@ -13,7 +14,7 @@ double callPythonFunction(std::vector<double> x, const char* moduleName){
 
 	PyObject *value;
 	for (int i = 0; i < n; i++){
-		printf("values %f\n", x[i]);
+		//printf("values %f\n", x[i]);
 		value = PyFloat_FromDouble(x[i]);
 		PyList_SetItem(pyList, i, value);
 	}
@@ -27,7 +28,7 @@ double callPythonFunction(std::vector<double> x, const char* moduleName){
 
 	PyObject* result = PyObject_CallFunctionObjArgs(pyFunction, pyList, NULL);
 
-	printf("result %f\n\n", PyFloat_AsDouble(result));
+	//printf("result %f\n\n", PyFloat_AsDouble(result));
 	return PyFloat_AsDouble(result);
 	
 }
@@ -73,35 +74,37 @@ double lineSearch(std::vector<double> x, int n, double h, std::vector<double> l,
 	return zk;
 }
 
-// int main(){
+/*
+int main(){
 
 // 	//initialise python
-// 	setenv("PYTHONPATH","./libs/",1);
-// 	Py_Initialize();
+ 	setenv("PYTHONPATH","./libs/",1);
+ 	Py_Initialize();
 
-// 	//sample n
-// 	int n=2;
+ 	//sample n
+ 	int n=2;
 
-// 	//sample x
-// 	double temp[2] = {20, 0.2};
-// 	std::vector<double> x(0);
-// 	x.insert(x.begin(), temp, temp + n);
+ 	//sample x
+ 	double temp[2] = {20, 0.2};
+ 	std::vector<double> x(0);
+ 	x.insert(x.begin(), temp, temp + n);
 
-// 	//sample l
-// 	double temp2[2] = {0, 0.15};
-// 	std::vector<double> l(0);
-// 	l.insert(l.begin(), temp2, temp2 + n);
+ 	//sample l
+ 	double temp2[2] = {0, 0.15};
+ 	std::vector<double> l(0);
+ 	l.insert(l.begin(), temp2, temp2 + n);
 
-// 	//sample u
-// 	double temp3[2] = {300, 0.3};
-// 	std::vector<double> u(0);
-// 	u.insert(u.begin(), temp3, temp3 + n);
+ 	//sample u
+ 	double temp3[2] = {300, 0.3};
+ 	std::vector<double> u(0);
+ 	u.insert(u.begin(), temp3, temp3 + n);
 
-// 	//sample h and k
-// 	double h=0.02;
-// 	int k=1;
+ 	//sample h and k
+ 	double h=0.02;
+ 	int k=1;
 
-// 	printf("%f\n", lineSearch(x,n,h,l,u,k));
+ 	printf("%f\n", lineSearch(x,n,h,l,u,k));
 
-// 	return 0;
-// }
+ 	return 0;
+ }
+ */

@@ -10,7 +10,7 @@ float callPythonObjectiveFunction(vector<double> x,const char* moduleName){
 	PyObject *pyList = PyList_New(n);
 	PyObject *value;
 	for (int i = 0; i < n; i++){
-		printf("values %f\n", x[i]);
+		//printf("values %f\n", x[i]);
 		value = PyFloat_FromDouble(x[i]);
 		PyList_SetItem(pyList, i, value);
 	}
@@ -84,30 +84,31 @@ vector<double> ConstructGreedyRandomized(vector<double> x,int n,double h,vector<
 
 	return x;
 }
+/*
 int main(){
 	setenv("PYTHONPATH","./libs",1);
 	Py_Initialize();
 	
 	//sample n
-	int n=2;
+	int n=5;
 
 	//sample x
-	double temp[2] = {20, 0.2};
+	double temp[n] = {20, 0.2,30,40,55};
 	vector<double> x(0);
 	x.insert(x.begin(), temp, temp + n);
 
 	//sample l
-	double temp2[2] = {0, 0.15};
+	double temp2[n] = {-10,-5,-10,-13,-13};
 	vector<double> l(0);
 	l.insert(l.begin(), temp2, temp2 + n);
 
 	//sample u
-	double temp3[2] = {300, 0.3};
+	double temp3[n] = {10,3,10,7,7};
 	vector<double> u(0);
 	u.insert(u.begin(), temp3, temp3 + n);
 
 	//sample h and k
-	double h=0.02;
+	double h=0.5;
 	bool improvc = false;
 
 	x = ConstructGreedyRandomized(x,n,h,l,u,&improvc);
@@ -122,3 +123,4 @@ int main(){
 	return 0;
 }
 
+*/
