@@ -115,7 +115,7 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 
 		float f = callPythonObjectiveFunction2(x_bh,"ackley");
 		if(feasible(x_bh,n,l,u) && f<fStar){
-			vector<double> x_star(x);
+			xStar=x_bh;
 			fStar = f;
 			*improvl= true;
 			numpointsexamined = 0;
