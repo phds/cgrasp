@@ -1,6 +1,6 @@
 #include "libs/common.h"
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
 float callPythonRandomElement(vector<double> x,const char* moduleName){
@@ -96,12 +96,12 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 
 	vector<double> bh(0);
 	double norm;
-	bool find;
 	for(int i=0 ;i<n ;i++){
-		
-		norm=sqrt(pow(sh[i],2)+pow(x[i],2));
-		x_temp=x[i] + h*( (sh[i])-(x[i]) /norm);
-		bh.push_back(x_temp);
+		if(find(sh.begin(), sh.end(), x[i]) != sh.end()){
+			norm=sqrt(pow(sh[i],2)+pow(x[i],2));
+			x_temp=x[i] + h*( (sh[i])-(x[i]) /norm);
+			bh.push_back(x_temp);
+		}
 		
 	}
 	while(numpointsexamined <= maxPointsToExamine){
