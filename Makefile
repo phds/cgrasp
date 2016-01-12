@@ -11,3 +11,6 @@ linesearch: linesearch.cpp
 
 constructgrandomized: ConstructGreedyRandomized.cpp linesearch.cpp
 	g++ ConstructGreedyRandomized.cpp -o bin/ConstructGreedyRandomized $(CCFLAGS)
+
+localimprovement: LocalImprovement.cpp
+	g++ localImprovement.cpp -o bin/localImprovement $(CCFLAGS)
