@@ -9,3 +9,8 @@ endif
 linesearch: linesearch.cpp
 	g++ linesearch.cpp -o bin/linesearch $(CCFLAGS)
 
+constructgrandomized: ConstructGreedyRandomized.cpp linesearch.cpp
+	g++ ConstructGreedyRandomized.cpp -o bin/ConstructGreedyRandomized $(CCFLAGS)
+
+localimprovement: LocalImprovement.cpp
+	g++ localImprovement.cpp -o bin/localImprovement $(CCFLAGS)

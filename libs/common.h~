@@ -1,7 +1,6 @@
 //for general libraries
 
 #include <iostream>
-#include <vector>
 #include <string.h>
 
 //for platform-specific libraries
@@ -9,4 +8,5 @@
     #include <Python/Python.h>
 #elif __linux__
     #include <Python.h>
+    #include <vector>
 #endif
