@@ -1,7 +1,7 @@
 
 '''
 Booth Function:
-	Definition: BO(x) = (x 1 + 2x^2 − 7)^2 + (2x 1 + x 2 − 5)^2
+	Definition: BO(x) = (x_1 + 2x_2 − 7)^2 + (2x_1 + x_2 − 5)^2
 	Domain: [−10, 10]^2
 	Global Minimum: x ∗ = (1, 3);
 	BO(xStar) = 0
