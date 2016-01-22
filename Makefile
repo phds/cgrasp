@@ -14,3 +14,6 @@ constructgrandomized: ConstructGreedyRandomized.cpp linesearch.cpp
 
 localimprovement: LocalImprovement.cpp
 	g++ localImprovement.cpp -o bin/localImprovement $(CCFLAGS)
+
+cgrasp: cgrasp.cpp PythonInterface.cpp
+	g++ cgrasp.cpp pythonInterface.cpp -o bin/cgrasp $(CCFLAGS)

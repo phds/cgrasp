@@ -1,30 +1,9 @@
 #include "libs/common.h"
-#include <algorithm>
 #include "linesearch.cpp"
-#define infinity 1000000000000.0
 
 using namespace std;
 
-float callPythonObjectiveFunction(vector<double> x,const char* moduleName){
-	int n = x.size();
-	PyObject *pyList = PyList_New(n);
-	PyObject *value;
-	for (int i = 0; i < n; i++){
-		//printf("values %f\n", x[i]);
-		value = PyFloat_FromDouble(x[i]);
-		PyList_SetItem(pyList, i, value);
-	}
-
-	PyObject* pyModuleName = PyString_FromString(moduleName);
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	PyObject* result = PyObject_CallMethod(pyModule, "ackley","O",pyList);
-
-	
-	return PyFloat_AsDouble(result);
-
-}
-
-vector<double> ConstructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
+vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
 
 	float alfa = ((double)rand() / ((double)RAND_MAX));
 
@@ -32,7 +11,7 @@ vector<double> ConstructGreedyRandomized(vector<double> x,int n,double h,vector<
 	for (int i = 0; i < n; i++){
 		s.push_back(i);
 	}
-	bool reuse=false;
+	bool reuse = false;
 	double min;
 	double max;
 
@@ -50,7 +29,7 @@ vector<double> ConstructGreedyRandomized(vector<double> x,int n,double h,vector<
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
 					z[i] = lineSearch(x,n,h,l,u,i);
-					g[i] = callPythonObjectiveFunction(z,"ackley");
+					g[i] = PythonInterface::objectiveFunction(z);
 				}
 				if (min > g[i]){
 					min = g[i];

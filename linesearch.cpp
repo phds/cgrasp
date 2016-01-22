@@ -1,37 +1,6 @@
 #include "libs/common.h"
-#include <mpfr.h>
 
 using namespace std;
-/*
-Function that calculates a function named moduleName on x and
-returns a double value
-*/
-double callPythonFunction(std::vector<double> x, const char* moduleName){
-
-	int n = x.size();
-
-	PyObject *pyList = PyList_New(n);
-
-	PyObject *value;
-	for (int i = 0; i < n; i++){
-		//printf("values %f\n", x[i]);
-		value = PyFloat_FromDouble(x[i]);
-		PyList_SetItem(pyList, i, value);
-	}
-  
-	PyObject* pyModuleName = PyString_FromString(moduleName);
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	if (pyModule==NULL) printf("Module null\n");
-	
-	PyObject* pyFunction = PyObject_GetAttrString(pyModule, moduleName);
-	if (pyFunction==NULL) printf("function null\n");
-
-	PyObject* result = PyObject_CallFunctionObjArgs(pyFunction, pyList, NULL);
-
-	//printf("result %f\n\n", PyFloat_AsDouble(result));
-	return PyFloat_AsDouble(result);
-	
-}
 
 /*
 x is the vector with the current solution
@@ -41,22 +10,22 @@ l is the lower bound vector
 u is the upper bound vector
 k is the index of the element being iterated
 */
-double lineSearch(std::vector<double> x, int n, double h, std::vector<double> l, std::vector<double> u,int k){
+double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
 
 	//copy of x
-	std::vector<double> t(x);
-	
+	vector<double> t(x);
+
 	//variable used to hold the function execution result
 	double functionResult;
 	//save the initial value of x[k]
 	double zk = x[k];
 
-	float minFunctionResult = callPythonFunction(x, "ackley");
+	double minFunctionResult = PythonInterface::objectiveFunction(x);
 
 	t[k] = l[k];
 
 	while(t[k] <= u[k]){
-		functionResult = callPythonFunction(t, "ackley");
+		functionResult = PythonInterface::objectiveFunction(t);
 		if(functionResult < minFunctionResult){
 			minFunctionResult = functionResult;
 			zk = t[k];
@@ -65,12 +34,11 @@ double lineSearch(std::vector<double> x, int n, double h, std::vector<double> l,
 	}
 
 	t[k] = u[k];
-	functionResult = callPythonFunction(t, "ackley");
+	functionResult = PythonInterface::objectiveFunction(t);
 	if(functionResult < minFunctionResult){
 		minFunctionResult = functionResult;
 			zk = t[k];
 	}
-
 	return zk;
 }
 

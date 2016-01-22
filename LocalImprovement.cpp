@@ -3,44 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-float callPythonRandomElement(vector<double> x,const char* moduleName){
-	int n = x.size();
-	PyObject *pyList = PyList_New(n);
-	PyObject *value;
-	for (int i = 0; i < n; i++){
-		//printf("values %f\n", x[i]);
-		value = PyFloat_FromDouble(x[i]);
-		PyList_SetItem(pyList, i, value);
-	}
-
-	PyObject* pyModuleName = PyString_FromString(moduleName);
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	PyObject* result = PyObject_CallMethod(pyModule, "randomselect","O",pyList);
-
-	
-	return PyFloat_AsDouble(result);
-
-}
-
-float callPythonObjectiveFunction2(vector<double> x,const char* moduleName){
-	int n = x.size();
-	PyObject *pyList = PyList_New(n);
-	PyObject *value;
-	for (int i = 0; i < n; i++){
-		//printf("values %f\n", x[i]);
-		value = PyFloat_FromDouble(x[i]);
-		PyList_SetItem(pyList, i, value);
-	}
-
-	PyObject* pyModuleName = PyString_FromString(moduleName);
-	PyObject* pyModule = PyImport_Import(pyModuleName);
-	PyObject* result = PyObject_CallMethod(pyModule, "ackley","O",pyList);
-
-	
-	return PyFloat_AsDouble(result);
-
-}
-
 bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;
@@ -111,10 +73,10 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 }
 
 
-void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL){
+vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL){
 	vector<double> xStar(x);
 	
-	float fStar = callPythonObjectiveFunction2(x, "ackley");
+	float fStar = PythonInterface::objectiveFunction(x);
 
 	double numGridPoints = 1;
 	for(int i = 0; i < n; i++){
@@ -134,7 +96,7 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 		double k = rand() % bh.size();
 		vector<double> x_bh = bh[k];
 
-		double f = callPythonObjectiveFunction2(x_bh,"ackley");
+		double f = PythonInterface::objectiveFunction(x_bh);
 		if(feasible(x_bh,n,l,u) && f<fStar){
 			xStar = x_bh;
 			fStar = f;
@@ -142,40 +104,42 @@ void LocalImprovement(vector<double> x,int n,double h,vector<double> l,vector<do
 			numPointsExamined = 0;
 		}
 	}
+
+	return xStar;
 }
 
 
 
 
-int main(){
-	setenv("PYTHONPATH",".",1);
-	Py_Initialize();
+// int main(){
+// 	setenv("PYTHONPATH",".",1);
+// 	Py_Initialize();
 	
-	//sample n
-	int n=2;
+// 	//sample n
+// 	int n=2;
 
-	//sample x
-	double temp[2] = {20, 0.2};
-	vector<double> x(0);
-	x.insert(x.begin(), temp, temp + n);
+// 	//sample x
+// 	double temp[2] = {20, 0.2};
+// 	vector<double> x(0);
+// 	x.insert(x.begin(), temp, temp + n);
 
-	//sample l
-	double temp2[2] = {0, 0.15};
-	vector<double> l(0);
-	l.insert(l.begin(), temp2, temp2 + n);
+// 	//sample l
+// 	double temp2[2] = {0, 0.15};
+// 	vector<double> l(0);
+// 	l.insert(l.begin(), temp2, temp2 + n);
 
-	//sample u
-	double temp3[2] = {300, 0.3};
-	vector<double> u(0);
-	u.insert(u.begin(), temp3, temp3 + n);
+// 	//sample u
+// 	double temp3[2] = {300, 0.3};
+// 	vector<double> u(0);
+// 	u.insert(u.begin(), temp3, temp3 + n);
 
-	//sample h and k
-	double h=0.02;
-	bool improvL=false;
+// 	//sample h and k
+// 	double h=0.02;
+// 	bool improvL=false;
 
-	double ro=0.001;
+// 	double ro=0.001;
 
-	LocalImprovement(x,n,h,l,u,ro,&improvL);
+// 	LocalImprovement(x,n,h,l,u,ro,&improvL);
 
-	return 0;
-}
+// 	return 0;
+// }

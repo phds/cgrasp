@@ -3,10 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <string.h>
+#include "../PythonInterface.h"
 
-//for platform-specific libraries
-#ifdef __APPLE__
-    #include <Python/Python.h>
-#elif __linux__
-    #include <Python.h>
-#endif
+#define infinity 1000000000000.0
