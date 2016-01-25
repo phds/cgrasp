@@ -83,13 +83,14 @@ vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l
 		numGridPoints *= ceil((u[i]-l[i])/h);
 	}
 
-	double maxPointsToExamine = ceil(ro*numGridPoints);
+	int maxPointsToExamine = ceil(ro*numGridPoints);
 	int numPointsExamined = 0;
 
 	vector< vector<double> > bh;
 	
 	while(numPointsExamined <= maxPointsToExamine){
 		
+		printf("localImprovement %d %d\n", numPointsExamined, maxPointsToExamine);
 		numPointsExamined += 1;
 
 		bh = buildBh(xStar, n, h, l, u);
@@ -107,39 +108,3 @@ vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l
 
 	return xStar;
 }
-
-
-
-
-// int main(){
-// 	setenv("PYTHONPATH",".",1);
-// 	Py_Initialize();
-	
-// 	//sample n
-// 	int n=2;
-
-// 	//sample x
-// 	double temp[2] = {20, 0.2};
-// 	vector<double> x(0);
-// 	x.insert(x.begin(), temp, temp + n);
-
-// 	//sample l
-// 	double temp2[2] = {0, 0.15};
-// 	vector<double> l(0);
-// 	l.insert(l.begin(), temp2, temp2 + n);
-
-// 	//sample u
-// 	double temp3[2] = {300, 0.3};
-// 	vector<double> u(0);
-// 	u.insert(u.begin(), temp3, temp3 + n);
-
-// 	//sample h and k
-// 	double h=0.02;
-// 	bool improvL=false;
-
-// 	double ro=0.001;
-
-// 	LocalImprovement(x,n,h,l,u,ro,&improvL);
-
-// 	return 0;
-// }

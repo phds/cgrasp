@@ -23,8 +23,6 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 	vector<double> xStar(n);
 	vector<double> x(n);
 
-	int maxpointstoexamine=500000;
-
 	srand(time(NULL));
 
 	for(int i=0;i<NumTimesToRun;i++){
@@ -88,7 +86,8 @@ int main(){
 
 	//hs needs to be greater than he
 	double hs = 0.5;
-	double he = 0.0001;
+	// double he = 0.0001;
+	double he = 0.25;
 
 	double ro = 0.001;
 	cgrasp(n, hs, he, l, u, ro);
