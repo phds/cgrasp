@@ -1,8 +1,3 @@
-#include "libs/common.h"
-#include <vector>
-#include <algorithm>
-using namespace std;
-
 bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;

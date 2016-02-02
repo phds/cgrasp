@@ -1,8 +1,8 @@
-#include "libs/common.h"
+#include "../libs/common.h"
 #include "ConstructGreedyRandomized.cpp"
 #include "localImprovement.cpp"
 
-#define NumTimesToRun 2
+#define NumTimesToRun 20
 using namespace std;
 
 vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
@@ -54,7 +54,7 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 		}
 	}
 
-	int m=xStar.size();
+	int m = xStar.size();
 	printf("%d\n",m );
 	
 	for(int j=0;j<m;j++){
