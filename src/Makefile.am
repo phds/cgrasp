@@ -1,2 +1,2 @@
-bin_PROGRAMS = ../bin/cgrasp
-hello_SOURCES = cgrasp.cpp PythonInterface.cpp 
+bin_PROGRAMS = cgrasp
+cgrasp_SOURCES = cgrasp.cpp PythonInterface.cpp

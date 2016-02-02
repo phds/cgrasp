@@ -85,7 +85,7 @@ vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l
 	
 	while(numPointsExamined <= maxPointsToExamine){
 		
-		printf("localImprovement %d %d\n", numPointsExamined, maxPointsToExamine);
+		printf("localImprovement numPointsExamined: %d maxPointsToExamine: %d\n", numPointsExamined, maxPointsToExamine);
 		numPointsExamined += 1;
 
 		bh = buildBh(xStar, n, h, l, u);

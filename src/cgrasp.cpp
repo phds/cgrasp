@@ -89,7 +89,7 @@ int main(){
 	// double he = 0.0001;
 	double he = 0.25;
 
-	double ro = 0.001;
+	double ro = 0.7;
 	cgrasp(n, hs, he, l, u, ro);
 	
 	return 0;
