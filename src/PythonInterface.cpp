@@ -27,7 +27,7 @@ double PythonInterface::objectiveFunction(std::vector<double> x){
     PyList_SetItem(pyList, i, value);
   }
 
-  PyObject* pyModuleName = PyString_FromString("moduleName");
+  PyObject* pyModuleName = PyString_FromString(moduleName);
   PyObject* pyModule = PyImport_Import(pyModuleName);
   PyObject* result = PyObject_CallMethod(pyModule, moduleName,"O",pyList);
 
