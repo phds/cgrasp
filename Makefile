@@ -6,5 +6,5 @@ ifeq ($(UNAME_S),Darwin)
   CCFLAGS = -framework Python
 endif
 
-cgrasp: src/cgrasp.cpp src/PythonInterface.cpp
-	g++ src/cgrasp.cpp src/PythonInterface.cpp -o bin/cgrasp $(CCFLAGS)
+cgrasp: src/cgraspInterface.cpp src/PythonInterface.cpp
+	g++ src/cgraspInterface.cpp src/PythonInterface.cpp -o bin/cgrasp $(CCFLAGS)
