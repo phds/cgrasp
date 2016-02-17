@@ -2,7 +2,6 @@
 #include "ConstructGreedyRandomized.cpp"
 #include "localImprovement.cpp"
 
-#define NumTimesToRun 20
 using namespace std;
 
 vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
@@ -15,7 +14,7 @@ vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
 	return x;
 }
 
-void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double ro){
+void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double ro, double ro,int k,int NumTimesToRun,double ep){
 
 	double h;
 
@@ -51,46 +50,19 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 				h = h/2;
 				printf("h: %lf\n",h );
 			}
+			if(fStar == 0 && abs(f - fStar) <= ep){
+				break;
+			}else if(fStar != 0 && abs(f - fStar) <= ep * abs(fStar)){
+				break;
+			}
 		}
 	}
 
 	int m = xStar.size();
-	printf("%d\n",m );
+	//printf("%d\n",m );
 	
 	for(int j=0;j<m;j++){
 		printf("%f\n",xStar[j]);
 	}
 	//return x_star;
-}
-int main(){
-
-	PythonInterface p("ackley");
-
-	//dimension of problem
-	int n = 5;
-
-	//sample x
-	double temp[5] = {20, 0.2, 30, 40, 55};
-	vector<double> x(0);
-	x.insert(x.begin(), temp, temp + n);
-
-	//sample l
-	double temp2[5] = {-10, -5, -10, -13, -13};
-	vector<double> l(0);
-	l.insert(l.begin(), temp2, temp2 + n);
-
-	//sample u
-	double temp3[5] = {10, 3, 10, 7, 7};
-	vector<double> u(0);
-	u.insert(u.begin(), temp3, temp3 + n);
-
-	//hs needs to be greater than he
-	double hs = 0.5;
-	// double he = 0.0001;
-	double he = 0.25;
-
-	double ro = 0.7;
-	cgrasp(n, hs, he, l, u, ro);
-	
-	return 0;
 }
