@@ -24,7 +24,7 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 		min = infinity;
 		max = -infinity;
 
-		printf("constructGreedyRandomized\n");
+		//printf("constructGreedyRandomized\n");
 
 		for(int i = 0; i < n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){

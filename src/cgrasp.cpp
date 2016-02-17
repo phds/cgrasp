@@ -14,8 +14,8 @@ vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
 	return x;
 }
 
-void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double ro, double ro,int k,int NumTimesToRun,double ep){
-
+void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<double> u, double ro,int k,int NumTimesToRun,double ep){
+	PythonInterface p(function);
 	double h;
 
 	double fStar = infinity;
@@ -23,7 +23,6 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 	vector<double> x(n);
 
 	srand(time(NULL));
-
 	for(int i=0;i<NumTimesToRun;i++){
 
 		x = getRandomPoint(n, l, u);
@@ -35,12 +34,12 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 			bool improvC = false;
 			bool improvL = false;
 			x = constructGreedyRandomized(x, n, h, l, u, &improvC);
-			x = localImprovement(x, n, h, l, u, ro, &improvL);
-			printf("cgrasp: \n");
-			for(int j=0; j<n; j++){
-				printf("%f ", x[j]);
-			}
-			printf("%d %d\n", improvC, improvL);
+			x = localImprovement(x, n, h, l, u, ro, &improvL,k);
+			//printf("cgrasp: \n");
+			//for(int j=0; j<n; j++){
+			//	printf("%f ", x[j]);
+			//}
+			//printf("%d %d\n", improvC, improvL);
 			double f = PythonInterface::objectiveFunction(x);
 			if(f < fStar){
 				xStar = x;
@@ -48,7 +47,7 @@ void cgrasp(int n,double hs,double he,vector<double> l,vector<double> u, double 
 			}
 			if(improvC == false && improvL == false){
 				h = h/2;
-				printf("h: %lf\n",h );
+			//	printf("h: %lf\n",h );
 			}
 			if(fStar == 0 && abs(f - fStar) <= ep){
 				break;

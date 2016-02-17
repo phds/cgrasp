@@ -17,9 +17,9 @@ double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<do
 	double functionResult;
 	//save the initial value of x[k]
 	double zk = x[k];
-
+	
 	double minFunctionResult = PythonInterface::objectiveFunction(x);
-
+	
 	t[k] = l[k];
 
 	while(t[k] <= u[k]){

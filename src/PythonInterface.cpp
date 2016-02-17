@@ -1,4 +1,5 @@
 #include "PythonInterface.h"
+#include "PythonInterface.h"
 
 char* PythonInterface::moduleName;
 
@@ -6,6 +7,7 @@ PythonInterface::PythonInterface(char* name){
   setenv("PYTHONPATH","./libs",1);
   Py_Initialize();
   moduleName = name;
+  
 }
 
 PythonInterface::~PythonInterface(){
@@ -25,7 +27,7 @@ double PythonInterface::objectiveFunction(std::vector<double> x){
     PyList_SetItem(pyList, i, value);
   }
 
-  PyObject* pyModuleName = PyString_FromString(moduleName);
+  PyObject* pyModuleName = PyString_FromString("ackley");
   PyObject* pyModule = PyImport_Import(pyModuleName);
   PyObject* result = PyObject_CallMethod(pyModule, moduleName,"O",pyList);
 
