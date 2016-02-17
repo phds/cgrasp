@@ -126,7 +126,7 @@ int main(int argc , char **argv){
     cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep);
     time (&end);
     double dif = difftime (end,start);
-    printf ("Elasped time is %.2lf seconds.\n", dif );
+    printf ("Elapsed time is %.2lf seconds.\n", dif );
     return EXIT_SUCCESS;
 
 }
