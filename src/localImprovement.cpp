@@ -68,7 +68,7 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 }
 
 
-vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL){
+vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
 	vector<double> xStar(x);
 	
 	float fStar = PythonInterface::objectiveFunction(x);
