@@ -45,7 +45,8 @@ int main(int argc , char **argv){
         ("ro", value< double >(),"Specifies the portion of neighborhood.")
         ("k", value< int >(),"Specifies the number of samples rounds.")
         ("it", value< int >(),"Specifies the number of iterations.")
-        ("ep", value< double >(),"Specifies the optimality gap.");
+        ("ep", value< double >(),"Specifies the optimality gap.")
+        ("excpt", value< vector<double> >()->multitoken(),"Specifies the exception sets.");
     string functionName;
     int dimension;
     vector<double> l;
@@ -76,7 +77,7 @@ int main(int argc , char **argv){
         cout << "[--function <function name> ] [--dimension <dimension value>]" 
         <<"[--lowerbound <lower bound limits>] [--upperbound <upper bound limits>]"
         <<"[--startgrid <start grid dimension>] [--endgrid <end grid dimension>]"
-        <<"[--ro <neighborhood portion>] [--k <samples rounds>]" << endl;
+        <<"[--ro <neighborhood portion>] [--k <samples rounds>] [--excpt <exception sets>]" << endl;
         cout << desc << endl;
     }
 
@@ -133,6 +134,16 @@ int main(int argc , char **argv){
     if (vm.count("ep")){
         ep = vm["ep"].as< double>();
     }
+    if (vm.count("ep")){
+        vector<double> excptTemp = vm["excpt"].as< vector<double> >();
+        if(excptTemp.size()%3==0){
+            for(int i=0;i<excptTemp.size();i=i+3){
+                l[excptTemp[i]] = excptTemp[i+1];
+                u[excptTemp[i]] = excptTemp[i+2];
+            }
+        }
+    }
+    
     char *f = new char[functionName.length() + 1];
     strcpy(f, functionName.c_str());
     time_t start,end;

@@ -4,7 +4,7 @@
 char* PythonInterface::moduleName;
 
 PythonInterface::PythonInterface(char* name){
-  setenv("PYTHONPATH","./libs",1);
+  setenv("PYTHONPATH","../libs",1);
   Py_Initialize();
   moduleName = name;
   
