@@ -38,8 +38,8 @@ int main(int argc , char **argv){
     desc.add_options()
         ("function", value< string >(),"Specifies function name.")
         ("dimension", value< int >(),"Specifies dimension.")
-        ("lowerbound", value< vector<double> >()->multitoken(),"Specifies lower bound limits.")
-        ("upperbound", value< vector<double> >()->multitoken(),"Specifies upper bound limits.")
+        ("lowerbound", value< double >(),"Specifies lower bound limits.")
+        ("upperbound", value< double >(),"Specifies upper bound limits.")
         ("startgrid", value< double >(),"Specifies start grid dimension.")
         ("endgrid", value< double >(),"Specifies end grid dimension.")
         ("ro", value< double >(),"Specifies the portion of neighborhood.")
@@ -90,29 +90,17 @@ int main(int argc , char **argv){
     }
 
     if (vm.count("lowerbound")){
-        vector<double> lTemp = vm["lowerbound"].as< vector<double> >();
-        if(lTemp.size()==1){
-            for(int i=0; i<dimension;i++){
-                l.push_back(lTemp[0]);
-
-            }
-        }else{
-            for(int i=0;i<lTemp.size();i++){
-                l.push_back(lTemp[i]);
-            }
+        double lTemp = vm["lowerbound"].as< double >();
+        for(int i=0; i<dimension;i++){
+            l.push_back(lTemp);
         }
+        
     }
 
     if (vm.count("upperbound")){
-        vector<double> uTemp = vm["upperbound"].as< vector<double> >();
-        if(uTemp.size()==1){
-            for(int i=0; i<dimension;i++){
-                u.push_back(uTemp[0]);
-            }
-        }else{
-            for(int i=0;i<uTemp.size();i++){
-                u.push_back(uTemp[i]);
-            }
+        double uTemp = vm["upperbound"].as< double >();
+        for(int i=0; i<dimension;i++){
+            u.push_back(uTemp);
         }
     }
 
