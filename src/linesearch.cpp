@@ -1,3 +1,4 @@
+#include "PythonInterface.h"
 using namespace std;
 
 /*
@@ -11,7 +12,7 @@ k is the index of the element being iterated
 double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
 
 	//copy of x
-	vector<double> t(x);
+	//vector<double> t(x);
 
 	//variable used to hold the function execution result
 	double functionResult;
@@ -20,22 +21,22 @@ double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<do
 	
 	double minFunctionResult = PythonInterface::objectiveFunction(x);
 	
-	t[k] = l[k];
+	x[k] = l[k];
 
-	while(t[k] <= u[k]){
-		functionResult = PythonInterface::objectiveFunction(t);
+	while(x[k] <= u[k]){
+		functionResult = PythonInterface::objectiveFunction(x);
 		if(functionResult < minFunctionResult){
 			minFunctionResult = functionResult;
-			zk = t[k];
+			zk = x[k];
 		}
-		t[k] = t[k] + h;
+		x[k] = x[k] + h;
 	}
 
-	t[k] = u[k];
-	functionResult = PythonInterface::objectiveFunction(t);
+	x[k] = u[k];
+	functionResult = PythonInterface::objectiveFunction(x);
 	if(functionResult < minFunctionResult){
 		minFunctionResult = functionResult;
-			zk = t[k];
+			zk = x[k];
 	}
 	return zk;
 }

@@ -6,7 +6,7 @@
 #include <boost/tokenizer.hpp>
 #include <boost/token_functions.hpp>
 #include <time.h>
-#include "cgrasp.cpp"
+#include "cgrasp.h"
 using namespace boost;
 using namespace boost::program_options;
 
@@ -90,17 +90,31 @@ int main(int argc , char **argv){
 
     if (vm.count("lowerbound")){
         vector<double> lTemp = vm["lowerbound"].as< vector<double> >();
-        for(int i=0;i<lTemp.size();i++){
-            l.push_back(lTemp[i]);
+        if(lTemp.size()==1){
+            for(int i=0; i<dimension;i++){
+                l.push_back(lTemp[0]);
+
+            }
+        }else{
+            for(int i=0;i<lTemp.size();i++){
+                l.push_back(lTemp[i]);
+            }
         }
     }
 
     if (vm.count("upperbound")){
         vector<double> uTemp = vm["upperbound"].as< vector<double> >();
-        for(int i=0;i<uTemp.size();i++){
-            u.push_back(uTemp[i]);
+        if(uTemp.size()==1){
+            for(int i=0; i<dimension;i++){
+                u.push_back(uTemp[0]);
+            }
+        }else{
+            for(int i=0;i<uTemp.size();i++){
+                u.push_back(uTemp[i]);
+            }
         }
     }
+
     if (vm.count("startgrid")){
         hs = vm["startgrid"].as< double>();
     }

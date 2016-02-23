@@ -1,3 +1,7 @@
+#include "PythonInterface.h"
+#include <random>
+#include <vector>
+using namespace std;
 bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;
@@ -73,11 +77,11 @@ vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l
 	
 	float fStar = PythonInterface::objectiveFunction(x);
 
+	std::random_device rd;
+	std::mt19937 generator (rd());
 	for(int j = 0; j < k; j++){
 			vector<double> sample;
 			for(int i=0; i<n; i++){
-				std::random_device rd;
-				std::mt19937 generator (rd());
 				std::uniform_real_distribution<double> dis(l[i],u[i]);
 				sample.push_back(dis(generator));
 			}

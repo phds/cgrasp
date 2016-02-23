@@ -1,7 +1,9 @@
 #include "../libs/common.h"
-#include "ConstructGreedyRandomized.cpp"
-#include "localImprovement.cpp"
-
+#include "ConstructGreedyRandomized.h"
+#include "localImprovement.h"
+#include "PythonInterface.h"
+#include <cmath>
+#define infinity 1000000000000.0
 using namespace std;
 
 vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
