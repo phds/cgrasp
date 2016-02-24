@@ -2879,6 +2879,7 @@ ac_config_headers="$ac_config_headers libs/common.h"
 
 
 # Check for a C++ compiler.
+#: ${CXXFLAGS="-g3 -O3"}
 ac_ext=cpp
 ac_cpp='$CXXCPP $CPPFLAGS'
 ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
@@ -15100,7 +15101,9 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 # Only expand once:
 
 
-# Check for libraries, headers, data etc here.
+
+
+
 
 # Last line: actually generate all required output files.
 cat >confcache <<\_ACEOF

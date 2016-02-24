@@ -25,9 +25,12 @@ AC_CONFIG_SRCDIR([src/cgraspInterface.cpp])
 AC_CONFIG_HEADERS([libs/common.h])
 
 # Check for a C++ compiler.
+#: ${CXXFLAGS="-g3 -O3"}
 AC_PROG_CXX
 AC_PROG_LIBTOOL
-# Check for libraries, headers, data etc here.
+
+
+
 
 # Last line: actually generate all required output files.
 AC_OUTPUT
