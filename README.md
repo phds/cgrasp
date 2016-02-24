@@ -42,3 +42,8 @@ By following those steps, you'll install the application development environment
   ```bash
   (venv) $ sudo apt-get install libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg
   ```
+7. In order to parser command line you need to install boost library:
+
+  ```bash
+  (venv) $ sudo apt-get install libboost-all-dev
+  ```

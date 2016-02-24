@@ -1,3 +1,7 @@
+#include "PythonInterface.h"
+#include <random>
+#include <vector>
+using namespace std;
 bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;
@@ -68,38 +72,27 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 }
 
 
-vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL){
+vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
 	vector<double> xStar(x);
 	
 	float fStar = PythonInterface::objectiveFunction(x);
 
-	double numGridPoints = 1;
-	for(int i = 0; i < n; i++){
-		numGridPoints *= ceil((u[i]-l[i])/h);
-	}
+	std::random_device rd;
+	std::mt19937 generator (rd());
+	for(int j = 0; j < k; j++){
+			vector<double> sample;
+			for(int i=0; i<n; i++){
+				std::uniform_real_distribution<double> dis(l[i],u[i]);
+				sample.push_back(dis(generator));
+			}
+			double f = PythonInterface::objectiveFunction(sample);
+			if(f<fStar){
+				xStar = sample;
+				fStar = f;
+				k = 0;
+				*improvL = true;
+			}
 
-	int maxPointsToExamine = ceil(ro*numGridPoints);
-	int numPointsExamined = 0;
-
-	vector< vector<double> > bh;
-	
-	while(numPointsExamined <= maxPointsToExamine){
-		
-		printf("localImprovement numPointsExamined: %d maxPointsToExamine: %d\n", numPointsExamined, maxPointsToExamine);
-		numPointsExamined += 1;
-
-		bh = buildBh(xStar, n, h, l, u);
-		double k = rand() % bh.size();
-		vector<double> x_bh = bh[k];
-
-		double f = PythonInterface::objectiveFunction(x_bh);
-		if(feasible(x_bh,n,l,u) && f<fStar){
-			xStar = x_bh;
-			fStar = f;
-			*improvL = true;
-			numPointsExamined = 0;
 		}
-	}
-
 	return xStar;
 }

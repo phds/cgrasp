@@ -1,0 +1,88 @@
+
+This file is part of the GNU CGRASP Library.
+
+The GNU CGRASP Library is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 3 of the License, or (at your
+option) any later version.
+
+Developers: Pedro Dias, Raul Maia 
+Bugs report to : phds@cin.ufpe.br , rmf4@cin.ufpe.br
+
+##############################################################################
+                        Installing GNU CGRASP
+                        ===================
+
+Requirements:
+	1. g++:
+		$ sudo apt-get install g++
+	2. boost:
+		$ sudo apt-get install libboost-all-dev
+	3. mpfr:
+		$ sudo apt-get install libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg
+
+Dependencies:
+	1. Python 
+		$[sudo] apt-get install python2.7-dev
+	2. GNU MPFR library 
+		$[sudo] apt-get install libmpfr-dev libmpfr-doc libmpfr4 libmpfr4-dbg
+	3. Boost library
+		$ sudo apt-get install libboost-all-dev
+
+							Building CGRASP
+						========================
+In the CGRASP directory, to detect your system, type:
+	$ mkdir build
+	$ cd build
+	$ ../configure
+	$ make
+
+Binary cgrasp will be created in build folder.
+
+
+
+=============================================================================
+Following is the menu and their program options
+
+Allowed arguments:
+  --function arg        Specifies function name.
+  --dimension arg       Specifies dimension.
+  --lowerbound arg      Specifies lower bound limits.
+  --upperbound arg      Specifies upper bound limits.
+  --startgrid arg       Specifies start grid dimension.
+  --endgrid arg         Specifies end grid dimension.
+  --ro arg              Specifies the portion of neighborhood.
+  --k arg               Specifies the number of samples rounds.
+  --it arg              Specifies the number of iterations.
+  --ep arg              Specifies the optimality gap.
+  --excpt 				Specifies the exception set.
+=============================================================================
+
+Examples:
+
+	$./cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+
+	$./cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001
+
+	$./cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001
+
+Proffiling with Valgrind:
+
+	$ valgrind --tool=memcheck --suppressions=valgrind-python.supp --show-reachable=yes ./cgrasp --function ackley --dimension 20 --lowerbound -5 --upperbound 5 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+
+Valgrind summary:
+
+	==8296== HEAP SUMMARY:
+	==8296==     in use at exit: 20,674,263 bytes in 65,133 blocks
+	==8296==   total heap usage: 323,697 allocs, 258,564 frees, 436,467,440 bytes allocated
+	==8296== 
+	==8296== LEAK SUMMARY:
+	==8296==    definitely lost: 0 bytes in 0 blocks
+	==8296==    indirectly lost: 0 bytes in 0 blocks
+	==8296==      possibly lost: 0 bytes in 0 blocks
+	==8296==    still reachable: 20,674,263 bytes in 65,133 blocks
+	==8296==         suppressed: 0 bytes in 0 blocks
+	==8296== Rerun with --leak-check=full to see details of leaked memory
+	==8296== 
+	==8296== For counts of detected and suppressed errors, rerun with: -v
+	==8296== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 332 from 10)

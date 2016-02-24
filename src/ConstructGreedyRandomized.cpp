@@ -1,5 +1,7 @@
-#include "linesearch.cpp"
-
+#include "linesearch.h"
+#include "PythonInterface.h"
+#include <algorithm>
+#define infinity 1000000000000.0
 using namespace std;
 
 vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
@@ -24,7 +26,7 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 		min = infinity;
 		max = -infinity;
 
-		printf("constructGreedyRandomized\n");
+		//printf("constructGreedyRandomized\n");
 
 		for(int i = 0; i < n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){
