@@ -8,6 +8,8 @@ AC_PREREQ([2.68])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
+LT_INIT
 # Enable "automake" to simplify creating makefiles. foreign relaxes some GNU
 # checks. -Wall and -Werror are instructions to Automake, not gcc.
 # Because this is a non-recursive automake, we use subdir-objects to tell
@@ -22,11 +24,13 @@ AC_CONFIG_FILES([Makefile])
 AC_CONFIG_SRCDIR([src/cgraspInterface.cpp])
 
 # Put configuration results in this file for us to #include in our program.
-AC_CONFIG_HEADERS([libs/common.h])
+
+AC_CONFIG_HEADERS([config.h])
 
 # Check for a C++ compiler.
 #: ${CXXFLAGS="-g3 -O3"}
 AC_PROG_CXX
+
 AC_PROG_LIBTOOL
 
 

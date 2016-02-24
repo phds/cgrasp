@@ -59,9 +59,30 @@ Allowed arguments:
 =============================================================================
 
 Examples:
+
 	$./cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
 
 	$./cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001
 
 	$./cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001
 
+Proffiling with Valgrind:
+
+	$ valgrind --tool=memcheck --suppressions=valgrind-python.supp --show-reachable=yes ./cgrasp --function ackley --dimension 20 --lowerbound -5 --upperbound 5 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+
+Valgrind summary:
+
+	==8296== HEAP SUMMARY:
+	==8296==     in use at exit: 20,674,263 bytes in 65,133 blocks
+	==8296==   total heap usage: 323,697 allocs, 258,564 frees, 436,467,440 bytes allocated
+	==8296== 
+	==8296== LEAK SUMMARY:
+	==8296==    definitely lost: 0 bytes in 0 blocks
+	==8296==    indirectly lost: 0 bytes in 0 blocks
+	==8296==      possibly lost: 0 bytes in 0 blocks
+	==8296==    still reachable: 20,674,263 bytes in 65,133 blocks
+	==8296==         suppressed: 0 bytes in 0 blocks
+	==8296== Rerun with --leak-check=full to see details of leaked memory
+	==8296== 
+	==8296== For counts of detected and suppressed errors, rerun with: -v
+	==8296== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 332 from 10)
