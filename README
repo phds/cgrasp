@@ -30,21 +30,18 @@ Dependencies:
 		$ sudo apt-get install libboost-all-dev
 
 							Building CGRASP
-						=======================
-Make sure there is not whitespaces in your path to cgrasp folder. In the CGRASP directory, to detect your system, type:
+						========================
+In the CGRASP directory, to detect your system, type:
 	$ mkdir build
 	$ cd build
 	$ ../configure
-	$ make && make install
+Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path
+	$ make
+	$ make install
 
 Binary cgrasp will be created in build folder.
 
-							Unninstalling CGRASP
-						==========================
-To unninstall cgrasp, in the CGRASP directory type:
-	$ cd build
-	$ make unninstall
-	$ make clean
+
 
 =============================================================================
 Following is the menu and their program options
@@ -65,15 +62,15 @@ Allowed arguments:
 
 Examples:
 
-	$ cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+	$./cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
 
-	$ cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001
+	$./cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001
 
-	$ cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001
+	$./cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001
 
 Proffiling with Valgrind:
 
-	$ valgrind --tool=memcheck --suppressions=valgrind-python.supp --show-reachable=yes cgrasp --function ackley --dimension 20 --lowerbound -5 --upperbound 5 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+	$ valgrind --tool=memcheck --suppressions=valgrind-python.supp --show-reachable=yes ./cgrasp --function ackley --dimension 20 --lowerbound -5 --upperbound 5 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
 
 Valgrind summary:
 
