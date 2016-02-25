@@ -46,6 +46,7 @@ Binary cgrasp will be created in build folder.
 							Unninstalling CGRASP
 						==========================
 To unninstall cgrasp, in the CGRASP directory type:
+	
 	$ cd build
 	$ make unninstall
 	$ make clean
