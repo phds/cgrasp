@@ -35,7 +35,7 @@ In the CGRASP directory, to detect your system, type:
 	$ mkdir build
 	$ cd build
 	$ ../configure
-	$ make
+	$ make && make install
 
 Binary cgrasp will be created in build folder.
 
