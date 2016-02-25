@@ -32,9 +32,13 @@ Dependencies:
 							Building CGRASP
 						=======================
 Make sure there is not whitespaces in your path to cgrasp folder. In the CGRASP directory, to detect your system, type:
+
 	$ mkdir build
 	$ cd build
 	$ ../configure
+
+Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path:
+
 	$ make && make install
 
 Binary cgrasp will be created in build folder.
