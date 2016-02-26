@@ -5,7 +5,6 @@
 using namespace std;
 
 vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
-
 	float alfa = ((double)rand() / ((double)RAND_MAX));
 
 	vector<double> s;

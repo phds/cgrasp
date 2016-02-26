@@ -10,7 +10,6 @@ u is the upper bound vector
 k is the index of the element being iterated
 */
 double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
-
 	//copy of x
 	//vector<double> t(x);
 
