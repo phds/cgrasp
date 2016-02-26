@@ -20,7 +20,6 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 	mpfr_init2 (gIndex, 200);
 	mpfr_init2 (threshold, 200);
 	mpfr_init2 (thresholdTemp, 200);
-	mpfr_init2 (thresholdTemp, 200);
 	mpfr_init2 (alfa, 200);
 	mpfr_set_d (alfa, ((double)rand() / ((double)RAND_MAX)), MPFR_RNDZ);
 	//float alfa = ((double)rand() / ((double)RAND_MAX));
