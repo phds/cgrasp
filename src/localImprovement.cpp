@@ -7,8 +7,15 @@ using namespace std;
 bool feasible(struct graspData *data){//vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;
+	mpfr_t xI,lI,uI;
+	mpfr_init2 (xI, 200);
+	mpfr_init2 (lI, 200);
+	mpfr_init2 (uI, 200);
 	for(i = 0; i < data->n; i++){
-		if(data->x[i] <= data->l[i] || data->x[i] >= data->u[i]){
+		mpfr_set_d (xI,data->x[i] , MPFR_RNDZ);
+		mpfr_set_d (lI,data->l[i] , MPFR_RNDZ);
+		mpfr_set_d (uI,data->u[i] , MPFR_RNDZ);
+		if(mpfr_cmp(xI,lI) <= 0 || mpfr_cmp(xI,uI) >= 0){
 			feas = false;
 		}
 	}
@@ -77,8 +84,13 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
 	vector<double> xStar(data->x);
 	
-	float fStar = PythonInterface::objectiveFunction(data->x);
-	
+	mpfr_t fStar, f;
+	mpfr_init2 (fStar, 200);
+	mpfr_init2 (f, 200);
+
+	//float fStar = PythonInterface::objectiveFunction(data->x);
+	mpfr_set_d (fStar,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
+
 	std::random_device rd;
 	std::mt19937 generator (rd());
 	for(int j = 0; j < data->k; j++){
@@ -87,10 +99,12 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 				std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
 				sample.push_back(dis(generator));
 			}
-			double f = PythonInterface::objectiveFunction(sample);
-			if(feasible(data) && f<fStar){
+			double res = PythonInterface::objectiveFunction(sample);
+			mpfr_set_d (f,res , MPFR_RNDZ);
+			if(feasible(data) && mpfr_cmp(f,fStar) <= 0){
 				xStar = sample;
-				fStar = f;
+				//fStar = f;
+				mpfr_set_d (fStar,res , MPFR_RNDZ);
 				data->k = 0;
 				*improvL = true;
 			}
