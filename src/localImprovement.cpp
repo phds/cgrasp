@@ -1,13 +1,14 @@
+#include "../libs/common.h"
 #include "PythonInterface.h"
 #include <random>
 #include <vector>
 using namespace std;
 
-bool feasible(vector<double> x,int n,vector<double> l, vector<double> u){
+bool feasible(struct graspData *data){//vector<double> x,int n,vector<double> l, vector<double> u){
 	bool feas = true;
 	int i;
-	for(i = 0; i < n; i++){
-		if(x[i] <= l[i] || x[i] >= u[i]){
+	for(i = 0; i < data->n; i++){
+		if(data->x[i] <= data->l[i] || data->x[i] >= data->u[i]){
 			feas = false;
 		}
 	}
@@ -73,24 +74,24 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 }
 
 
-vector<double> localImprovement(vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
-	vector<double> xStar(x);
+vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
+	vector<double> xStar(data->x);
 	
-	float fStar = PythonInterface::objectiveFunction(x);
+	float fStar = PythonInterface::objectiveFunction(data->x);
 
 	std::random_device rd;
 	std::mt19937 generator (rd());
-	for(int j = 0; j < k; j++){
+	for(int j = 0; j < data->k; j++){
 			vector<double> sample;
-			for(int i=0; i<n; i++){
-				std::uniform_real_distribution<double> dis(l[i],u[i]);
+			for(int i=0; i< data->n; i++){
+				std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
 				sample.push_back(dis(generator));
 			}
 			double f = PythonInterface::objectiveFunction(sample);
-			if(f<fStar){
+			if(feasible(data) && f<fStar){
 				xStar = sample;
 				fStar = f;
-				k = 0;
+				data->k = 0;
 				*improvL = true;
 			}
 

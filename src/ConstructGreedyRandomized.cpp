@@ -1,22 +1,23 @@
+#include "../libs/common.h"
 #include "linesearch.h"
 #include "PythonInterface.h"
 #include <algorithm>
 #define infinity 1000000000000.0
 using namespace std;
 
-vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
+vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){//vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
 	float alfa = ((double)rand() / ((double)RAND_MAX));
 
 	vector<double> s;
-	for (int i = 0; i < n; i++){
+	for (int i = 0; i < data->n; i++){
 		s.push_back(i);
 	}
 	bool reuse = false;
 	double min;
 	double max;
 
-	vector<double> g(n);
-	vector<double> z(x);
+	vector<double> g(data->n);
+	vector<double> z(data->x);
 	vector<double> rcl(0);
 	int j;
 	int random_index;
@@ -27,10 +28,10 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 
 		//printf("constructGreedyRandomized\n");
 
-		for(int i = 0; i < n; i++){
+		for(int i = 0; i < data->n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
-					z[i] = lineSearch(x,n,h,l,u,i);
+					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
 					g[i] = PythonInterface::objectiveFunction(z);
 				}
 				if (min > g[i]){
@@ -44,7 +45,7 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 
 		rcl.clear();
 		double threshold = min + alfa*(max-min);
-		for(int i=0; i<n; i++){
+		for(int i=0; i< data->n; i++){
 			if(find(s.begin(), s.end(), i) != s.end() && g[i] <= threshold){
 				rcl.push_back(i);
 			}
@@ -52,10 +53,10 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 
 		random_index = rand() % rcl.size();
 		j = rcl[random_index];
-		if(x[j] == z[j]){
+		if(data->x[j] == z[j]){
 			reuse = true;
 		}else{
-			x[j] = z[j];
+			data->x[j] = z[j];
 			reuse = false;
 			*improvc = true;
 		}
@@ -63,5 +64,5 @@ vector<double> constructGreedyRandomized(vector<double> x,int n,double h,vector<
 		//s.erase(s.begin()+j);
 	}
 
-	return x;
+	return data->x;
 }

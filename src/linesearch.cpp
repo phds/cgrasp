@@ -1,3 +1,4 @@
+#include "../libs/common.h"
 #include "PythonInterface.h"
 using namespace std;
 
@@ -9,33 +10,33 @@ l is the lower bound vector
 u is the upper bound vector
 k is the index of the element being iterated
 */
-double lineSearch(vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
+double lineSearch(struct graspData *data,int k){//vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
 	//copy of x
 	//vector<double> t(x);
 
 	//variable used to hold the function execution result
 	double functionResult;
 	//save the initial value of x[k]
-	double zk = x[k];
+	double zk = data->x[k];
 	
-	double minFunctionResult = PythonInterface::objectiveFunction(x);
+	double minFunctionResult = PythonInterface::objectiveFunction(data->x);
 	
-	x[k] = l[k];
+	data->x[k] = data->l[k];
 
-	while(x[k] <= u[k]){
-		functionResult = PythonInterface::objectiveFunction(x);
+	while(data->x[k] <= data->u[k]){
+		functionResult = PythonInterface::objectiveFunction(data->x);
 		if(functionResult < minFunctionResult){
 			minFunctionResult = functionResult;
-			zk = x[k];
+			zk = data->x[k];
 		}
-		x[k] = x[k] + h;
+		data->x[k] = data->x[k] + data->hs;
 	}
 
-	x[k] = u[k];
-	functionResult = PythonInterface::objectiveFunction(x);
+	data->x[k] = data->u[k];
+	functionResult = PythonInterface::objectiveFunction(data->x);
 	if(functionResult < minFunctionResult){
 		minFunctionResult = functionResult;
-			zk = x[k];
+			zk = data->x[k];
 	}
 	return zk;
 }

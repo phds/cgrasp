@@ -17,39 +17,47 @@ vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
 }
 
 void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<double> u, double ro,int k,int NumTimesToRun,double ep){
-	
+	printf("%s\n","COMECOU" );
+	//struct graspData * data = (graspData *) malloc (sizeof(struct graspData));
+	struct graspData *data = new struct graspData();
+	data->n = n;
+	data->l = l;
+	data->u = u;
+	data->ro = ro;
+	data->k = k;
 	PythonInterface p(function);
 	double h;
 
 	double fStar = infinity;
-	vector<double> xStar(n);
-	vector<double> x(n);
+	vector<double> xStar(data->n);
+	vector<double> x(data->n);
 
 	srand(time(NULL));
 	for(int i=0;i<NumTimesToRun;i++){
 
-		x = getRandomPoint(n, l, u);
-
-		h = hs;
-
-		while (h >= he){
-
+		data->x = getRandomPoint(n, l, u);
+		data->hs = hs;
+		data->he = he;
+		//h = hs;
+		while (data->hs >= data->he){
+		//while (h >= he){
 			bool improvC = false;
 			bool improvL = false;
-			x = constructGreedyRandomized(x, n, h, l, u, &improvC);
-			x = localImprovement(x, n, h, l, u, ro, &improvL,k);
+			data->x = constructGreedyRandomized(data,&improvC);//x, n, h, l, u, &improvC);
+			data->x = localImprovement(data,&improvL);//x, n, h, l, u, ro, &improvL,k);
 			//printf("cgrasp: \n");
 			//for(int j=0; j<n; j++){
 			//	printf("%f ", x[j]);
 			//}
 			//printf("%d %d\n", improvC, improvL);
-			double f = PythonInterface::objectiveFunction(x);
+			double f = PythonInterface::objectiveFunction(data->x);
 			if(f < fStar){
-				xStar = x;
+				xStar = data->x;
 				fStar = f;
 			}
 			if(improvC == false && improvL == false){
-				h = h/2;
+				data->hs = data->hs/2;
+				//h = h/2;
 			//	printf("h: %lf\n",h );
 			}
 			if(fStar == 0 && abs(f - fStar) <= ep){
