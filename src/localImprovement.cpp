@@ -19,6 +19,9 @@ bool feasible(struct graspData *data){//vector<double> x,int n,vector<double> l,
 			feas = false;
 		}
 	}
+	mpfr_clear(xI);
+	mpfr_clear(lI);
+	mpfr_clear(uI);
 	return feas;
 }
 
@@ -94,21 +97,22 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 	std::random_device rd;
 	std::mt19937 generator (rd());
 	for(int j = 0; j < data->k; j++){
-			vector<double> sample;
-			for(int i=0; i< data->n; i++){
-				std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
-				sample.push_back(dis(generator));
-			}
-			double res = PythonInterface::objectiveFunction(sample);
-			mpfr_set_d (f,res , MPFR_RNDZ);
-			if(feasible(data) && mpfr_cmp(f,fStar) <= 0){
-				xStar = sample;
-				//fStar = f;
-				mpfr_set_d (fStar,res , MPFR_RNDZ);
-				data->k = 0;
-				*improvL = true;
-			}
-
+		vector<double> sample;
+		for(int i=0; i< data->n; i++){
+			std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
+			sample.push_back(dis(generator));
 		}
+		double res = PythonInterface::objectiveFunction(sample);
+		mpfr_set_d (f,res , MPFR_RNDZ);
+		if(feasible(data) && mpfr_cmp(f,fStar) <= 0){
+			xStar = sample;
+			//fStar = f;
+			mpfr_set_d (fStar,res , MPFR_RNDZ);
+			data->k = 0;
+			*improvL = true;
+		}
+	}
+	mpfr_clear(fStar);
+	mpfr_clear(f);
 	return xStar;
 }

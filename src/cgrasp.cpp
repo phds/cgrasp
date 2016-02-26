@@ -105,5 +105,15 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	for(int j=0;j<m;j++){
 		printf("%f\n",xStar[j]);
 	}
+	mpfr_clear (fStar);
+	mpfr_clear (f);
+	mpfr_clear (zero);
+	mpfr_clear (fminusfStar);
+	mpfr_clear (e);
+	mpfr_clear (emultfStar);
+	mpfr_clear (absfStar);
+	
 	//return x_star;
 }
+
+

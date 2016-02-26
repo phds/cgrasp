@@ -80,6 +80,14 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 		s.erase(remove(s.begin(),s.end(), j), s.end());
 		//s.erase(s.begin()+j);
 	}
+	
+	mpfr_clear(min);
+	mpfr_clear(max);
+	mpfr_clear(gIndex);
+	mpfr_clear(threshold);
+	mpfr_clear(thresholdTemp);
+	mpfr_clear(alfa);
+	
 
 	return data->x;
 }

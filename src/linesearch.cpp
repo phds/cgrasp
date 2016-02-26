@@ -48,6 +48,9 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 		mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
 		zk = data->x[k];
 	}
+	
+	mpfr_clear(functionResult);
+	mpfr_clear(minFunctionResult);
 	return zk;
 }
 
