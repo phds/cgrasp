@@ -6,15 +6,26 @@
 using namespace std;
 
 vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){//vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
-	float alfa = ((double)rand() / ((double)RAND_MAX));
+	
 
 	vector<double> s;
 	for (int i = 0; i < data->n; i++){
 		s.push_back(i);
 	}
 	bool reuse = false;
-	double min;
-	double max;
+
+	mpfr_t min,max,gIndex,threshold,thresholdTemp,alfa;
+	mpfr_init2 (min, 200);
+	mpfr_init2 (max, 200);
+	mpfr_init2 (gIndex, 200);
+	mpfr_init2 (threshold, 200);
+	mpfr_init2 (thresholdTemp, 200);
+	mpfr_init2 (thresholdTemp, 200);
+	mpfr_init2 (alfa, 200);
+	mpfr_set_d (alfa, ((double)rand() / ((double)RAND_MAX)), MPFR_RNDZ);
+	//float alfa = ((double)rand() / ((double)RAND_MAX));
+	//double min;
+	//double max;
 
 	vector<double> g(data->n);
 	vector<double> z(data->x);
@@ -22,31 +33,37 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 	int j;
 	int random_index;
 	while (s.size() != 0){
+		mpfr_set_d (min, infinity, MPFR_RNDZ);
+		mpfr_set_d (max, infinity, MPFR_RNDZ);
 
-		min = infinity;
-		max = -infinity;
 
 		//printf("constructGreedyRandomized\n");
-
+		double res;
 		for(int i = 0; i < data->n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
 					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
-					g[i] = PythonInterface::objectiveFunction(z);
+					res = PythonInterface::objectiveFunction(z);
+					mpfr_set_d (gIndex,res, MPFR_RNDZ);
 				}
-				if (min > g[i]){
-					min = g[i];
+				if (mpfr_cmp(min,gIndex) >= 0){
+					mpfr_set_d (min,res, MPFR_RNDZ);
+					//min = g[i];
 				}
-				if(max < g[i]){
-					max = g[i];
+				if(mpfr_cmp(max,gIndex) >= 0){
+					//max = g[i];
+					mpfr_set_d (max,res, MPFR_RNDZ);
 				}
 			}
 		}
 
 		rcl.clear();
-		double threshold = min + alfa*(max-min);
+		mpfr_sub(thresholdTemp,max,min,MPFR_RNDZ);
+		mpfr_mul(thresholdTemp,alfa,thresholdTemp,MPFR_RNDZ);
+		mpfr_add(threshold,min,thresholdTemp,MPFR_RNDZ);
+		//double threshold = min + alfa*(max-min);
 		for(int i=0; i< data->n; i++){
-			if(find(s.begin(), s.end(), i) != s.end() && g[i] <= threshold){
+			if(find(s.begin(), s.end(), i) != s.end() && mpfr_cmp(gIndex,threshold) <= 0){
 				rcl.push_back(i);
 			}
 		}

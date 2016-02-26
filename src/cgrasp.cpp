@@ -30,7 +30,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	
 	mpfr_t fStar, f,zero,fminusfStar,e,emultfStar,absfStar;
 	mpfr_init2 (fStar, 200);
-	mpfr_set_d (fStar, 1000000000000.0, MPFR_RNDZ);
+	mpfr_set_d (fStar, infinity, MPFR_RNDZ);
 	mpfr_init2 (f, 200);
 	mpfr_init2 (zero, 200);
 	mpfr_set_d (zero, 0, MPFR_RNDZ);
