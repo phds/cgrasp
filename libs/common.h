@@ -1,7 +1,7 @@
 //for general libraries
-#include "../src/PythonInterface.h"
 #include <stddef.h> 
 #include <mpfr.h>
+#include "../src/PythonInterface.h"
 #include <vector>
 #include <algorithm>
 #include <string.h>

@@ -78,7 +78,7 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 	vector<double> xStar(data->x);
 	
 	float fStar = PythonInterface::objectiveFunction(data->x);
-
+	
 	std::random_device rd;
 	std::mt19937 generator (rd());
 	for(int j = 0; j < data->k; j++){

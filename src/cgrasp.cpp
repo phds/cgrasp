@@ -17,7 +17,7 @@ vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
 }
 
 void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<double> u, double ro,int k,int NumTimesToRun,double ep){
-	printf("%s\n","COMECOU" );
+
 	//struct graspData * data = (graspData *) malloc (sizeof(struct graspData));
 	struct graspData *data = new struct graspData();
 	data->n = n;
@@ -27,8 +27,22 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	data->k = k;
 	PythonInterface p(function);
 	double h;
+	
+	mpfr_t fStar, f,zero,fminusfStar,e,emultfStar,absfStar;
+	mpfr_init2 (fStar, 200);
+	mpfr_set_d (fStar, 1000000000000.0, MPFR_RNDZ);
+	mpfr_init2 (f, 200);
+	mpfr_init2 (zero, 200);
+	mpfr_set_d (zero, 0, MPFR_RNDZ);
+	mpfr_init2 (fminusfStar, 200);
 
-	double fStar = infinity;
+	mpfr_init2 (e, 200);
+	mpfr_set_d (e, ep, MPFR_RNDZ);
+	mpfr_init2 (emultfStar, 200);
+
+	mpfr_init2 (absfStar, 200);
+
+
 	vector<double> xStar(data->n);
 	vector<double> x(data->n);
 
@@ -50,21 +64,38 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			//	printf("%f ", x[j]);
 			//}
 			//printf("%d %d\n", improvC, improvL);
-			double f = PythonInterface::objectiveFunction(data->x);
-			if(f < fStar){
+			double res = PythonInterface::objectiveFunction(data->x); 
+			//double f = PythonInterface::objectiveFunction(data->x);
+			mpfr_set_d (f, res, MPFR_RNDZ); 
+			if(mpfr_cmp(f,fStar) <= 0){
+			//if(f < fStar){
 				xStar = data->x;
-				fStar = f;
+				//fStar = f;
+				mpfr_set_d (fStar, res, MPFR_RNDZ); 
 			}
 			if(improvC == false && improvL == false){
 				data->hs = data->hs/2;
 				//h = h/2;
 			//	printf("h: %lf\n",h );
 			}
-			if(fStar == 0 && abs(f - fStar) <= ep){
-				break;
-			}else if(fStar != 0 && abs(f - fStar) <= ep * abs(fStar)){
-				break;
+			
+			if(mpfr_cmp(zero,fStar) == 0){
+				mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
+				mpfr_abs(fminusfStar,fminusfStar,MPFR_RNDZ);
+				if(mpfr_cmp(fminusfStar,e) <= 0){
+					break;
+				}
+			}else{
+				mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
+				mpfr_abs(fminusfStar,fminusfStar,MPFR_RNDZ);
+
+				mpfr_abs(absfStar,fStar,MPFR_RNDZ);
+				mpfr_mul(emultfStar,e,absfStar,MPFR_RNDZ);
+				if(mpfr_cmp(fminusfStar,emultfStar) <= 0){
+					break;
+				}
 			}
+			
 		}
 	}
 
