@@ -67,7 +67,8 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 				rcl.push_back(i);
 			}
 		}
-
+		
+		//Check if RCL size = 0
 		if(rcl.size() == 0){
 			//outfile<<"RCL SIZE = "<<0<<"\n";
 			break;
