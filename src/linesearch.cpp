@@ -13,6 +13,9 @@ k is the index of the element being iterated
 double lineSearch(struct graspData *data,int k){//vector<double> x, int n, double h, vector<double> l, vector<double> u, int k){
 	//copy of x
 	//vector<double> t(x);
+	//outfile << "Step : Line Search\n";
+	//outfile.flush();
+
 	mpfr_t functionResult,minFunctionResult;
 	mpfr_init2 (functionResult, 200);
 	mpfr_init2 (minFunctionResult, 200);
@@ -20,6 +23,7 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 	//variable used to hold the function execution result
 	//double functionResult;
 	//save the initial value of x[k]
+
 	double zk = data->x[k];
 	
 	//double minFunctionResult = PythonInterface::objectiveFunction(data->x);
@@ -27,6 +31,7 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 
 	data->x[k] = data->l[k];
 	double res;
+
 	while(data->x[k] <= data->u[k]){
 		//functionResult = PythonInterface::objectiveFunction(data->x);
 		res = PythonInterface::objectiveFunction(data->x);
@@ -36,6 +41,7 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 			mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
 			zk = data->x[k];
 		}
+
 		data->x[k] = data->x[k] + data->hs;
 	}
 
@@ -47,6 +53,7 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 		//minFunctionResult = functionResult;
 		mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
 		zk = data->x[k];
+
 	}
 	
 	mpfr_clear(functionResult);

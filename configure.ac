@@ -29,6 +29,7 @@ AC_CONFIG_HEADERS([config.h])
 
 # Check for a C++ compiler.
 #: ${CXXFLAGS="-g3 -O3"}
+: ${CXXFLAGS="-pg -O3"}
 AC_PROG_CXX
 
 AC_PROG_LIBTOOL

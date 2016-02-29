@@ -6,7 +6,7 @@
 using namespace std;
 
 vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){//vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
-	
+
 
 	vector<double> s;
 	for (int i = 0; i < data->n; i++){
@@ -35,7 +35,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 		mpfr_set_d (min, infinity, MPFR_RNDZ);
 		mpfr_set_d (max, infinity, MPFR_RNDZ);
 
-
+		//outfile<<"RCL SIZE = "<<rcl.size()<<"\n";
 		//printf("constructGreedyRandomized\n");
 		double res;
 		for(int i = 0; i < data->n; i++){
@@ -45,6 +45,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 					res = PythonInterface::objectiveFunction(z);
 					mpfr_set_d (gIndex,res, MPFR_RNDZ);
 				}
+
 				if (mpfr_cmp(min,gIndex) >= 0){
 					mpfr_set_d (min,res, MPFR_RNDZ);
 					//min = g[i];
@@ -56,7 +57,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 			}
 		}
 
-		rcl.clear();
+
 		mpfr_sub(thresholdTemp,max,min,MPFR_RNDZ);
 		mpfr_mul(thresholdTemp,alfa,thresholdTemp,MPFR_RNDZ);
 		mpfr_add(threshold,min,thresholdTemp,MPFR_RNDZ);
@@ -67,7 +68,14 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 			}
 		}
 
-		random_index = rand() % rcl.size();
+		if(rcl.size() == 0){
+			//outfile<<"RCL SIZE = "<<0<<"\n";
+			break;
+		}else{
+			//outfile<<"RCL SIZE = "<<rcl.size()<<"\n";
+			random_index = rand() % rcl.size();
+		}
+
 		j = rcl[random_index];
 		if(data->x[j] == z[j]){
 			reuse = true;
@@ -76,8 +84,11 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 			reuse = false;
 			*improvc = true;
 		}
+
+
 		s.erase(remove(s.begin(),s.end(), j), s.end());
 		//s.erase(s.begin()+j);
+		
 	}
 	
 	mpfr_clear(min);
@@ -86,7 +97,8 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 	mpfr_clear(threshold);
 	mpfr_clear(thresholdTemp);
 	mpfr_clear(alfa);
-	
-
+	g.clear();
+	z.clear();
+	rcl.clear();
 	return data->x;
 }

@@ -42,23 +42,61 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 
 	mpfr_init2 (absfStar, 200);
 
-
+	ofstream outfile ("trace_log.txt");
+	outfile << "****CGRASP log file***\n";
+	outfile.flush();
 	vector<double> xStar(data->n);
 	vector<double> x(data->n);
 
 	srand(time(NULL));
 	for(int i=0;i<NumTimesToRun;i++){
+		outfile << "\n\n\nIteration number = "<<i+1<<"\n";
 
 		data->x = getRandomPoint(n, l, u);
 		data->hs = hs;
 		data->he = he;
+
 		//h = hs;
 		while (data->hs >= data->he){
 		//while (h >= he){
+			outfile << "Inicial h = "<<data->hs<<"\n";
+			outfile.flush();
 			bool improvC = false;
 			bool improvL = false;
+			
+			
+			outfile << "Step : Construct Greedy Randomized\n";
+			outfile.flush();
+			
 			data->x = constructGreedyRandomized(data,&improvC);//x, n, h, l, u, &improvC);
+			
+			if(improvC==true){
+				outfile<<"\nBest solution found in Construct Greedy Randomized step\n";
+				for(int i=0;i<data->x.size();i++){
+					outfile<<data->x[i]<<"\n";
+					outfile.flush();
+				}
+			}else{
+				outfile<<"\nNo best solution found in Construct Greedy Randomized step\n";
+				outfile.flush();
+			}
+
+			outfile << "Step : Local Improvement\n";
+			outfile.flush();
+
 			data->x = localImprovement(data,&improvL);//x, n, h, l, u, ro, &improvL,k);
+			
+			if(improvL==true){
+				outfile<<"\nBest solution found in Local Improvement step\n";
+				for(int i=0;i<data->x.size();i++){
+					outfile<<data->x[i]<<"\n";
+					outfile.flush();
+				}
+			}else{
+				outfile<<"\nNo best solution found in Local Improvement step\n";
+				outfile.flush();
+			}
+
 			//printf("cgrasp: \n");
 			//for(int j=0; j<n; j++){
 			//	printf("%f ", x[j]);
@@ -70,11 +108,17 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			if(mpfr_cmp(f,fStar) <= 0){
 			//if(f < fStar){
 				xStar = data->x;
+				outfile << "\nFound a best solution after Construct Greedy Randomized and Local Improvement\n";
+				for(int i=0;i<xStar.size();i++){
+					outfile << xStar[i]<<"\n";
+					outfile.flush();
+				}
 				//fStar = f;
 				mpfr_set_d (fStar, res, MPFR_RNDZ); 
 			}
 			if(improvC == false && improvL == false){
 				data->hs = data->hs/2;
+				outfile << "\nDecreasing h to "<<data->hs<<"\n";
 				//h = h/2;
 			//	printf("h: %lf\n",h );
 			}
@@ -105,6 +149,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	for(int j=0;j<m;j++){
 		printf("%f\n",xStar[j]);
 	}
+
 	mpfr_clear (fStar);
 	mpfr_clear (f);
 	mpfr_clear (zero);
@@ -115,6 +160,8 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	free(data);
 	l.clear();
 	u.clear();
+	xStar.clear();
+	outfile.close();
 	//return x_star;
 }
 

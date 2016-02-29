@@ -2,16 +2,19 @@
 
 
 char* PythonInterface::moduleName;
-
+PyObject* pyModuleName;
+PyObject* pyModule;
 PythonInterface::PythonInterface(char* name){
   setenv("PYTHONPATH","../libs",1);
   Py_Initialize();
   moduleName = name;
-  
+  pyModuleName = PyString_FromString(moduleName);
+  //pyModule = PyImport_Import(pyModuleName);
+  //PyRun_SimpleString("import ackley");
 }
 
 PythonInterface::~PythonInterface(){
-
+  Py_Finalize();
 }
 
 double PythonInterface::objectiveFunction(std::vector<double> x){
@@ -28,9 +31,10 @@ double PythonInterface::objectiveFunction(std::vector<double> x){
   }
 
 
-  PyObject* pyModuleName = PyString_FromString(moduleName);
-  PyObject* pyModule = PyImport_Import(pyModuleName);
+  pyModule = PyImport_Import(pyModuleName);
   PyObject* result = PyObject_CallMethod(pyModule, moduleName,"O",pyList);
-
+  
+  //PyObject_Print(pyModuleName, stdout, 0);
+  //PyObject_Print(pyModule, stdout, 0);
   return PyFloat_AsDouble(result);
 }

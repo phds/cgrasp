@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <string.h>
-
+#include <fstream>
 
 #define infinity 1000000000000.0
 

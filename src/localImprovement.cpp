@@ -107,13 +107,16 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 		mpfr_set_d (f,res , MPFR_RNDZ);
 		if(feasible(data) && mpfr_cmp(f,fStar) <= 0){
 			xStar = sample;
+			*improvL = true;
 			//data->x = sample;
 			//fStar = f;
 			mpfr_set_d (fStar,res , MPFR_RNDZ);
 			data->k = 0;
 			*improvL = true;
+
 		}
 	}
+
 	mpfr_clear(fStar);
 	mpfr_clear(f);
 	return xStar;
