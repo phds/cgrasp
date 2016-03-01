@@ -7,13 +7,15 @@ Inicial h = 0.5
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.5
 3
+2
 Step : Local Improvement
 
-Best solution found in Local Improvement step
+No best solution found in Local Improvement step
 
 Found a best solution after Construct Greedy Randomized and Local Improvement
+3
+2
 
 
 
@@ -23,95 +25,20 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
 2.5
 Step : Local Improvement
 
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
+Best solution found in Local Improvement step
+3.268
+2.04702
 
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.25
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.268
+2.04702
 
 
 
 Iteration number = 3
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
@@ -146,33 +73,6 @@ Iteration number = 4
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -201,6 +101,24 @@ Decreasing h to 0.125
 
 
 Iteration number = 5
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
@@ -244,6 +162,15 @@ Iteration number = 6
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -275,6 +202,59 @@ Iteration number = 7
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+No best solution found in Construct Greedy Randomized step
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Decreasing h to 0.25
+Inicial h = 0.25
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3.25
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.25
+2
+
+
+
+Iteration number = 8
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+2.5
+3
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -302,122 +282,10 @@ Decreasing h to 0.125
 
 
 
-Iteration number = 8
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.25
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
-
-
-
 Iteration number = 9
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -433,33 +301,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
 2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
 
 
 
@@ -467,33 +312,6 @@ Iteration number = 10
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -509,24 +327,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+2
 
 
 
@@ -534,24 +338,6 @@ Iteration number = 11
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -567,24 +353,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+2
 
 
 
@@ -592,42 +364,6 @@ Iteration number = 12
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -638,17 +374,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -679,6 +406,15 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
 2.5
 Step : Local Improvement
 
@@ -701,24 +437,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+2
 
 
 
@@ -727,8 +449,8 @@ Inicial h = 0.5
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.5
 3
+2
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -754,17 +476,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -784,6 +497,15 @@ Iteration number = 15
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -794,17 +516,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -824,6 +537,15 @@ Iteration number = 16
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
 No best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
@@ -834,17 +556,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -866,15 +579,6 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
 2.5
 Step : Local Improvement
 
@@ -892,20 +596,15 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.75
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
+3.25
+2
 Step : Local Improvement
 
 No best solution found in Local Improvement step
 
-Decreasing h to 0.125
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.25
+2
 
 
 
@@ -915,15 +614,6 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
 2.5
 Step : Local Improvement
 
@@ -941,33 +631,19 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.75
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
+3.25
+2
 Step : Local Improvement
 
 No best solution found in Local Improvement step
 
-Decreasing h to 0.125
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.25
+2
 
 
 
 Iteration number = 19
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-2.5
-3
-Step : Local Improvement
-
-No best solution found in Local Improvement step
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
@@ -1022,42 +698,6 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
 2.5
 Step : Local Improvement
 
@@ -1080,24 +720,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+2
 
 
 
@@ -1105,9 +731,35 @@ Iteration number = 21
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
+No best solution found in Construct Greedy Randomized step
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Decreasing h to 0.25
+Inicial h = 0.25
+Step : Construct Greedy Randomized
+
 Best solution found in Construct Greedy Randomized step
-3
+3.25
 2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.25
+2
+
+
+
+Iteration number = 22
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+2.5
+3
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -1138,91 +790,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
 2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
-
-
-
-Iteration number = 22
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.25
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
 
 
 
@@ -1272,6 +843,24 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
 2.5
 Step : Local Improvement
 
@@ -1312,6 +901,77 @@ Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
 3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2.5
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+No best solution found in Construct Greedy Randomized step
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Decreasing h to 0.25
+Inicial h = 0.25
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3.25
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Found a best solution after Construct Greedy Randomized and Local Improvement
+3.25
+2
+
+
+
+Iteration number = 26
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
+2
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+3
 2.5
 Step : Local Improvement
 
@@ -1346,115 +1006,12 @@ Decreasing h to 0.125
 
 
 
-Iteration number = 26
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.25
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
-
-
-
 Iteration number = 27
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
+2.70606
 2.5
 Step : Local Improvement
 
@@ -1472,26 +1029,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -1508,15 +1047,6 @@ Decreasing h to 0.125
 
 
 Iteration number = 28
-Inicial h = 0.5
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3
-2.5
-Step : Local Improvement
-
-No best solution found in Local Improvement step
 Inicial h = 0.5
 Step : Construct Greedy Randomized
 
@@ -1552,8 +1082,8 @@ Inicial h = 0.5
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.55882
 3
+2
 Step : Local Improvement
 
 No best solution found in Local Improvement step
@@ -1584,24 +1114,10 @@ Best solution found in Construct Greedy Randomized step
 Step : Local Improvement
 
 No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
 
-Best solution found in Construct Greedy Randomized step
+Found a best solution after Construct Greedy Randomized and Local Improvement
 3.25
-2.25
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-No best solution found in Construct Greedy Randomized step
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-
-Decreasing h to 0.125
+2
 
 
 
@@ -1610,7 +1126,7 @@ Inicial h = 0.5
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-2.77699
+2.70117
 2.5
 Step : Local Improvement
 
@@ -1628,26 +1144,8 @@ Inicial h = 0.25
 Step : Construct Greedy Randomized
 
 Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2
-Step : Local Improvement
-
-No best solution found in Local Improvement step
-Inicial h = 0.25
-Step : Construct Greedy Randomized
-
-Best solution found in Construct Greedy Randomized step
-3.25
-2.25
+2.75
+2.5
 Step : Local Improvement
 
 No best solution found in Local Improvement step
