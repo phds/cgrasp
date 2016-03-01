@@ -105,7 +105,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			double res = PythonInterface::objectiveFunction(data->x); 
 			//double f = PythonInterface::objectiveFunction(data->x);
 			mpfr_set_d (f, res, MPFR_RNDZ); 
-			if(mpfr_cmp(f,fStar) <= 0){
+			if(mpfr_cmp(f,fStar) < 0){
 			//if(f < fStar){
 				xStar = data->x;
 				//printf("%d\n",data->x.size() );

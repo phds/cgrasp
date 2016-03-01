@@ -33,7 +33,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 	int random_index;
 	while (s.size() != 0){
 		mpfr_set_d (min, infinity, MPFR_RNDZ);
-		mpfr_set_d (max, infinity, MPFR_RNDZ);
+		mpfr_set_d (max, -infinity, MPFR_RNDZ);
 
 		//outfile<<"RCL SIZE = "<<rcl.size()<<"\n";
 		//printf("constructGreedyRandomized\n");
@@ -42,17 +42,17 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
 					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
-					res = PythonInterface::objectiveFunction(z);
-					mpfr_set_d (gIndex,res, MPFR_RNDZ);
+					g[i] = PythonInterface::objectiveFunction(z);
+					mpfr_set_d (gIndex,g[i], MPFR_RNDZ);
 				}
 
-				if (mpfr_cmp(min,gIndex) >= 0){
-					mpfr_set_d (min,res, MPFR_RNDZ);
+				if (mpfr_cmp(min,gIndex) > 0){
+					mpfr_set_d (min,g[i], MPFR_RNDZ);
 					//min = g[i];
 				}
-				if(mpfr_cmp(max,gIndex) >= 0){
+				if(mpfr_cmp(max,gIndex) < 0){
 					//max = g[i];
-					mpfr_set_d (max,res, MPFR_RNDZ);
+					mpfr_set_d (max,g[i], MPFR_RNDZ);
 				}
 			}
 		}

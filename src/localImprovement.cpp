@@ -105,10 +105,10 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 		//sample.clear();
 		double res = PythonInterface::objectiveFunction(sample);
 		mpfr_set_d (f,res , MPFR_RNDZ);
-		if(feasible(data) && mpfr_cmp(f,fStar) <= 0){
-			//xStar = sample;
+		if(mpfr_cmp(f,fStar) < 0){
+			xStar = sample;
 			*improvL = true;
-			data->x = sample;
+			//data->x = sample;
 			//fStar = f;
 			mpfr_set_d (fStar,res , MPFR_RNDZ);
 			data->k = 0;
@@ -119,6 +119,6 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 
 	mpfr_clear(fStar);
 	mpfr_clear(f);
-	//return xStar;
-	return data->x;
+	return xStar;
+	//return data->x;
 }
