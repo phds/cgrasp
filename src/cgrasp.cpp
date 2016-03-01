@@ -107,6 +107,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			mpfr_set_d (f, res, MPFR_RNDZ); 
 			if(mpfr_cmp(f,fStar) <= 0){
 			//if(f < fStar){
+				printf("%s\n","AAAAA" );
 				xStar = data->x;
 				outfile << "\nFound a best solution after Construct Greedy Randomized and Local Improvement\n";
 				for(int i=0;i<xStar.size();i++){
