@@ -1,6 +1,7 @@
-src/PythonInterface.o: src/PythonInterface.cpp /usr/include/stdc-predef.h \
- src/PythonInterface.h /usr/include/python2.7/Python.h \
- /usr/include/python2.7/patchlevel.h /usr/include/python2.7/pyconfig.h \
+../src/PythonInterface.o: ../src/PythonInterface.cpp \
+ /usr/include/stdc-predef.h ../src/PythonInterface.h \
+ /usr/include/python2.7/Python.h /usr/include/python2.7/patchlevel.h \
+ /usr/include/python2.7/pyconfig.h \
  /usr/include/i386-linux-gnu/python2.7/pyconfig.h \
  /usr/include/python2.7/pymacconfig.h \
  /usr/lib/gcc/i686-linux-gnu/4.9/include-fixed/limits.h \
@@ -180,7 +181,7 @@ src/PythonInterface.o: src/PythonInterface.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-src/PythonInterface.h:
+../src/PythonInterface.h:
 
 /usr/include/python2.7/Python.h:
 

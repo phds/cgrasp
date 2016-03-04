@@ -1,0 +1,703 @@
+****CGRASP log file***
+
+
+
+Iteration number = 1
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Found a best solution after Construct Greedy Randomized and Local Improvement
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 2
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 3
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 4
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 5
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 6
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 7
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 8
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 9
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 10
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 11
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 12
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 13
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 14
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 15
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 16
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 17
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 18
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 19
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 20
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 21
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 22
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 23
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 24
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 25
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 26
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 27
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 28
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 29
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|
+
+
+
+Iteration number = 30
+Inicial h = 0.5
+Step : Construct Greedy Randomized
+
+Best solution found in Construct Greedy Randomized step
+0
+0
+2
+-1
+0
+0
+0
+0
+0
+0
+Step : Local Improvement
+
+No best solution found in Local Improvement step
+
+Stopping criteria not met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|

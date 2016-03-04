@@ -92,7 +92,9 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 	mpfr_init2 (f, 200);
 
 	//float fStar = PythonInterface::objectiveFunction(data->x);
-	mpfr_set_d (fStar,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
+	//mpfr_set_d (fStar,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
+	mpfr_set_d (fStar,ackley(data->x) , MPFR_RNDZ);
+	
 
 	std::random_device rd;
 	std::mt19937 generator (rd());
@@ -103,7 +105,9 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 			sample.push_back(dis(generator));
 		}
 		//sample.clear();
-		double res = PythonInterface::objectiveFunction(sample);
+		//double res = ackley(sample);
+		double res = ackley(sample);
+		//double res = PythonInterface::objectiveFunction(sample);
 		mpfr_set_d (f,res , MPFR_RNDZ);
 		if(mpfr_cmp(f,fStar) < 0){
 			xStar = sample;

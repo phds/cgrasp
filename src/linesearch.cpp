@@ -27,14 +27,15 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 	double zk = data->x[k];
 	
 	//double minFunctionResult = PythonInterface::objectiveFunction(data->x);
-	mpfr_set_d (minFunctionResult,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
-
+	//mpfr_set_d (minFunctionResult,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
+	mpfr_set_d (minFunctionResult,ackley(data->x) , MPFR_RNDZ);
 	data->x[k] = data->l[k];
 	double res;
 
 	while(data->x[k] <= data->u[k]){
 		//functionResult = PythonInterface::objectiveFunction(data->x);
-		res = PythonInterface::objectiveFunction(data->x);
+		//res = PythonInterface::objectiveFunction(data->x);
+		res = ackley(data->x);
 		mpfr_set_d (functionResult,res , MPFR_RNDZ);
 		if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
 			//minFunctionResult = functionResult;
@@ -47,7 +48,8 @@ double lineSearch(struct graspData *data,int k){//vector<double> x, int n, doubl
 
 	data->x[k] = data->u[k];
 	//functionResult = PythonInterface::objectiveFunction(data->x);
-	res = PythonInterface::objectiveFunction(data->x);
+	//res = PythonInterface::objectiveFunction(data->x);
+	res = ackley(data->x);
 	mpfr_set_d (functionResult,res , MPFR_RNDZ);
 	if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
 		//minFunctionResult = functionResult;

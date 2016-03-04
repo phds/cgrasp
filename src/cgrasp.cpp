@@ -3,6 +3,10 @@
 #include "localImprovement.h"
 #include "PythonInterface.h"
 #include <cmath>
+
+
+
+
 #define infinity 1000000000000.0
 using namespace std;
 
@@ -25,7 +29,10 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	data->u = u;
 	data->ro = ro;
 	data->k = k;
-	PythonInterface p(function);
+	//PythonInterface p(function);
+
+	//__objectiveFunction = &ackley;
+
 	//double h;
 	
 	mpfr_t fStar, f,zero,fminusfStar,e,emultfStar,absfStar;
@@ -47,7 +54,8 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	outfile.flush();
 	vector<double> xStar(data->n);
 	vector<double> x(data->n);
-
+	bool stopCriteriaNum = false;
+	bool stopCriteria = false;
 	srand(time(NULL));
 	for(int i=0;i<NumTimesToRun;i++){
 		outfile << "\n\n\nIteration number = "<<i+1<<"\n";
@@ -102,8 +110,8 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			//	printf("%f ", x[j]);
 			//}
 			//printf("%d %d\n", improvC, improvL);
-			double res = PythonInterface::objectiveFunction(data->x); 
-			//double f = PythonInterface::objectiveFunction(data->x);
+			double res = ackley(data->x); //PythonInterface::objectiveFunction(data->x); 
+			//double res = PythonInterface::objectiveFunction(data->x);
 			mpfr_set_d (f, res, MPFR_RNDZ); 
 			if(mpfr_cmp(f,fStar) < 0){
 			//if(f < fStar){
@@ -124,31 +132,41 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			//	printf("h: %lf\n",h );
 			}
 			
+			mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
+			mpfr_abs(fminusfStar,fminusfStar,MPFR_RNDZ);
+			
 			if(mpfr_cmp(zero,fStar) == 0){
-				mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
-				mpfr_abs(fminusfStar,fminusfStar,MPFR_RNDZ);
 				if(mpfr_cmp(fminusfStar,e) <= 0){
+					outfile<<"\nStopping criteria met : |f (x) − f (x ∗ )| <= e\n";
+					outfile.flush();
+					stopCriteria = true;
 					break;
 				}
 			}else{
-				mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
-				mpfr_abs(fminusfStar,fminusfStar,MPFR_RNDZ);
-
 				mpfr_abs(absfStar,fStar,MPFR_RNDZ);
 				mpfr_mul(emultfStar,e,absfStar,MPFR_RNDZ);
 				if(mpfr_cmp(fminusfStar,emultfStar) <= 0){
+					outfile<<"\nStopping criteria met : |f (x) − f (x ∗ )| <= e * |f (x ∗ )|\n";
+					outfile.flush();
+					stopCriteria = true;
 					break;
 				}
 			}
 			
 		}
+		if(stopCriteria == true){
+			break;
+		}
 	}
-
+	if (stopCriteriaNum ==false && stopCriteria == false){
+		outfile<<"\nStopping criteria met : Max number of iterations\n";
+		outfile.flush();
+	}
 	int m = xStar.size();
 	//printf("%d\n",m );
 	
 	for(int j=0;j<m;j++){
-		printf("%f\n",xStar[j]);
+		//printf("%f\n",xStar[j]);
 	}
 
 	mpfr_clear (fStar);
@@ -158,7 +176,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	mpfr_clear (e);
 	mpfr_clear (emultfStar);
 	mpfr_clear (absfStar);
-	free(data);
+	delete data;
 	l.clear();
 	u.clear();
 	xStar.clear();

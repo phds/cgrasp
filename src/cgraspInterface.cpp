@@ -3,10 +3,9 @@
 #include <boost/program_options/options_description.hpp>
 #include <boost/program_options/parsers.hpp>
 #include <boost/program_options/variables_map.hpp>
-#include <boost/tokenizer.hpp>
-#include <boost/token_functions.hpp>
 #include <time.h>
 #include "cgrasp.h"
+#include "gnuplot-iostream.h"
 using namespace boost;
 using namespace boost::program_options;
 
@@ -134,12 +133,37 @@ int main(int argc , char **argv){
     
     char *f = new char[functionName.length() + 1];
     strcpy(f, functionName.c_str());
-    time_t start,end;
-    time (&start);
-    cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep);
-    time (&end);
-    double dif = difftime (end,start);
-    printf ("Elapsed time is %.2lf seconds.\n", dif );
+    
+    vector<int> pts_A;
+    vector<double> pts_B;
+    for(int i=10;i<=200;i++){
+        pts_A.push_back(i);
+    }
+    
+    //for(int dim=10;dim<=200;dim++){
+    //    printf("Dim = %d\n",dim );
+    //    vector<double> lL;
+    //    vector<double> uL;
+    //    for(int i=0; i<dim;i++){
+    //        lL.push_back(-10.0);
+    //        uL.push_back(10.0);
+    //    }
+
+        time_t start,end;
+        time (&start);
+        cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep);
+        time (&end);
+        double dif = difftime (end,start);
+    //    pts_B.push_back(dif);
+        printf ("Elapsed time is %.2lf seconds.\n", dif );
+        delete [] f;
+    //}
+    //ofstream myfilestream ("myfile_c1");
+    //for(int i=0;i<pts_A.size();i++){
+    //    myfilestream << pts_A[i]<< "\t"<< pts_B[i]<<"\n";
+    //}
+
+    
     return EXIT_SUCCESS;
 
 }

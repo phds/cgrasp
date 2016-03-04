@@ -729,14 +729,147 @@
  /usr/include/boost/program_options/positional_options.hpp \
  /usr/include/boost/program_options/detail/parsers.hpp \
  /usr/include/boost/program_options/detail/convert.hpp \
- /usr/include/boost/program_options/variables_map.hpp \
- /usr/include/boost/tokenizer.hpp /usr/include/boost/token_iterator.hpp \
- /usr/include/boost/iterator/detail/minimum_category.hpp \
- /usr/include/boost/token_functions.hpp ../src/cgrasp.h \
- /usr/include/c++/4.9/fstream \
+ /usr/include/boost/program_options/variables_map.hpp ../src/cgrasp.h \
+ ../src/gnuplot-iostream.h /usr/include/c++/4.9/fstream \
  /usr/include/i386-linux-gnu/c++/4.9/bits/basic_file.h \
  /usr/include/i386-linux-gnu/c++/4.9/bits/c++io.h \
- /usr/include/c++/4.9/bits/fstream.tcc
+ /usr/include/c++/4.9/bits/fstream.tcc /usr/include/c++/4.9/iomanip \
+ /usr/include/boost/iostreams/device/file_descriptor.hpp \
+ /usr/include/boost/iostreams/categories.hpp \
+ /usr/include/boost/iostreams/detail/config/auto_link.hpp \
+ /usr/include/boost/iostreams/detail/config/dyn_link.hpp \
+ /usr/include/boost/iostreams/detail/config/windows_posix.hpp \
+ /usr/include/boost/iostreams/detail/file_handle.hpp \
+ /usr/include/boost/iostreams/detail/ios.hpp \
+ /usr/include/boost/iostreams/detail/config/wide_streams.hpp \
+ /usr/include/boost/iostreams/detail/path.hpp \
+ /usr/include/boost/iostreams/positioning.hpp \
+ /usr/include/boost/iostreams/detail/config/codecvt.hpp \
+ /usr/include/boost/iostreams/detail/config/fpos.hpp \
+ /usr/include/boost/iostreams/detail/config/disable_warnings.hpp \
+ /usr/include/boost/iostreams/detail/config/enable_warnings.hpp \
+ /usr/include/boost/config/abi_prefix.hpp \
+ /usr/include/boost/config/abi_suffix.hpp \
+ /usr/include/boost/iostreams/stream.hpp \
+ /usr/include/boost/iostreams/constants.hpp \
+ /usr/include/boost/iostreams/detail/char_traits.hpp \
+ /usr/include/boost/iostreams/detail/config/overload_resolution.hpp \
+ /usr/include/boost/iostreams/detail/config/gcc.hpp \
+ /usr/include/boost/iostreams/detail/forward.hpp \
+ /usr/include/boost/iostreams/detail/config/limits.hpp \
+ /usr/include/boost/iostreams/detail/push_params.hpp \
+ /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+ /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+ /usr/include/boost/iostreams/detail/iostream.hpp \
+ /usr/include/boost/iostreams/detail/select.hpp \
+ /usr/include/boost/iostreams/stream_buffer.hpp \
+ /usr/include/boost/iostreams/detail/streambuf/direct_streambuf.hpp \
+ /usr/include/boost/iostreams/detail/error.hpp \
+ /usr/include/boost/iostreams/detail/execute.hpp \
+ /usr/include/boost/preprocessor/iteration/local.hpp \
+ /usr/include/boost/utility/result_of.hpp \
+ /usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp \
+ /usr/include/boost/preprocessor/facilities/intercept.hpp \
+ /usr/include/boost/utility/declval.hpp \
+ /usr/include/boost/utility/detail/result_of_iterate.hpp \
+ /usr/include/boost/preprocessor/iteration/detail/local.hpp \
+ /usr/include/boost/iostreams/detail/functional.hpp \
+ /usr/include/boost/iostreams/close.hpp \
+ /usr/include/boost/iostreams/flush.hpp \
+ /usr/include/boost/iostreams/detail/dispatch.hpp \
+ /usr/include/boost/iostreams/traits.hpp \
+ /usr/include/boost/iostreams/detail/bool_trait_def.hpp \
+ /usr/include/boost/iostreams/detail/template_params.hpp \
+ /usr/include/boost/preprocessor/control/expr_if.hpp \
+ /usr/include/boost/iostreams/detail/is_iterator_range.hpp \
+ /usr/include/boost/iostreams/detail/select_by_size.hpp \
+ /usr/include/boost/iostreams/detail/wrap_unwrap.hpp \
+ /usr/include/boost/iostreams/detail/enable_if_stream.hpp \
+ /usr/include/boost/iostreams/traits_fwd.hpp \
+ /usr/include/boost/range/iterator_range.hpp \
+ /usr/include/boost/range/iterator_range_io.hpp \
+ /usr/include/boost/iostreams/detail/streambuf.hpp \
+ /usr/include/boost/iostreams/operations_fwd.hpp \
+ /usr/include/boost/iostreams/detail/adapter/non_blocking_adapter.hpp \
+ /usr/include/boost/iostreams/read.hpp \
+ /usr/include/boost/iostreams/char_traits.hpp \
+ /usr/include/boost/iostreams/seek.hpp \
+ /usr/include/boost/iostreams/write.hpp \
+ /usr/include/boost/iostreams/detail/optional.hpp \
+ /usr/include/boost/type_traits/aligned_storage.hpp \
+ /usr/include/boost/aligned_storage.hpp \
+ /usr/include/boost/type_traits/type_with_alignment.hpp \
+ /usr/include/boost/preprocessor/list/for_each_i.hpp \
+ /usr/include/boost/preprocessor/tuple/to_list.hpp \
+ /usr/include/boost/preprocessor/list/transform.hpp \
+ /usr/include/boost/preprocessor/list/append.hpp \
+ /usr/include/boost/iostreams/detail/streambuf/linked_streambuf.hpp \
+ /usr/include/boost/iostreams/operations.hpp \
+ /usr/include/boost/iostreams/imbue.hpp \
+ /usr/include/boost/iostreams/input_sequence.hpp \
+ /usr/include/boost/iostreams/optimal_buffer_size.hpp \
+ /usr/include/boost/iostreams/output_sequence.hpp \
+ /usr/include/boost/iostreams/detail/streambuf/indirect_streambuf.hpp \
+ /usr/include/boost/iostreams/detail/adapter/concept_adapter.hpp \
+ /usr/include/boost/iostreams/concepts.hpp \
+ /usr/include/boost/iostreams/detail/default_arg.hpp \
+ /usr/include/boost/iostreams/detail/call_traits.hpp \
+ /usr/include/boost/iostreams/detail/config/unreachable_return.hpp \
+ /usr/include/boost/iostreams/device/null.hpp \
+ /usr/include/boost/iostreams/detail/buffer.hpp \
+ /usr/include/boost/iostreams/checked_operations.hpp \
+ /usr/include/boost/iostreams/get.hpp \
+ /usr/include/boost/iostreams/put.hpp \
+ /usr/include/boost/iostreams/detail/double_object.hpp \
+ /usr/include/boost/call_traits.hpp \
+ /usr/include/boost/detail/call_traits.hpp \
+ /usr/include/boost/iostreams/detail/push.hpp \
+ /usr/include/boost/iostreams/detail/adapter/range_adapter.hpp \
+ /usr/include/boost/iostreams/pipeline.hpp \
+ /usr/include/boost/iostreams/detail/resolve.hpp \
+ /usr/include/boost/detail/is_incrementable.hpp \
+ /usr/include/boost/iostreams/detail/adapter/mode_adapter.hpp \
+ /usr/include/boost/iostreams/detail/adapter/output_iterator_adapter.hpp \
+ /usr/include/boost/iostreams/detail/is_dereferenceable.hpp \
+ /usr/include/boost/iostreams/device/array.hpp \
+ /usr/include/boost/utility/base_from_member.hpp \
+ /usr/include/boost/utility.hpp /usr/include/boost/utility/binary.hpp \
+ /usr/include/boost/preprocessor/control/deduce_d.hpp \
+ /usr/include/boost/preprocessor/seq/cat.hpp \
+ /usr/include/boost/preprocessor/seq/fold_left.hpp \
+ /usr/include/boost/preprocessor/seq/transform.hpp \
+ /usr/include/boost/preprocessor/arithmetic/mod.hpp \
+ /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
+ /usr/include/boost/preprocessor/comparison/less_equal.hpp \
+ /usr/include/boost/preprocessor/logical/not.hpp \
+ /usr/include/boost/utility/identity_type.hpp \
+ /usr/include/boost/type_traits/function_traits.hpp \
+ /usr/include/boost/noncopyable.hpp /usr/include/boost/tuple/tuple.hpp \
+ /usr/include/boost/tuple/detail/tuple_basic.hpp \
+ /usr/include/boost/type_traits/cv_traits.hpp \
+ /usr/include/boost/type_traits/add_cv.hpp \
+ /usr/include/boost/type_traits/remove_volatile.hpp \
+ /usr/include/boost/filesystem.hpp \
+ /usr/include/boost/filesystem/config.hpp \
+ /usr/include/boost/system/api_config.hpp \
+ /usr/include/boost/filesystem/path.hpp \
+ /usr/include/boost/filesystem/path_traits.hpp \
+ /usr/include/boost/type_traits/decay.hpp \
+ /usr/include/boost/type_traits/remove_bounds.hpp \
+ /usr/include/boost/system/error_code.hpp \
+ /usr/include/boost/system/config.hpp /usr/include/boost/operators.hpp \
+ /usr/include/boost/cerrno.hpp /usr/include/c++/4.9/list \
+ /usr/include/c++/4.9/bits/stl_list.h /usr/include/c++/4.9/bits/list.tcc \
+ /usr/include/boost/system/system_error.hpp \
+ /usr/include/boost/io/detail/quoted_manip.hpp \
+ /usr/include/boost/io/ios_state.hpp /usr/include/boost/io_fwd.hpp \
+ /usr/include/boost/filesystem/operations.hpp \
+ /usr/include/boost/detail/scoped_enum_emulation.hpp \
+ /usr/include/boost/detail/bitmask.hpp /usr/include/c++/4.9/stack \
+ /usr/include/c++/4.9/deque /usr/include/c++/4.9/bits/stl_deque.h \
+ /usr/include/c++/4.9/bits/deque.tcc \
+ /usr/include/c++/4.9/bits/stl_stack.h \
+ /usr/include/boost/filesystem/convenience.hpp
 
 /usr/include/stdc-predef.h:
 
@@ -2376,15 +2509,9 @@
 
 /usr/include/boost/program_options/variables_map.hpp:
 
-/usr/include/boost/tokenizer.hpp:
-
-/usr/include/boost/token_iterator.hpp:
-
-/usr/include/boost/iterator/detail/minimum_category.hpp:
-
-/usr/include/boost/token_functions.hpp:
-
 ../src/cgrasp.h:
+
+../src/gnuplot-iostream.h:
 
 /usr/include/c++/4.9/fstream:
 
@@ -2393,3 +2520,293 @@
 /usr/include/i386-linux-gnu/c++/4.9/bits/c++io.h:
 
 /usr/include/c++/4.9/bits/fstream.tcc:
+
+/usr/include/c++/4.9/iomanip:
+
+/usr/include/boost/iostreams/device/file_descriptor.hpp:
+
+/usr/include/boost/iostreams/categories.hpp:
+
+/usr/include/boost/iostreams/detail/config/auto_link.hpp:
+
+/usr/include/boost/iostreams/detail/config/dyn_link.hpp:
+
+/usr/include/boost/iostreams/detail/config/windows_posix.hpp:
+
+/usr/include/boost/iostreams/detail/file_handle.hpp:
+
+/usr/include/boost/iostreams/detail/ios.hpp:
+
+/usr/include/boost/iostreams/detail/config/wide_streams.hpp:
+
+/usr/include/boost/iostreams/detail/path.hpp:
+
+/usr/include/boost/iostreams/positioning.hpp:
+
+/usr/include/boost/iostreams/detail/config/codecvt.hpp:
+
+/usr/include/boost/iostreams/detail/config/fpos.hpp:
+
+/usr/include/boost/iostreams/detail/config/disable_warnings.hpp:
+
+/usr/include/boost/iostreams/detail/config/enable_warnings.hpp:
+
+/usr/include/boost/config/abi_prefix.hpp:
+
+/usr/include/boost/config/abi_suffix.hpp:
+
+/usr/include/boost/iostreams/stream.hpp:
+
+/usr/include/boost/iostreams/constants.hpp:
+
+/usr/include/boost/iostreams/detail/char_traits.hpp:
+
+/usr/include/boost/iostreams/detail/config/overload_resolution.hpp:
+
+/usr/include/boost/iostreams/detail/config/gcc.hpp:
+
+/usr/include/boost/iostreams/detail/forward.hpp:
+
+/usr/include/boost/iostreams/detail/config/limits.hpp:
+
+/usr/include/boost/iostreams/detail/push_params.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
+
+/usr/include/boost/preprocessor/repetition/repeat_from_to.hpp:
+
+/usr/include/boost/iostreams/detail/iostream.hpp:
+
+/usr/include/boost/iostreams/detail/select.hpp:
+
+/usr/include/boost/iostreams/stream_buffer.hpp:
+
+/usr/include/boost/iostreams/detail/streambuf/direct_streambuf.hpp:
+
+/usr/include/boost/iostreams/detail/error.hpp:
+
+/usr/include/boost/iostreams/detail/execute.hpp:
+
+/usr/include/boost/preprocessor/iteration/local.hpp:
+
+/usr/include/boost/utility/result_of.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp:
+
+/usr/include/boost/preprocessor/facilities/intercept.hpp:
+
+/usr/include/boost/utility/declval.hpp:
+
+/usr/include/boost/utility/detail/result_of_iterate.hpp:
+
+/usr/include/boost/preprocessor/iteration/detail/local.hpp:
+
+/usr/include/boost/iostreams/detail/functional.hpp:
+
+/usr/include/boost/iostreams/close.hpp:
+
+/usr/include/boost/iostreams/flush.hpp:
+
+/usr/include/boost/iostreams/detail/dispatch.hpp:
+
+/usr/include/boost/iostreams/traits.hpp:
+
+/usr/include/boost/iostreams/detail/bool_trait_def.hpp:
+
+/usr/include/boost/iostreams/detail/template_params.hpp:
+
+/usr/include/boost/preprocessor/control/expr_if.hpp:
+
+/usr/include/boost/iostreams/detail/is_iterator_range.hpp:
+
+/usr/include/boost/iostreams/detail/select_by_size.hpp:
+
+/usr/include/boost/iostreams/detail/wrap_unwrap.hpp:
+
+/usr/include/boost/iostreams/detail/enable_if_stream.hpp:
+
+/usr/include/boost/iostreams/traits_fwd.hpp:
+
+/usr/include/boost/range/iterator_range.hpp:
+
+/usr/include/boost/range/iterator_range_io.hpp:
+
+/usr/include/boost/iostreams/detail/streambuf.hpp:
+
+/usr/include/boost/iostreams/operations_fwd.hpp:
+
+/usr/include/boost/iostreams/detail/adapter/non_blocking_adapter.hpp:
+
+/usr/include/boost/iostreams/read.hpp:
+
+/usr/include/boost/iostreams/char_traits.hpp:
+
+/usr/include/boost/iostreams/seek.hpp:
+
+/usr/include/boost/iostreams/write.hpp:
+
+/usr/include/boost/iostreams/detail/optional.hpp:
+
+/usr/include/boost/type_traits/aligned_storage.hpp:
+
+/usr/include/boost/aligned_storage.hpp:
+
+/usr/include/boost/type_traits/type_with_alignment.hpp:
+
+/usr/include/boost/preprocessor/list/for_each_i.hpp:
+
+/usr/include/boost/preprocessor/tuple/to_list.hpp:
+
+/usr/include/boost/preprocessor/list/transform.hpp:
+
+/usr/include/boost/preprocessor/list/append.hpp:
+
+/usr/include/boost/iostreams/detail/streambuf/linked_streambuf.hpp:
+
+/usr/include/boost/iostreams/operations.hpp:
+
+/usr/include/boost/iostreams/imbue.hpp:
+
+/usr/include/boost/iostreams/input_sequence.hpp:
+
+/usr/include/boost/iostreams/optimal_buffer_size.hpp:
+
+/usr/include/boost/iostreams/output_sequence.hpp:
+
+/usr/include/boost/iostreams/detail/streambuf/indirect_streambuf.hpp:
+
+/usr/include/boost/iostreams/detail/adapter/concept_adapter.hpp:
+
+/usr/include/boost/iostreams/concepts.hpp:
+
+/usr/include/boost/iostreams/detail/default_arg.hpp:
+
+/usr/include/boost/iostreams/detail/call_traits.hpp:
+
+/usr/include/boost/iostreams/detail/config/unreachable_return.hpp:
+
+/usr/include/boost/iostreams/device/null.hpp:
+
+/usr/include/boost/iostreams/detail/buffer.hpp:
+
+/usr/include/boost/iostreams/checked_operations.hpp:
+
+/usr/include/boost/iostreams/get.hpp:
+
+/usr/include/boost/iostreams/put.hpp:
+
+/usr/include/boost/iostreams/detail/double_object.hpp:
+
+/usr/include/boost/call_traits.hpp:
+
+/usr/include/boost/detail/call_traits.hpp:
+
+/usr/include/boost/iostreams/detail/push.hpp:
+
+/usr/include/boost/iostreams/detail/adapter/range_adapter.hpp:
+
+/usr/include/boost/iostreams/pipeline.hpp:
+
+/usr/include/boost/iostreams/detail/resolve.hpp:
+
+/usr/include/boost/detail/is_incrementable.hpp:
+
+/usr/include/boost/iostreams/detail/adapter/mode_adapter.hpp:
+
+/usr/include/boost/iostreams/detail/adapter/output_iterator_adapter.hpp:
+
+/usr/include/boost/iostreams/detail/is_dereferenceable.hpp:
+
+/usr/include/boost/iostreams/device/array.hpp:
+
+/usr/include/boost/utility/base_from_member.hpp:
+
+/usr/include/boost/utility.hpp:
+
+/usr/include/boost/utility/binary.hpp:
+
+/usr/include/boost/preprocessor/control/deduce_d.hpp:
+
+/usr/include/boost/preprocessor/seq/cat.hpp:
+
+/usr/include/boost/preprocessor/seq/fold_left.hpp:
+
+/usr/include/boost/preprocessor/seq/transform.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/mod.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
+
+/usr/include/boost/preprocessor/comparison/less_equal.hpp:
+
+/usr/include/boost/preprocessor/logical/not.hpp:
+
+/usr/include/boost/utility/identity_type.hpp:
+
+/usr/include/boost/type_traits/function_traits.hpp:
+
+/usr/include/boost/noncopyable.hpp:
+
+/usr/include/boost/tuple/tuple.hpp:
+
+/usr/include/boost/tuple/detail/tuple_basic.hpp:
+
+/usr/include/boost/type_traits/cv_traits.hpp:
+
+/usr/include/boost/type_traits/add_cv.hpp:
+
+/usr/include/boost/type_traits/remove_volatile.hpp:
+
+/usr/include/boost/filesystem.hpp:
+
+/usr/include/boost/filesystem/config.hpp:
+
+/usr/include/boost/system/api_config.hpp:
+
+/usr/include/boost/filesystem/path.hpp:
+
+/usr/include/boost/filesystem/path_traits.hpp:
+
+/usr/include/boost/type_traits/decay.hpp:
+
+/usr/include/boost/type_traits/remove_bounds.hpp:
+
+/usr/include/boost/system/error_code.hpp:
+
+/usr/include/boost/system/config.hpp:
+
+/usr/include/boost/operators.hpp:
+
+/usr/include/boost/cerrno.hpp:
+
+/usr/include/c++/4.9/list:
+
+/usr/include/c++/4.9/bits/stl_list.h:
+
+/usr/include/c++/4.9/bits/list.tcc:
+
+/usr/include/boost/system/system_error.hpp:
+
+/usr/include/boost/io/detail/quoted_manip.hpp:
+
+/usr/include/boost/io/ios_state.hpp:
+
+/usr/include/boost/io_fwd.hpp:
+
+/usr/include/boost/filesystem/operations.hpp:
+
+/usr/include/boost/detail/scoped_enum_emulation.hpp:
+
+/usr/include/boost/detail/bitmask.hpp:
+
+/usr/include/c++/4.9/stack:
+
+/usr/include/c++/4.9/deque:
+
+/usr/include/c++/4.9/bits/stl_deque.h:
+
+/usr/include/c++/4.9/bits/deque.tcc:
+
+/usr/include/c++/4.9/bits/stl_stack.h:
+
+/usr/include/boost/filesystem/convenience.hpp:

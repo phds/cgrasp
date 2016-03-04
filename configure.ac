@@ -10,6 +10,7 @@ AC_CONFIG_MACRO_DIR([m4])
 
 m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 LT_INIT
+
 # Enable "automake" to simplify creating makefiles. foreign relaxes some GNU
 # checks. -Wall and -Werror are instructions to Automake, not gcc.
 # Because this is a non-recursive automake, we use subdir-objects to tell
@@ -28,8 +29,9 @@ AC_CONFIG_SRCDIR([src/cgraspInterface.cpp])
 AC_CONFIG_HEADERS([config.h])
 
 # Check for a C++ compiler.
-#: ${CXXFLAGS="-g3 -O3"}
-: ${CXXFLAGS="-pg -O3"}
+#: ${CXXFLAGS="-fopenmp -p -g -pg -O3"}
+: ${CXXFLAGS="-p -g -pg -O3"}
+
 AC_PROG_CXX
 
 AC_PROG_LIBTOOL

@@ -1,0 +1,2295 @@
+desc: (none)
+cmd: cgrasp --function ackley --dimension 10 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 30 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=32630894
+mem_heap_B=660713
+mem_heap_extra_B=5703
+mem_stacks_B=0
+heap_tree=peak
+n9: 660713 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 319488 0x422DCC4: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 98304 0x422E18D: PyString_InternInPlace (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 98304 0x416189F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 98304 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 98304 0x4161285: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 98304 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 98304 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 98304 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+  n4: 67968 0x41D13F9: PyDict_SetItemString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 35328 in 14 places, all below massif's threshold (01.00%)
+   n2: 14592 0x4228F69: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 7680 0x41228E2: PyStructSequence_InitType (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 7680 in 5 places, all below massif's threshold (01.00%)
+    n0: 6912 in 12 places, all below massif's threshold (01.00%)
+   n1: 11136 0x4228E82: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 11136 in 11 places, all below massif's threshold (01.00%)
+   n1: 6912 0x417DCFA: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6912 in 6 places, all below massif's threshold (01.00%)
+  n3: 56640 0x41A8EC3: PyDict_Merge (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 25920 0x41A8F8F: PyDict_Copy (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 20928 0x41A94C9: _PyImport_FixupExtension (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 10752 in 4 places, all below massif's threshold (01.00%)
+     n1: 10176 0x425E212: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 10176 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 10176 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 10176 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 10176 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n2: 10176 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 9984 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 9984 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n0: 192 in 1 place, below massif's threshold (01.00%)
+    n0: 4992 in 1 place, below massif's threshold (01.00%)
+   n1: 24576 0x41EB453: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 24576 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 24576 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 24576 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 24576 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 24576 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 24576 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 24576 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 24576 0x804E79B: main (cgraspInterface.cpp:137)
+   n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 27648 0x4206FF2: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 27648 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 23040 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 23040 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 20736 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 19200 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 19200 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 19200 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 19200 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 19200 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 19200 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 19200 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 19200 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 17664 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n2: 17664 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 17280 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 17280 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 17280 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 17280 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 17280 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 17280 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 0 in 1 place, below massif's threshold (01.00%)
+                         n0: 384 in 1 place, below massif's threshold (01.00%)
+                       n0: 1536 in 1 place, below massif's threshold (01.00%)
+               n0: 1536 in 1 place, below massif's threshold (01.00%)
+              n0: 2304 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+    n0: 3072 in 1 place, below massif's threshold (01.00%)
+  n0: 19200 in 12 places, all below massif's threshold (01.00%)
+  n1: 18432 0x4207568: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 18432 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 18432 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 12288 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 12288 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 12288 in 2 places, all below massif's threshold (01.00%)
+                       n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 16896 0x4228DD3: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 16896 in 29 places, all below massif's threshold (01.00%)
+  n1: 14400 0x422EC71: _PyDict_NewPresized (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 14400 0x4206E16: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 14400 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 14400 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 14400 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 14400 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 14400 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 14400 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14400 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14400 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14400 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14400 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 14400 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 13056 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 13056 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 13056 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 13056 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 12288 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 768 in 1 place, below massif's threshold (01.00%)
+               n0: 1344 in 1 place, below massif's threshold (01.00%)
+ n4: 126475 0x4279328: PyObject_Malloc (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 71240 0x427FBFD: PyGrammar_AddAccelerators (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 71240 0x427FD56: PyParser_New (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 71240 0x425D362: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 71240 0x42041D8: PyParser_ASTFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 71240 0x420424B: PyRun_StringFlags (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 71240 0x4207E77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 71240 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 71240 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 71240 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 71240 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 71240 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 71240 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 71240 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 71240 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 71240 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 71240 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 71240 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 71240 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 71240 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 71240 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 71240 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 71240 0x804E79B: main (cgraspInterface.cpp:137)
+  n1: 41348 0x41F4FC8: PyString_FromStringAndSize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n3: 41348 0x4160A37: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 26519 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n2: 26519 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 15566 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 15566 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 10281 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 10281 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 10281 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 10281 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9319 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9319 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9319 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9319 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9319 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 9319 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 8359 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 8359 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 8359 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 8359 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 8359 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 8359 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 8359 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 8359 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 8359 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n0: 8359 in 2 places, all below massif's threshold (01.00%)
+                  n0: 960 in 1 place, below massif's threshold (01.00%)
+            n0: 962 in 1 place, below massif's threshold (01.00%)
+        n0: 5285 in 1 place, below massif's threshold (01.00%)
+      n1: 10953 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 10953 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 10953 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 9864 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 9864 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9864 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9864 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 9864 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 7144 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 7144 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 7144 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n0: 7144 in 2 places, all below massif's threshold (01.00%)
+              n0: 2720 in 1 place, below massif's threshold (01.00%)
+         n0: 1089 in 1 place, below massif's threshold (01.00%)
+    n2: 14829 0x4161261: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 13985 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n2: 13985 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 13379 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13379 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 13379 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 12534 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 12534 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 12534 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 12534 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 12534 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 12534 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n2: 12534 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 9651 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 9651 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 9651 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 9651 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9651 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9651 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9651 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9651 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9651 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9651 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n0: 9651 in 2 places, all below massif's threshold (01.00%)
+                 n0: 2883 in 1 place, below massif's threshold (01.00%)
+          n0: 845 in 1 place, below massif's threshold (01.00%)
+       n0: 606 in 1 place, below massif's threshold (01.00%)
+     n0: 844 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 11797 0x422E213: PyString_FromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 11797 in 3 places, all below massif's threshold (01.00%)
+  n0: 2090 in 4 places, all below massif's threshold (01.00%)
+ n1: 85408 0x46A5A8A: monstartup (gmon.c:134)
+  n1: 85408 0x804F00F: __gmon_start__ (in /usr/local/bin/cgrasp)
+   n0: 85408 0x47AEAF8: ??? (in /usr/lib/i386-linux-gnu/libgmp.so.10.1.3)
+ n1: 36397 0x416208E: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 36397 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 36397 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 36397 0x42585E9: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 36397 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 36397 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 36397 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 36397 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 36397 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 36397 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 36397 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 36397 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 36397 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 36397 0x426FBD2: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 36397 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 36397 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 36397 0x4258B80: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 36397 0x411CE83: _PyCodec_Lookup (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 36397 0x411E18A: PyUnicodeUCS4_SetDefaultEncoding (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 36397 0x411E21B: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 36397 0x41C7F27: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 36397 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 36397 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 36397 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 36397 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 36397 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 36397 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 36397 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 36397 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 36397 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 24837 in 80 places, all below massif's threshold (01.00%)
+ n1: 18944 0x449D7F9: ??? (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 18944 0x400ED75: call_init.part.0 (dl-init.c:78)
+   n1: 18944 0x400EE62: _dl_init (dl-init.c:36)
+    n0: 18944 0x400110D: ??? (in /lib/i386-linux-gnu/ld-2.19.so)
+ n2: 16388 0x425E356: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 12291 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 8194 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 8194 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 8194 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n0: 8194 in 2 places, all below massif's threshold (01.00%)
+   n0: 4097 in 1 place, below massif's threshold (01.00%)
+  n0: 4097 in 1 place, below massif's threshold (01.00%)
+ n2: 16388 0x425DA4F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 12291 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 8194 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 8194 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 8194 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 8194 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n0: 8194 in 2 places, all below massif's threshold (01.00%)
+   n0: 4097 in 1 place, below massif's threshold (01.00%)
+  n0: 4097 in 1 place, below massif's threshold (01.00%)
+ n2: 16388 0x4258021: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 12291 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 12291 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 12291 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 8194 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 8194 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n0: 8194 in 2 places, all below massif's threshold (01.00%)
+     n0: 4097 in 1 place, below massif's threshold (01.00%)
+  n0: 4097 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=2
+#-----------
+time=95060240
+mem_heap_B=610780
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=133640202
+mem_heap_B=610348
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=189753696
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=252014685
+mem_heap_B=610348
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=292474627
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=341089028
+mem_heap_B=610388
+mem_heap_extra_B=6076
+mem_stacks_B=0
+heap_tree=detailed
+n6: 610388 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 345216 0x422DCC4: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 98304 0x422E18D: PyString_InternInPlace (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 98304 0x416189F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 98304 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 98304 0x4161285: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 98304 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 98304 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 98304 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+  n5: 71040 0x41D13F9: PyDict_SetItemString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 28800 in 13 places, all below massif's threshold (01.00%)
+   n2: 14592 0x4228F69: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 7680 0x41228E2: PyStructSequence_InitType (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 7680 in 5 places, all below massif's threshold (01.00%)
+    n0: 6912 in 12 places, all below massif's threshold (01.00%)
+   n1: 11136 0x4228E82: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 11136 in 11 places, all below massif's threshold (01.00%)
+   n1: 9984 0x417DCFA: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 9984 in 8 places, all below massif's threshold (01.00%)
+   n1: 6528 0x4228FE9: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6528 in 3 places, all below massif's threshold (01.00%)
+  n3: 60864 0x41A8EC3: PyDict_Merge (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 30144 0x41A8F8F: PyDict_Copy (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 24000 0x41A94C9: _PyImport_FixupExtension (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 13248 0x425E212: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 13248 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 13248 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13248 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13248 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n2: 13248 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11520 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11520 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11520 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n2: 11520 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n0: 1536 in 1 place, below massif's threshold (01.00%)
+                  n0: 1536 in 1 place, below massif's threshold (01.00%)
+           n0: 192 in 1 place, below massif's threshold (01.00%)
+     n0: 10752 in 4 places, all below massif's threshold (01.00%)
+    n0: 6144 in 1 place, below massif's threshold (01.00%)
+   n1: 24576 0x41EB453: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 24576 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 24576 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 24576 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 24576 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 24576 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 24576 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 24576 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 24576 0x804E79B: main (cgraspInterface.cpp:137)
+   n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 36480 0x4206FF2: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 36480 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 31872 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 31872 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 31872 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 31872 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24960 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24960 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24960 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 24960 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 23424 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 23424 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 21120 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 19584 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 19584 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 19584 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 19584 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 19584 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 19584 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 19584 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 19584 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 18048 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n2: 18048 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 17280 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 17280 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 17280 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 17280 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 17280 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 17280 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 0 in 1 place, below massif's threshold (01.00%)
+                         n0: 768 in 1 place, below massif's threshold (01.00%)
+                       n0: 1536 in 1 place, below massif's threshold (01.00%)
+               n0: 1536 in 1 place, below massif's threshold (01.00%)
+              n0: 2304 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 6912 in 3 places, all below massif's threshold (01.00%)
+    n0: 4608 in 1 place, below massif's threshold (01.00%)
+  n0: 21120 in 13 places, all below massif's threshold (01.00%)
+  n1: 20544 0x422EC71: _PyDict_NewPresized (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 20544 0x4206E16: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 20544 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 20544 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 20544 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 20544 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 20544 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 14400 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14400 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14400 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14400 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14400 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 14400 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 13056 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 13056 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 13056 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 13056 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 12288 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 768 in 1 place, below massif's threshold (01.00%)
+               n0: 1344 in 1 place, below massif's threshold (01.00%)
+         n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 19968 0x4207568: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 19968 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 19968 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 19968 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19968 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19968 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 19968 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 19968 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 19968 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 19968 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 18432 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 18432 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 12288 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 12288 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 12288 in 2 places, all below massif's threshold (01.00%)
+                       n0: 6144 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 16896 0x4228DD3: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 16896 in 29 places, all below massif's threshold (01.00%)
+ n4: 131607 0x4279328: PyObject_Malloc (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 71240 0x427FBFD: PyGrammar_AddAccelerators (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 71240 0x427FD56: PyParser_New (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 71240 0x425D362: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 71240 0x42041D8: PyParser_ASTFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 71240 0x420424B: PyRun_StringFlags (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 71240 0x4207E77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 71240 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 71240 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 71240 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 71240 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 71240 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 71240 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 71240 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 71240 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 71240 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 71240 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 71240 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 71240 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 71240 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 71240 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 71240 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 71240 0x804E79B: main (cgraspInterface.cpp:137)
+  n1: 46480 0x41F4FC8: PyString_FromStringAndSize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n3: 46480 0x4160A37: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 30925 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n2: 30925 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19379 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19379 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13119 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13119 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 13119 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 13119 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9319 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9319 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9319 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9319 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9319 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 9319 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 8359 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 8359 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 8359 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 8359 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 8359 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 8359 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 8359 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 8359 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 8359 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n0: 8359 in 2 places, all below massif's threshold (01.00%)
+                  n0: 960 in 1 place, below massif's threshold (01.00%)
+            n0: 3800 in 1 place, below massif's threshold (01.00%)
+        n1: 6260 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 6260 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 6260 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 6260 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 6260 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 6260 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n0: 6260 in 2 places, all below massif's threshold (01.00%)
+      n1: 11546 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 11546 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 11546 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 10457 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 9864 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9864 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9864 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 9864 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 7144 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 7144 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 7144 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n0: 7144 in 2 places, all below massif's threshold (01.00%)
+              n0: 2720 in 1 place, below massif's threshold (01.00%)
+          n0: 593 in 1 place, below massif's threshold (01.00%)
+         n0: 1089 in 1 place, below massif's threshold (01.00%)
+    n2: 15555 0x4161261: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 15555 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n2: 15555 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 14949 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 14949 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 14949 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14104 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14104 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14104 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14104 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 14104 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 14104 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n2: 14104 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 11221 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11221 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11221 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11221 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 11221 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 11221 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 11221 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 11221 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 11221 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 11221 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n2: 11221 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n0: 9651 in 2 places, all below massif's threshold (01.00%)
+                            n0: 1570 in 1 place, below massif's threshold (01.00%)
+                 n0: 2883 in 1 place, below massif's threshold (01.00%)
+          n0: 845 in 1 place, below massif's threshold (01.00%)
+       n0: 606 in 1 place, below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n2: 11797 0x422E213: PyString_FromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 6499 0x417DD9C: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6499 in 4 places, all below massif's threshold (01.00%)
+   n0: 5298 in 2 places, all below massif's threshold (01.00%)
+  n0: 2090 in 4 places, all below massif's threshold (01.00%)
+ n1: 85408 0x46A5A8A: monstartup (gmon.c:134)
+  n1: 85408 0x804F00F: __gmon_start__ (in /usr/local/bin/cgrasp)
+   n0: 85408 0x47AEAF8: ??? (in /usr/lib/i386-linux-gnu/libgmp.so.10.1.3)
+ n0: 21021 in 107 places, all below massif's threshold (01.00%)
+ n1: 18944 0x449D7F9: ??? (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 18944 0x400ED75: call_init.part.0 (dl-init.c:78)
+   n1: 18944 0x400EE62: _dl_init (dl-init.c:36)
+    n0: 18944 0x400110D: ??? (in /lib/i386-linux-gnu/ld-2.19.so)
+ n1: 8192 0x44CBEF9: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 8192 0x44CFC20: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+   n1: 8192 0x805B158: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (fstream:719)
+    n0: 8192 0x804E79B: main (cgraspInterface.cpp:137)
+#-----------
+snapshot=8
+#-----------
+time=405623537
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=465961490
+mem_heap_B=610348
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=522262952
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=570544670
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=620597055
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=699226172
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=749294963
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=820825794
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=863741081
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=928109983
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=996330500
+mem_heap_B=610268
+mem_heap_extra_B=6116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1037287837
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1105552629
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1160128362
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1187417399
+mem_heap_B=610860
+mem_heap_extra_B=6140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1242002572
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1282943365
+mem_heap_B=614917
+mem_heap_extra_B=6147
+mem_stacks_B=0
+heap_tree=detailed
+n6: 614917 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 345216 0x422DCC4: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 98304 0x422E18D: PyString_InternInPlace (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 98304 0x416189F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 98304 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 98304 0x4161285: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 98304 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 98304 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 98304 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+  n5: 71040 0x41D13F9: PyDict_SetItemString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 28800 in 13 places, all below massif's threshold (01.00%)
+   n2: 14592 0x4228F69: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 7680 0x41228E2: PyStructSequence_InitType (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 7680 in 5 places, all below massif's threshold (01.00%)
+    n0: 6912 in 12 places, all below massif's threshold (01.00%)
+   n1: 11136 0x4228E82: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 11136 in 11 places, all below massif's threshold (01.00%)
+   n1: 9984 0x417DCFA: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 9984 in 8 places, all below massif's threshold (01.00%)
+   n1: 6528 0x4228FE9: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6528 in 3 places, all below massif's threshold (01.00%)
+  n3: 60864 0x41A8EC3: PyDict_Merge (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 30144 0x41A8F8F: PyDict_Copy (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 24000 0x41A94C9: _PyImport_FixupExtension (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 13248 0x425E212: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 13248 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 13248 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13248 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13248 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n2: 13248 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11520 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11520 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11520 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n2: 11520 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n0: 1536 in 1 place, below massif's threshold (01.00%)
+                  n0: 1536 in 1 place, below massif's threshold (01.00%)
+           n0: 192 in 1 place, below massif's threshold (01.00%)
+     n0: 10752 in 4 places, all below massif's threshold (01.00%)
+    n0: 6144 in 1 place, below massif's threshold (01.00%)
+   n1: 24576 0x41EB453: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 24576 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 24576 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 24576 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 24576 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 24576 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 24576 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 24576 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 24576 0x804E79B: main (cgraspInterface.cpp:137)
+   n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 36480 0x4206FF2: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 36480 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 31872 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 31872 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 31872 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 31872 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24960 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24960 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24960 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 24960 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 23424 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 23424 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 21120 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 19584 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 19584 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 19584 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 19584 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 19584 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 19584 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 19584 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 19584 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 18048 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n2: 18048 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 17280 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 17280 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 17280 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 17280 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 17280 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 17280 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 0 in 1 place, below massif's threshold (01.00%)
+                         n0: 768 in 1 place, below massif's threshold (01.00%)
+                       n0: 1536 in 1 place, below massif's threshold (01.00%)
+               n0: 1536 in 1 place, below massif's threshold (01.00%)
+              n0: 2304 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 6912 in 3 places, all below massif's threshold (01.00%)
+    n0: 4608 in 1 place, below massif's threshold (01.00%)
+  n0: 21120 in 13 places, all below massif's threshold (01.00%)
+  n1: 20544 0x422EC71: _PyDict_NewPresized (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 20544 0x4206E16: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 20544 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 20544 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 20544 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 20544 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 20544 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 14400 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14400 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14400 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14400 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14400 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 14400 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 13056 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 13056 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 13056 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 13056 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 12288 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 768 in 1 place, below massif's threshold (01.00%)
+               n0: 1344 in 1 place, below massif's threshold (01.00%)
+         n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 19968 0x4207568: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 19968 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 19968 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 19968 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19968 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19968 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 19968 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 19968 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 19968 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 19968 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 18432 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 18432 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 12288 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 12288 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 12288 in 2 places, all below massif's threshold (01.00%)
+                       n0: 6144 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 16896 0x4228DD3: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 16896 in 29 places, all below massif's threshold (01.00%)
+ n4: 131607 0x4279328: PyObject_Malloc (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 71240 0x427FBFD: PyGrammar_AddAccelerators (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 71240 0x427FD56: PyParser_New (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 71240 0x425D362: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 71240 0x42041D8: PyParser_ASTFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 71240 0x420424B: PyRun_StringFlags (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 71240 0x4207E77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 71240 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 71240 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 71240 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 71240 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 71240 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 71240 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 71240 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 71240 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 71240 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 71240 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 71240 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 71240 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 71240 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 71240 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 71240 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 71240 0x804E79B: main (cgraspInterface.cpp:137)
+  n1: 46480 0x41F4FC8: PyString_FromStringAndSize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n3: 46480 0x4160A37: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 30925 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n2: 30925 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19379 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19379 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13119 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13119 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 13119 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 13119 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9319 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9319 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9319 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9319 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9319 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 9319 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 8359 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 8359 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 8359 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 8359 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 8359 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 8359 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 8359 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 8359 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 8359 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n0: 8359 in 2 places, all below massif's threshold (01.00%)
+                  n0: 960 in 1 place, below massif's threshold (01.00%)
+            n0: 3800 in 1 place, below massif's threshold (01.00%)
+        n1: 6260 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 6260 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 6260 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 6260 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 6260 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 6260 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n0: 6260 in 2 places, all below massif's threshold (01.00%)
+      n1: 11546 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 11546 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 11546 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 10457 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 9864 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9864 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9864 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 9864 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 7144 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 7144 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 7144 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n0: 7144 in 2 places, all below massif's threshold (01.00%)
+              n0: 2720 in 1 place, below massif's threshold (01.00%)
+          n0: 593 in 1 place, below massif's threshold (01.00%)
+         n0: 1089 in 1 place, below massif's threshold (01.00%)
+    n2: 15555 0x4161261: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 15555 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n2: 15555 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 14949 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 14949 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 14949 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14104 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14104 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14104 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14104 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 14104 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 14104 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n2: 14104 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 11221 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11221 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11221 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11221 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 11221 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 11221 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 11221 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 11221 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 11221 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 11221 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n2: 11221 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n0: 9651 in 2 places, all below massif's threshold (01.00%)
+                            n0: 1570 in 1 place, below massif's threshold (01.00%)
+                 n0: 2883 in 1 place, below massif's threshold (01.00%)
+          n0: 845 in 1 place, below massif's threshold (01.00%)
+       n0: 606 in 1 place, below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n2: 11797 0x422E213: PyString_FromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 6499 0x417DD9C: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6499 in 4 places, all below massif's threshold (01.00%)
+   n0: 5298 in 2 places, all below massif's threshold (01.00%)
+  n0: 2090 in 4 places, all below massif's threshold (01.00%)
+ n1: 85408 0x46A5A8A: monstartup (gmon.c:134)
+  n1: 85408 0x804F00F: __gmon_start__ (in /usr/local/bin/cgrasp)
+   n0: 85408 0x47AEAF8: ??? (in /usr/lib/i386-linux-gnu/libgmp.so.10.1.3)
+ n0: 25550 in 107 places, all below massif's threshold (01.00%)
+ n1: 18944 0x449D7F9: ??? (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 18944 0x400ED75: call_init.part.0 (dl-init.c:78)
+   n1: 18944 0x400EE62: _dl_init (dl-init.c:36)
+    n0: 18944 0x400110D: ??? (in /lib/i386-linux-gnu/ld-2.19.so)
+ n1: 8192 0x44CBEF9: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 8192 0x44CFC20: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+   n1: 8192 0x805B158: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (fstream:719)
+    n0: 8192 0x804E79B: main (cgraspInterface.cpp:137)
+#-----------
+snapshot=25
+#-----------
+time=1351178916
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1392121332
+mem_heap_B=610860
+mem_heap_extra_B=6140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1433056461
+mem_heap_B=610436
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1487673075
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1542271904
+mem_heap_B=610476
+mem_heap_extra_B=6140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1583219187
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1650757214
+mem_heap_B=610436
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1711128683
+mem_heap_B=610860
+mem_heap_extra_B=6140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1791612309
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1851989029
+mem_heap_B=610436
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1892234159
+mem_heap_B=610780
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1952601512
+mem_heap_B=610436
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2012988460
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2073354791
+mem_heap_B=610372
+mem_heap_extra_B=6116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2113604396
+mem_heap_B=614917
+mem_heap_extra_B=6147
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2153864717
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2194133713
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=2234396421
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2274643893
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=2314914712
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2375301339
+mem_heap_B=610388
+mem_heap_extra_B=6076
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2435668940
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2516162446
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2576548284
+mem_heap_B=610348
+mem_heap_extra_B=6060
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2616797824
+mem_heap_B=614661
+mem_heap_extra_B=6147
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2644088609
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2671378203
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2698670593
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2725968851
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2753258314
+mem_heap_B=610780
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2780547370
+mem_heap_B=610164
+mem_heap_extra_B=6060
+mem_stacks_B=0
+heap_tree=detailed
+n6: 610164 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 345216 0x422DCC4: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 98304 0x422E18D: PyString_InternInPlace (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 98304 0x416189F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 98304 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 98304 0x4161285: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 98304 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 98304 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 98304 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+  n5: 71040 0x41D13F9: PyDict_SetItemString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 28800 in 13 places, all below massif's threshold (01.00%)
+   n2: 14592 0x4228F69: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 7680 0x41228E2: PyStructSequence_InitType (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 7680 in 5 places, all below massif's threshold (01.00%)
+    n0: 6912 in 12 places, all below massif's threshold (01.00%)
+   n1: 11136 0x4228E82: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 11136 in 11 places, all below massif's threshold (01.00%)
+   n1: 9984 0x417DCFA: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 9984 in 8 places, all below massif's threshold (01.00%)
+   n1: 6528 0x4228FE9: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6528 in 3 places, all below massif's threshold (01.00%)
+  n3: 60864 0x41A8EC3: PyDict_Merge (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 30144 0x41A8F8F: PyDict_Copy (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 24000 0x41A94C9: _PyImport_FixupExtension (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 13248 0x425E212: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 13248 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 13248 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13248 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13248 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n2: 13248 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11520 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11520 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11520 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n2: 11520 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n0: 1536 in 1 place, below massif's threshold (01.00%)
+                  n0: 1536 in 1 place, below massif's threshold (01.00%)
+           n0: 192 in 1 place, below massif's threshold (01.00%)
+     n0: 10752 in 4 places, all below massif's threshold (01.00%)
+    n0: 6144 in 1 place, below massif's threshold (01.00%)
+   n1: 24576 0x41EB453: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 24576 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 24576 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 24576 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 24576 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 24576 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 24576 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 24576 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 24576 0x804E79B: main (cgraspInterface.cpp:137)
+   n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 36480 0x4206FF2: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 36480 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 31872 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 31872 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 31872 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 31872 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24960 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24960 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24960 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 24960 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 23424 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 23424 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 21120 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 19584 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 19584 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 19584 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 19584 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 19584 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 19584 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 19584 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 19584 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 18048 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n2: 18048 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 17280 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 17280 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 17280 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 17280 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 17280 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 17280 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 0 in 1 place, below massif's threshold (01.00%)
+                         n0: 768 in 1 place, below massif's threshold (01.00%)
+                       n0: 1536 in 1 place, below massif's threshold (01.00%)
+               n0: 1536 in 1 place, below massif's threshold (01.00%)
+              n0: 2304 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 6912 in 3 places, all below massif's threshold (01.00%)
+    n0: 4608 in 1 place, below massif's threshold (01.00%)
+  n0: 21120 in 13 places, all below massif's threshold (01.00%)
+  n1: 20544 0x422EC71: _PyDict_NewPresized (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 20544 0x4206E16: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 20544 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 20544 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 20544 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 20544 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 20544 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 14400 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14400 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14400 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14400 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14400 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 14400 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 13056 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 13056 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 13056 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 13056 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 12288 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 768 in 1 place, below massif's threshold (01.00%)
+               n0: 1344 in 1 place, below massif's threshold (01.00%)
+         n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 19968 0x4207568: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 19968 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 19968 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 19968 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19968 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19968 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 19968 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 19968 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 19968 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 19968 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 18432 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 18432 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 12288 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 12288 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 12288 in 2 places, all below massif's threshold (01.00%)
+                       n0: 6144 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 16896 0x4228DD3: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 16896 in 29 places, all below massif's threshold (01.00%)
+ n4: 131607 0x4279328: PyObject_Malloc (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 71240 0x427FBFD: PyGrammar_AddAccelerators (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 71240 0x427FD56: PyParser_New (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 71240 0x425D362: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 71240 0x42041D8: PyParser_ASTFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 71240 0x420424B: PyRun_StringFlags (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 71240 0x4207E77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 71240 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 71240 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 71240 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 71240 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 71240 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 71240 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 71240 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 71240 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 71240 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 71240 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 71240 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 71240 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 71240 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 71240 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 71240 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 71240 0x804E79B: main (cgraspInterface.cpp:137)
+  n1: 46480 0x41F4FC8: PyString_FromStringAndSize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n3: 46480 0x4160A37: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 30925 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n2: 30925 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19379 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19379 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13119 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13119 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 13119 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 13119 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9319 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9319 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9319 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9319 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9319 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 9319 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 8359 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 8359 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 8359 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 8359 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 8359 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 8359 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 8359 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 8359 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 8359 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n0: 8359 in 2 places, all below massif's threshold (01.00%)
+                  n0: 960 in 1 place, below massif's threshold (01.00%)
+            n0: 3800 in 1 place, below massif's threshold (01.00%)
+        n1: 6260 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 6260 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 6260 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 6260 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 6260 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 6260 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n0: 6260 in 2 places, all below massif's threshold (01.00%)
+      n1: 11546 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 11546 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 11546 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 10457 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 9864 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9864 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9864 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 9864 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 7144 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 7144 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 7144 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n0: 7144 in 2 places, all below massif's threshold (01.00%)
+              n0: 2720 in 1 place, below massif's threshold (01.00%)
+          n0: 593 in 1 place, below massif's threshold (01.00%)
+         n0: 1089 in 1 place, below massif's threshold (01.00%)
+    n2: 15555 0x4161261: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 15555 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n2: 15555 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 14949 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 14949 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 14949 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14104 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14104 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14104 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14104 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 14104 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 14104 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n2: 14104 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 11221 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11221 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11221 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11221 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 11221 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 11221 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 11221 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 11221 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 11221 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 11221 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n2: 11221 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n0: 9651 in 2 places, all below massif's threshold (01.00%)
+                            n0: 1570 in 1 place, below massif's threshold (01.00%)
+                 n0: 2883 in 1 place, below massif's threshold (01.00%)
+          n0: 845 in 1 place, below massif's threshold (01.00%)
+       n0: 606 in 1 place, below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n2: 11797 0x422E213: PyString_FromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 6499 0x417DD9C: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6499 in 4 places, all below massif's threshold (01.00%)
+   n0: 5298 in 2 places, all below massif's threshold (01.00%)
+  n0: 2090 in 4 places, all below massif's threshold (01.00%)
+ n1: 85408 0x46A5A8A: monstartup (gmon.c:134)
+  n1: 85408 0x804F00F: __gmon_start__ (in /usr/local/bin/cgrasp)
+   n0: 85408 0x47AEAF8: ??? (in /usr/lib/i386-linux-gnu/libgmp.so.10.1.3)
+ n0: 20797 in 107 places, all below massif's threshold (01.00%)
+ n1: 18944 0x449D7F9: ??? (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 18944 0x400ED75: call_init.part.0 (dl-init.c:78)
+   n1: 18944 0x400EE62: _dl_init (dl-init.c:36)
+    n0: 18944 0x400110D: ??? (in /lib/i386-linux-gnu/ld-2.19.so)
+ n1: 8192 0x44CBEF9: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 8192 0x44CFC20: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+   n1: 8192 0x805B158: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (fstream:719)
+    n0: 8192 0x804E79B: main (cgraspInterface.cpp:137)
+#-----------
+snapshot=56
+#-----------
+time=2807844196
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2835133435
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=2862438671
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=2889746431
+mem_heap_B=610388
+mem_heap_extra_B=6076
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=2917037520
+mem_heap_B=610396
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=2944343833
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=2971636220
+mem_heap_B=610780
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=2998925466
+mem_heap_B=610388
+mem_heap_extra_B=6076
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3026216778
+mem_heap_B=610436
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3053510162
+mem_heap_B=610524
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=detailed
+n6: 610524 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 345216 0x422DCC4: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n2: 98304 0x422E18D: PyString_InternInPlace (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 98304 0x416189F: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 98304 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 98304 0x4161285: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 98304 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 98304 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 98304 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 98304 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 98304 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 98304 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 98304 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 98304 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 98304 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 98304 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 98304 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 98304 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 98304 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 98304 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+  n5: 71040 0x41D13F9: PyDict_SetItemString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 28800 in 13 places, all below massif's threshold (01.00%)
+   n2: 14592 0x4228F69: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 7680 0x41228E2: PyStructSequence_InitType (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n0: 7680 in 5 places, all below massif's threshold (01.00%)
+    n0: 6912 in 12 places, all below massif's threshold (01.00%)
+   n1: 11136 0x4228E82: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 11136 in 11 places, all below massif's threshold (01.00%)
+   n1: 9984 0x417DCFA: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 9984 in 8 places, all below massif's threshold (01.00%)
+   n1: 6528 0x4228FE9: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6528 in 3 places, all below massif's threshold (01.00%)
+  n3: 60864 0x41A8EC3: PyDict_Merge (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 30144 0x41A8F8F: PyDict_Copy (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n2: 24000 0x41A94C9: _PyImport_FixupExtension (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 13248 0x425E212: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 13248 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 13248 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13248 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13248 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n2: 13248 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11520 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11520 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11520 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n2: 11520 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 9984 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 9984 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 9984 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 9984 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 9984 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 9984 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9984 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 9984 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 9984 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n0: 1536 in 1 place, below massif's threshold (01.00%)
+                  n0: 1536 in 1 place, below massif's threshold (01.00%)
+           n0: 192 in 1 place, below massif's threshold (01.00%)
+     n0: 10752 in 4 places, all below massif's threshold (01.00%)
+    n0: 6144 in 1 place, below massif's threshold (01.00%)
+   n1: 24576 0x41EB453: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 24576 0x4209514: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24576 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 24576 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 24576 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 24576 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 24576 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 24576 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 24576 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 24576 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 24576 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 24576 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 24576 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 24576 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 24576 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 24576 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 24576 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 24576 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 24576 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 24576 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 24576 0x804E79B: main (cgraspInterface.cpp:137)
+   n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 36480 0x4206FF2: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n2: 36480 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 31872 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 31872 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 31872 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 31872 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 24960 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 24960 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 24960 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 24960 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 23424 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 23424 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 21120 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 19584 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 19584 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 19584 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 19584 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 19584 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 19584 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 19584 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 19584 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 18048 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n2: 18048 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 17280 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 17280 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 17280 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 17280 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 17280 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 17280 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 0 in 1 place, below massif's threshold (01.00%)
+                         n0: 768 in 1 place, below massif's threshold (01.00%)
+                       n0: 1536 in 1 place, below massif's threshold (01.00%)
+               n0: 1536 in 1 place, below massif's threshold (01.00%)
+              n0: 2304 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 6912 in 3 places, all below massif's threshold (01.00%)
+    n0: 4608 in 1 place, below massif's threshold (01.00%)
+  n0: 21120 in 13 places, all below massif's threshold (01.00%)
+  n1: 20544 0x422EC71: _PyDict_NewPresized (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 20544 0x4206E16: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 20544 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 20544 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 20544 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 20544 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 20544 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 14400 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14400 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14400 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14400 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14400 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n2: 14400 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 13056 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 13056 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 13056 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 13056 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 13056 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 13056 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 13056 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 13056 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 13056 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 13056 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n2: 13056 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 12288 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n1: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                              n0: 12288 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 768 in 1 place, below massif's threshold (01.00%)
+               n0: 1344 in 1 place, below massif's threshold (01.00%)
+         n0: 6144 in 1 place, below massif's threshold (01.00%)
+  n1: 19968 0x4207568: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 19968 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 19968 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 19968 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19968 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19968 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 19968 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 19968 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 19968 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 19968 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 18432 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 18432 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 18432 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 18432 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 18432 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 18432 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 18432 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 18432 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 18432 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 18432 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n2: 18432 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 12288 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 12288 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 12288 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n0: 12288 in 2 places, all below massif's threshold (01.00%)
+                       n0: 6144 in 1 place, below massif's threshold (01.00%)
+            n0: 1536 in 1 place, below massif's threshold (01.00%)
+        n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 16896 0x4228DD3: PyType_Ready (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n0: 16896 in 29 places, all below massif's threshold (01.00%)
+ n4: 131607 0x4279328: PyObject_Malloc (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+  n1: 71240 0x427FBFD: PyGrammar_AddAccelerators (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 71240 0x427FD56: PyParser_New (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 71240 0x425D362: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 71240 0x42041D8: PyParser_ASTFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 71240 0x420424B: PyRun_StringFlags (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 71240 0x4207E77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 71240 0x420916A: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 71240 0x4209240: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 71240 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 71240 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 71240 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 71240 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 71240 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 71240 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 71240 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 71240 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 71240 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 71240 0x41579DC: PyObject_CallFunction (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 71240 0x41A5349: PyImport_Import (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 71240 0x41A6A88: PyImport_ImportModule (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 71240 0x4251C0C: Py_InitializeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n1: 71240 0x4251F79: Py_Initialize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 71240 0x805AD22: PythonInterface::PythonInterface(char*) (PythonInterface.cpp:8)
+                             n1: 71240 0x805AFCE: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (cgrasp.cpp:28)
+                              n0: 71240 0x804E79B: main (cgraspInterface.cpp:137)
+  n1: 46480 0x41F4FC8: PyString_FromStringAndSize (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n3: 46480 0x4160A37: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n1: 30925 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n2: 30925 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n1: 19379 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n2: 19379 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 13119 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 13119 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 13119 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n2: 13119 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9319 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 9319 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 9319 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 9319 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 9319 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n2: 9319 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 8359 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 8359 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 8359 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 8359 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 8359 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 8359 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 8359 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 8359 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 8359 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n0: 8359 in 2 places, all below massif's threshold (01.00%)
+                  n0: 960 in 1 place, below massif's threshold (01.00%)
+            n0: 3800 in 1 place, below massif's threshold (01.00%)
+        n1: 6260 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n1: 6260 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 6260 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 6260 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 6260 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 6260 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n0: 6260 in 2 places, all below massif's threshold (01.00%)
+      n1: 11546 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 11546 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n2: 11546 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 10457 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 9864 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 9864 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 9864 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n2: 9864 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 7144 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 7144 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n1: 7144 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n0: 7144 in 2 places, all below massif's threshold (01.00%)
+              n0: 2720 in 1 place, below massif's threshold (01.00%)
+          n0: 593 in 1 place, below massif's threshold (01.00%)
+         n0: 1089 in 1 place, below massif's threshold (01.00%)
+    n2: 15555 0x4161261: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+     n1: 15555 0x4160B20: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+      n2: 15555 0x4161274: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+       n1: 14949 0x4161E96: PyMarshal_ReadObjectFromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+        n1: 14949 0x41620BF: PyMarshal_ReadLastObjectFromFile (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+         n2: 14949 0x425DB0A: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+          n1: 14104 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+           n1: 14104 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+            n1: 14104 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+             n1: 14104 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+              n1: 14104 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+               n1: 14104 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                n2: 14104 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                 n1: 11221 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                  n1: 11221 0x420A7A1: PyEval_EvalCode (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                   n1: 11221 0x420AB4C: PyImport_ExecCodeModuleEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                    n1: 11221 0x425DC72: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                     n1: 11221 0x425E3D5: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                      n1: 11221 0x425819A: PyImport_ImportModuleLevel (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                       n1: 11221 0x424EC11: ??? (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                        n1: 11221 0x41C7F47: PyCFunction_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                         n1: 11221 0x421B842: PyObject_Call (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                          n1: 11221 0x41BDC70: PyEval_CallObjectWithKeywords (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                           n2: 11221 0x4206D77: PyEval_EvalFrameEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                            n1: 9651 0x420A63A: PyEval_EvalCodeEx (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+                             n0: 9651 in 2 places, all below massif's threshold (01.00%)
+                            n0: 1570 in 1 place, below massif's threshold (01.00%)
+                 n0: 2883 in 1 place, below massif's threshold (01.00%)
+          n0: 845 in 1 place, below massif's threshold (01.00%)
+       n0: 606 in 1 place, below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n2: 11797 0x422E213: PyString_FromString (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+   n1: 6499 0x417DD9C: Py_InitModule4 (in /usr/lib/i386-linux-gnu/libpython2.7.so.1.0)
+    n0: 6499 in 4 places, all below massif's threshold (01.00%)
+   n0: 5298 in 2 places, all below massif's threshold (01.00%)
+  n0: 2090 in 4 places, all below massif's threshold (01.00%)
+ n1: 85408 0x46A5A8A: monstartup (gmon.c:134)
+  n1: 85408 0x804F00F: __gmon_start__ (in /usr/local/bin/cgrasp)
+   n0: 85408 0x47AEAF8: ??? (in /usr/lib/i386-linux-gnu/libgmp.so.10.1.3)
+ n0: 21157 in 107 places, all below massif's threshold (01.00%)
+ n1: 18944 0x449D7F9: ??? (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 18944 0x400ED75: call_init.part.0 (dl-init.c:78)
+   n1: 18944 0x400EE62: _dl_init (dl-init.c:36)
+    n0: 18944 0x400110D: ??? (in /lib/i386-linux-gnu/ld-2.19.so)
+ n1: 8192 0x44CBEF9: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+  n1: 8192 0x44CFC20: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21)
+   n1: 8192 0x805B158: cgrasp(char*, int, double, double, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> >, double, int, int, double) (fstream:719)
+    n0: 8192 0x804E79B: main (cgraspInterface.cpp:137)
+#-----------
+snapshot=66
+#-----------
+time=3080801973
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3108092721
+mem_heap_B=610820
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3135388048
+mem_heap_B=610308
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3162695595
+mem_heap_B=610564
+mem_heap_extra_B=6132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3189985335
+mem_heap_B=610500
+mem_heap_extra_B=6116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3217278624
+mem_heap_B=611292
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty

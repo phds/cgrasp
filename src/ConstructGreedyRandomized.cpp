@@ -42,7 +42,8 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
 					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
-					g[i] = PythonInterface::objectiveFunction(z);
+					g[i] = ackley(z);
+					//g[i] = PythonInterface::objectiveFunction(z);
 					mpfr_set_d (gIndex,g[i], MPFR_RNDZ);
 				}
 
@@ -78,7 +79,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 		}
 
 		j = rcl[random_index];
-		if(data->x[j] == z[j]){
+		if(data->x[j] == z[j]){ // >= ?
 			reuse = true;
 		}else{
 			data->x[j] = z[j];
