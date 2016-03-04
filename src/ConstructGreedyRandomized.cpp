@@ -5,7 +5,7 @@
 #define infinity 1000000000000.0
 using namespace std;
 
-vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){//vector<double> x,int n,double h,vector<double> l,vector<double> u,bool* improvc){
+vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
 
 
 	vector<double> s;
@@ -22,9 +22,7 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 	mpfr_init2 (thresholdTemp, 200);
 	mpfr_init2 (alfa, 200);
 	mpfr_set_d (alfa, ((double)rand() / ((double)RAND_MAX)), MPFR_RNDZ);
-	//float alfa = ((double)rand() / ((double)RAND_MAX));
-	//double min;
-	//double max;
+
 
 	vector<double> g(data->n);
 	vector<double> z(data->x);
@@ -35,24 +33,20 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 		mpfr_set_d (min, infinity, MPFR_RNDZ);
 		mpfr_set_d (max, -infinity, MPFR_RNDZ);
 
-		//outfile<<"RCL SIZE = "<<rcl.size()<<"\n";
-		//printf("constructGreedyRandomized\n");
+
 		double res;
 		for(int i = 0; i < data->n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){
 				if(reuse == false){
-					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
+					z[i] = lineSearch(data,i);
 					g[i] = ackley(z);
-					//g[i] = PythonInterface::objectiveFunction(z);
 					mpfr_set_d (gIndex,g[i], MPFR_RNDZ);
 				}
 
 				if (mpfr_cmp(min,gIndex) > 0){
 					mpfr_set_d (min,g[i], MPFR_RNDZ);
-					//min = g[i];
 				}
 				if(mpfr_cmp(max,gIndex) < 0){
-					//max = g[i];
 					mpfr_set_d (max,g[i], MPFR_RNDZ);
 				}
 			}
@@ -68,13 +62,10 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 				rcl.push_back(i);
 			}
 		}
-		//printf("%d\n",rcl.size() );
-		//Check if RCL size = 0
+
 		if(rcl.size() == 0){
-			//outfile<<"RCL SIZE = "<<0<<"\n";
 			break;
 		}else{
-			//outfile<<"RCL SIZE = "<<rcl.size()<<"\n";
 			random_index = rand() % rcl.size();
 		}
 
@@ -89,7 +80,6 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){/
 
 
 		s.erase(remove(s.begin(),s.end(), j), s.end());
-		//s.erase(s.begin()+j);
 		
 	}
 	

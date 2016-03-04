@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-bool feasible(struct graspData *data){//vector<double> x,int n,vector<double> l, vector<double> u){
+bool feasible(struct graspData *data){
 	bool feas = true;
 	int i;
 	mpfr_t xI,lI,uI;
@@ -91,8 +91,7 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 	mpfr_init2 (fStar, 200);
 	mpfr_init2 (f, 200);
 
-	//float fStar = PythonInterface::objectiveFunction(data->x);
-	//mpfr_set_d (fStar,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
+
 	mpfr_set_d (fStar,ackley(data->x) , MPFR_RNDZ);
 	
 
@@ -104,16 +103,13 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 			std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
 			sample.push_back(dis(generator));
 		}
-		//sample.clear();
-		//double res = ackley(sample);
+
 		double res = ackley(sample);
-		//double res = PythonInterface::objectiveFunction(sample);
+
 		mpfr_set_d (f,res , MPFR_RNDZ);
 		if(mpfr_cmp(f,fStar) < 0){
 			xStar = sample;
 			*improvL = true;
-			//data->x = sample;
-			//fStar = f;
 			mpfr_set_d (fStar,res , MPFR_RNDZ);
 			data->k = 0;
 			*improvL = true;
