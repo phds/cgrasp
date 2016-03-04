@@ -22,18 +22,14 @@ vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
 
 void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<double> u, double ro,int k,int NumTimesToRun,double ep){
 
-	//struct graspData * data = (graspData *) malloc (sizeof(struct graspData));
 	struct graspData *data = new struct graspData();
 	data->n = n;
 	data->l = l;
 	data->u = u;
 	data->ro = ro;
 	data->k = k;
-	//PythonInterface p(function);
+	PythonInterface p(function);
 
-	//__objectiveFunction = &ackley;
-
-	//double h;
 	
 	mpfr_t fStar, f,zero,fminusfStar,e,emultfStar,absfStar;
 	mpfr_init2 (fStar, 200);
@@ -64,9 +60,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 		data->hs = hs;
 		data->he = he;
 
-		//h = hs;
 		while (data->hs >= data->he){
-		//while (h >= he){
 			outfile << "Inicial h = "<<data->hs<<"\n";
 			outfile.flush();
 			bool improvC = false;
@@ -76,7 +70,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			outfile << "Step : Construct Greedy Randomized\n";
 			outfile.flush();
 			
-			data->x = constructGreedyRandomized(data,&improvC);//x, n, h, l, u, &improvC);
+			data->x = constructGreedyRandomized(data,&improvC);
 			
 			if(improvC==true){
 				outfile<<"\nBest solution found in Construct Greedy Randomized step\n";
@@ -92,8 +86,8 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			outfile << "Step : Local Improvement\n";
 			outfile.flush();
 
-			data->x = localImprovement(data,&improvL);//x, n, h, l, u, ro, &improvL,k);
-			//printf("%d\n",data->x.size() );
+			data->x = localImprovement(data,&improvL);
+			
 			if(improvL==true){
 				outfile<<"\nBest solution found in Local Improvement step\n";
 				for(int i=0;i<data->x.size();i++){
@@ -103,33 +97,22 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			}else{
 				outfile<<"\nNo best solution found in Local Improvement step\n";
 				outfile.flush();
-			}
-
-			//printf("cgrasp: \n");
-			//for(int j=0; j<n; j++){
-			//	printf("%f ", x[j]);
-			//}
-			//printf("%d %d\n", improvC, improvL);
-			double res = ackley(data->x); //PythonInterface::objectiveFunction(data->x); 
-			//double res = PythonInterface::objectiveFunction(data->x);
+			} 
+			
+			double res = PythonInterface::objectiveFunction(data->x);
 			mpfr_set_d (f, res, MPFR_RNDZ); 
 			if(mpfr_cmp(f,fStar) < 0){
-			//if(f < fStar){
 				xStar = data->x;
-				//printf("%d\n",data->x.size() );
 				outfile << "\nFound a best solution after Construct Greedy Randomized and Local Improvement\n";
 				for(int i=0;i<xStar.size();i++){
 					outfile << xStar[i]<<"\n";
 					outfile.flush();
 				}
-				//fStar = f;
 				mpfr_set_d (fStar, res, MPFR_RNDZ); 
 			}
 			if(improvC == false && improvL == false){
 				data->hs = data->hs/2;
 				outfile << "\nDecreasing h to "<<data->hs<<"\n";
-				//h = h/2;
-			//	printf("h: %lf\n",h );
 			}
 			
 			mpfr_sub(fminusfStar,f,fStar,MPFR_RNDZ);
