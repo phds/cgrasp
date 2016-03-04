@@ -19,6 +19,9 @@ public:
   
 private:
   static char* moduleName;
+  static PyObject* pyModuleName;
+  static PyObject* pyModule;
+  static PyObject *value;
 };
 
 #endif

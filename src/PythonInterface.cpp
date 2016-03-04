@@ -2,15 +2,16 @@
 
 
 char* PythonInterface::moduleName;
-
+PyObject* PythonInterface::pyModuleName;
+PyObject* PythonInterface::pyModule;
+PyObject* PythonInterface::value;
 PythonInterface::PythonInterface(char* name){
   setenv("PYTHONPATH","../libs",1);
   Py_Initialize();
   moduleName = name;
-  
-  //pyModuleName = PyString_FromString(moduleName);
-  //pyModule = PyImport_Import(pyModuleName);
-  //PyRun_SimpleString("import ackley");
+  pyModuleName = PyString_FromString(moduleName);
+  pyModule = PyImport_Import(pyModuleName);
+
 }
 
 PythonInterface::~PythonInterface(){
@@ -22,7 +23,7 @@ double PythonInterface::objectiveFunction(std::vector<double> x){
   int n = x.size();
   PyObject *pyList = PyList_New(n);
   //printf ("PyList ref count: %zd\n",pyList->ob_refcnt);
-  PyObject *value;
+  
 
   for (int i = 0; i < n; i++){
     //printf("values %f\n", x[i]);
@@ -36,8 +37,8 @@ double PythonInterface::objectiveFunction(std::vector<double> x){
   
   //printf("pyList ref count after loop before xdecref %zd\n",pyList->ob_refcnt );
   
-  PyObject* pyModuleName = PyString_FromString(moduleName);
-  PyObject* pyModule = PyImport_Import(pyModuleName);
+  //PyObject* pyModuleName = PyString_FromString(moduleName);
+  //PyObject* pyModule = PyImport_Import(pyModuleName);
   
   
   PyObject* result = PyObject_CallMethod(pyModule, moduleName,"O",pyList);
