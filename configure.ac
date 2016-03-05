@@ -30,8 +30,8 @@ AC_CONFIG_HEADERS([config.h])
 
 # Check for a C++ compiler.
 #: ${CXXFLAGS="-fopenmp -p -g -pg -O3"}
-: ${CXXFLAGS="-p -g -pg -O3"}
-
+#: ${CXXFLAGS="-p -g -pg -O3"}
+: ${CXXFLAGS="-O3"}
 AC_PROG_CXX
 
 AC_PROG_LIBTOOL

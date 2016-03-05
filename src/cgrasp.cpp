@@ -28,7 +28,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	data->u = u;
 	data->ro = ro;
 	data->k = k;
-	PythonInterface p(function);
+	PythonInterface *p = new PythonInterface(function);
 
 	
 	mpfr_t fStar, f,zero,fminusfStar,e,emultfStar,absfStar;
@@ -160,6 +160,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	mpfr_clear (emultfStar);
 	mpfr_clear (absfStar);
 	delete data;
+	delete p;
 	l.clear();
 	u.clear();
 	xStar.clear();
