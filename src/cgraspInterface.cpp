@@ -134,31 +134,34 @@ int main(int argc , char **argv){
     char *f = new char[functionName.length() + 1];
     strcpy(f, functionName.c_str());
     
-    vector<int> pts_A;
-    vector<double> pts_B;
-    for(int i=10;i<=200;i++){
-        pts_A.push_back(i);
-    }
-    
-    //for(int dim=10;dim<=200;dim++){
-    //    printf("Dim = %d\n",dim );
-    //    vector<double> lL;
-    //    vector<double> uL;
-    //    for(int i=0; i<dim;i++){
-    //        lL.push_back(-10.0);
-    //        uL.push_back(10.0);
-    //    }
+    //vector<int> pts_A;
+    //vector<double> pts_B;
+    //for(int i=1;i<=500;i++){
+    //    pts_A.push_back(i);
+    //}
+    //int dim;
+    for(int dim=344;dim<=345;dim++){
+        printf("Dim = %d\n",dim );
+        vector<double> lL;
+        vector<double> uL;
+        for(int i=0; i<dim;i++){
+            lL.push_back(-10.0);
+            uL.push_back(10.0);
+        }
 
         time_t start,end;
         time (&start);
-        cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep);
+        cgrasp(f,dim,hs,he,lL,uL,ro,k,iterations,ep);
         time (&end);
         double dif = difftime (end,start);
-    //    pts_B.push_back(dif);
+        //pts_B.push_back(dif);
         printf ("Elapsed time is %.2lf seconds.\n", dif );
-        delete [] f;
-    //}
-    //ofstream myfilestream ("myfile_c1");
+        lL.clear();
+        uL.clear();
+        //dim = 454;
+    }
+    delete [] f;
+    //ofstream myfilestream ("myfile_python");
     //for(int i=0;i<pts_A.size();i++){
     //    myfilestream << pts_A[i]<< "\t"<< pts_B[i]<<"\n";
     //}

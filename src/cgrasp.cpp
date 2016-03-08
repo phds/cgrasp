@@ -149,7 +149,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	//printf("%d\n",m );
 	
 	for(int j=0;j<m;j++){
-		printf("%f\n",xStar[j]);
+		//printf("%f\n",xStar[j]);
 	}
 
 	mpfr_clear (fStar);
@@ -160,7 +160,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	mpfr_clear (emultfStar);
 	mpfr_clear (absfStar);
 	delete data;
-	delete p;
+	//delete p;
 	l.clear();
 	u.clear();
 	xStar.clear();
