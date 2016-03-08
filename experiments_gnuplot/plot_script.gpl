@@ -1,0 +1,7 @@
+set terminal png       
+set output  "Dim_VS_Time.png"   
+set title "Dimension vs. Time to reach minimun global for ackley function"
+set xlabel "Dimension"
+set ylabel "Elapsed time (s)"
+plot "python.dat" smooth csplines
+pause -1 "Hit any key to continue"
