@@ -5,23 +5,23 @@
 #include <cmath>
 
 
-
-
-#define infinity 1000000000000.0
 using namespace std;
 
-vector<double> getRandomPoint(int n, vector<double> l, vector<double> u){
-
+vector<double> getRandomPoint(int n, struct graspData *data, struct seedData *seed){
+	//std::random_device rd;
+	std::mt19937 generator (seed->rd);
 	vector<double> x(n);
 	for(int i = 0; i < n; i++){
-		x[i] = (u[i] - l[i]) * ( (double)rand() / (double)RAND_MAX ) + l[i];
+		std::uniform_real_distribution<double> dis(data->l[i],data->u[i]);
+		x[i] = (dis(generator));
+		//x[i] = (u[i] - l[i]) * ( (double)rand() / (double)RAND_MAX ) + l[i];
 	}
 
 	return x;
 }
 
 void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<double> u, double ro,int k,int NumTimesToRun,double ep){
-
+	struct seedData *seed = new struct seedData();
 	struct graspData *data = new struct graspData();
 	data->n = n;
 	data->l = l;
@@ -52,11 +52,11 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	vector<double> x(data->n);
 	bool stopCriteriaNum = false;
 	bool stopCriteria = false;
-	srand(time(NULL));
+	//srand(time(NULL));
 	for(int i=0;i<NumTimesToRun;i++){
 		outfile << "\n\n\nIteration number = "<<i+1<<"\n";
 
-		data->x = getRandomPoint(n, l, u);
+		data->x = getRandomPoint(n,data,seed);
 		data->hs = hs;
 		data->he = he;
 
@@ -86,7 +86,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 			outfile << "Step : Local Improvement\n";
 			outfile.flush();
 
-			data->x = localImprovement(data,&improvL);
+			data->x = localImprovement(data,&improvL,seed);
 			
 			if(improvL==true){
 				outfile<<"\nBest solution found in Local Improvement step\n";
@@ -149,7 +149,7 @@ void cgrasp(char* function,int n,double hs,double he,vector<double> l,vector<dou
 	//printf("%d\n",m );
 	
 	for(int j=0;j<m;j++){
-		//printf("%f\n",xStar[j]);
+		printf("%f\n",xStar[j]);
 	}
 
 	mpfr_clear (fStar);

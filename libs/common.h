@@ -7,16 +7,15 @@
 #include <string.h>
 #include <fstream>
 #include "../src/ackley.h"
-
-
+#include <ctime>
 
 #define infinity 1000000000000.0
 
+
 #ifndef GRASPDATA_H
 
-extern double (*__objectiveFunction) (std::vector<double> );
-
 #define GRASPDATA_H
+
 struct graspData{
   std::vector<double> x;
   int n;
@@ -27,4 +26,11 @@ struct graspData{
   double ro;
   int k;
 };
+
+struct seedData{
+	int rd = time(NULL);
+	//std::random_device rd;
+};
+
+
 #endif

@@ -1,0 +1,1 @@
+--function ackley --dimension 10 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 0 2 4

@@ -84,7 +84,7 @@ vector< vector<double> > buildBh (vector<double> x, int n, double h, vector<doub
 }
 
 
-vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
+vector<double> localImprovement(struct graspData *data,bool *improvL, struct seedData *seed){//vector<double> x,int n,double h,vector<double> l,vector<double> u,double ro,bool *improvL,int k){
 	vector<double> xStar(data->x);
 	
 	mpfr_t fStar, f;
@@ -95,8 +95,8 @@ vector<double> localImprovement(struct graspData *data,bool *improvL){//vector<d
 	mpfr_set_d (fStar,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
 	
 
-	std::random_device rd;
-	std::mt19937 generator (rd());
+	//std::random_device rd;
+	std::mt19937 generator (seed->rd);
 	for(int j = 0; j < data->k; j++){
 		vector<double> sample;
 		for(int i=0; i< data->n; i++){
