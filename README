@@ -30,6 +30,7 @@ Dependencies:
 		$ sudo apt-get install libboost-all-dev
 
 							Building CGRASP
+<<<<<<< HEAD
 						========================
 In the CGRASP directory, to detect your system, type:
 
@@ -37,6 +38,18 @@ In the CGRASP directory, to detect your system, type:
 	$ mkdir build
 	$ cd build
 	$ ../configure
+=======
+						=======================
+Make sure there is not whitespaces in your path to cgrasp folder. In the CGRASP directory, to detect your system, type:
+
+	$ mkdir build
+	$ cd build
+	$ ../configure
+
+Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path:
+
+	$ make && make install
+>>>>>>> 8b3e02c1ed9b31823e04ea06603b22a0c29bda3a
 
 Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path.
 
@@ -47,6 +60,16 @@ Binary cgrasp will be created in /usr/bin.
 Cgrasp headers will be created in /usr/include for future includes in others programs.
 To run cgrasp you must be in build directory.
 
+<<<<<<< HEAD
+=======
+							Unninstalling CGRASP
+						==========================
+To unninstall cgrasp, in the CGRASP directory type:
+	
+	$ cd build
+	$ make unninstall
+	$ make clean
+>>>>>>> 8b3e02c1ed9b31823e04ea06603b22a0c29bda3a
 
 =============================================================================
 Following is the menu and their program options
