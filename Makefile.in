@@ -16,6 +16,7 @@
 
 
 
+
 VPATH = @srcdir@
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -136,13 +137,13 @@ am__uninstall_files_from_dir = { \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
 am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
-	"$(DESTDIR)$(includedir)"
+	"$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(includedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libcgrasp_la_LIBADD =
 am__dirstamp = $(am__leading_dot)dirstamp
 am_libcgrasp_la_OBJECTS = ../src/PythonInterface.lo ../src/cgrasp.lo \
 	../src/ConstructGreedyRandomized.lo ../src/linesearch.lo \
-	../src/localImprovement.lo ../src/ackley.lo
+	../src/localImprovement.lo
 libcgrasp_la_OBJECTS = $(am_libcgrasp_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -211,6 +212,7 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+DATA = $(pkgdata_DATA)
 HEADERS = $(include_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) \
 	$(LISP)config.h.in
@@ -375,11 +377,10 @@ EXTRA_DIST = m4/NOTES
 AM_CPPFLAGS = -I/usr/include/python2.7 -lpython2.7 -lmpfr -lgmp -lm -std=c++11 -lboost_program_options -lboost_system
 include_HEADERS = ../src/cgrasp.h
 cgrasp_SOURCES = ../src/cgraspInterface.cpp 
-
-#cgrasp_SOURCES = ../src/cgraspInterface.cpp ../src/PythonInterface.cpp ../src/ackley.cpp ../src/cgrasp.cpp  ../src/ConstructGreedyRandomized.cpp ../src/linesearch.cpp ../src/localImprovement.cpp ../libs/common.h
 lib_LTLIBRARIES = libcgrasp.la
 cgrasp_LDADD = libcgrasp.la
-libcgrasp_la_SOURCES = ../src/PythonInterface.cpp ../src/cgrasp.cpp ../src/ConstructGreedyRandomized.cpp ../src/linesearch.cpp ../src/localImprovement.cpp ../libs/common.h ../src/ackley.cpp
+libcgrasp_la_SOURCES = ../src/PythonInterface.cpp ../src/cgrasp.cpp ../src/ConstructGreedyRandomized.cpp ../src/linesearch.cpp ../src/localImprovement.cpp ../libs/common.h
+pkgdata_DATA = ../libs/ackley.py ../libs/alan.py ../libs/batch.py ../libs/bohachevsky.py ../libs/booth.py ../libs/branin.py ../libs/colville.py ../libs/griewank.py ../libs/levy.py ../libs/matyas.py ../libs/rastrigin.py ../libs/schwefel.py ../libs/waters.py ../libs/waterz.py ../libs/ex1221.py ../libs/nvs04.py ../libs/gear2.py ../libs/gear3.py ../libs/nous1.py ../libs/nuclear14a.py ../libs/ghg_1veh.py ../libs/st_e13.py ../libs/tls6.py ../libs/csched1.py ../libs/du-opt.py ../libs/fac1.py ../libs/ex1223.py ../libs/synheat.py ../libs/batchdes.py ../libs/ex1265.py ../libs/tloss.py ../libs/elf.py ../libs/gbd.py ../libs/hmittelman.py ../libs/oaer.py ../libs/procsel.py ../libs/synthes1.py ../libs/ex1223a.py ../libs/ex1223b.py ../libs/gear4.py ../libs/st_e15.py ../libs/st_e27.py ../libs/st_e38.py ../libs/st_miqp5.py
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -485,8 +486,6 @@ clean-libLTLIBRARIES:
 	../src/$(DEPDIR)/$(am__dirstamp)
 ../src/localImprovement.lo: ../src/$(am__dirstamp) \
 	../src/$(DEPDIR)/$(am__dirstamp)
-../src/ackley.lo: ../src/$(am__dirstamp) \
-	../src/$(DEPDIR)/$(am__dirstamp)
 
 libcgrasp.la: $(libcgrasp_la_OBJECTS) $(libcgrasp_la_DEPENDENCIES) $(EXTRA_libcgrasp_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(CXXLINK) -rpath $(libdir) $(libcgrasp_la_OBJECTS) $(libcgrasp_la_LIBADD) $(LIBS)
@@ -556,7 +555,6 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/ConstructGreedyRandomized.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/PythonInterface.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/ackley.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/cgrasp.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/cgraspInterface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../src/$(DEPDIR)/linesearch.Plo@am__quote@
@@ -595,6 +593,27 @@ clean-libtool:
 
 distclean-libtool:
 	-rm -f libtool config.lt
+install-pkgdataDATA: $(pkgdata_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
+	done
+
+uninstall-pkgdataDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(pkgdatadir)'; $(am__uninstall_files_from_dir)
 install-includeHEADERS: $(include_HEADERS)
 	@$(NORMAL_INSTALL)
 	@list='$(include_HEADERS)'; test -n "$(includedir)" || list=; \
@@ -841,11 +860,12 @@ distcleancheck: distclean
 	       exit 1; } >&2
 check-am: all-am
 check: check-am
-all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(HEADERS) config.h
+all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA) $(HEADERS) \
+		config.h
 install-binPROGRAMS: install-libLTLIBRARIES
 
 installdirs:
-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(includedir)"; do \
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(includedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -904,7 +924,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-includeHEADERS
+install-data-am: install-includeHEADERS install-pkgdataDATA
 
 install-dvi: install-dvi-am
 
@@ -953,7 +973,7 @@ ps: ps-am
 ps-am:
 
 uninstall-am: uninstall-binPROGRAMS uninstall-includeHEADERS \
-	uninstall-libLTLIBRARIES
+	uninstall-libLTLIBRARIES uninstall-pkgdataDATA
 
 .MAKE: all install-am install-strip
 
@@ -970,12 +990,13 @@ uninstall-am: uninstall-binPROGRAMS uninstall-includeHEADERS \
 	install-exec-am install-html install-html-am \
 	install-includeHEADERS install-info install-info-am \
 	install-libLTLIBRARIES install-man install-pdf install-pdf-am \
-	install-ps install-ps-am install-strip installcheck \
-	installcheck-am installdirs maintainer-clean \
+	install-pkgdataDATA install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags tags-am uninstall uninstall-am uninstall-binPROGRAMS \
-	uninstall-includeHEADERS uninstall-libLTLIBRARIES
+	uninstall-includeHEADERS uninstall-libLTLIBRARIES \
+	uninstall-pkgdataDATA
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.

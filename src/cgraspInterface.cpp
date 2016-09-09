@@ -6,7 +6,6 @@
 #include <boost/tokenizer.hpp>
 #include <time.h>
 #include "cgrasp.h"
-#include "gnuplot-iostream.h"
 using namespace boost;
 using namespace boost::program_options;
 #include <utility> 
@@ -31,7 +30,7 @@ int main(int argc , char **argv){
 
     // Add descriptive text for display when help argument is
     // supplied
-    options_description desc("\nAn example command using Boost command line arguments.\n\nAllowed arguments");
+    options_description desc("\n\nAllowed arguments");
 
     // Define command line arguments using either formats:
     //
@@ -44,6 +43,7 @@ int main(int argc , char **argv){
     // Remember that arguments with values may be multi-values
     // and must be vectors
     desc.add_options()
+        ("help","Help command.")
         ("function", value< string >(),"Specifies function name.")
         ("dimension", value< int >(),"Specifies dimension.")
         ("lowerbound", value< double >(),"Specifies lower bound limits.")
@@ -55,6 +55,8 @@ int main(int argc , char **argv){
         ("it", value< int >(),"Specifies the number of iterations.")
         ("ep", value< double >(),"Specifies the optimality gap.")
         ("excpt", value< vector<double> >()->multitoken(),"Specifies the exception sets.")
+        ("setexpt", value< vector<double> >()->multitoken(),"Specifies another approach of exception sets.")
+        ("seed", value< int >(),"Specifies the seed to be used.")
         ("config-file", value<string>(),"can be specified with '@name', too");
     string functionName;
     int dimension;
@@ -66,6 +68,7 @@ int main(int argc , char **argv){
     int k;
     int iterations;
     double ep;
+    int seedNumber;
 
 
 
@@ -86,11 +89,13 @@ int main(int argc , char **argv){
 
     // Display help text when requested
     if (vm.count("help")){
-        cout << "[--function <function name> ] [--dimension <dimension value>]" 
-        <<"[--lowerbound <lower bound limits>] [--upperbound <upper bound limits>]"
-        <<"[--startgrid <start grid dimension>] [--endgrid <end grid dimension>]"
-        <<"[--ro <neighborhood portion>] [--k <samples rounds>] [--excpt <exception sets>]" << endl;
+        //cout << "[--function <function name> ] [--dimension <dimension value>]" 
+        //<<"[--lowerbound <lower bound limits>] [--upperbound <upper bound limits>]"
+        //<<"[--startgrid <start grid dimension>] [--endgrid <end grid dimension>]"
+        //<<"[--ro <neighborhood portion>] [--k <samples rounds>] [--excpt <exception sets>]"
+        //<<"[--setexpt <exception sets>]" "[--seed <seed value>]" << endl;
         cout << desc << endl;
+        return 1;
     }
     if (vm.count("config-file")) {
         // Load the file and tokenize it
@@ -110,7 +115,17 @@ int main(int argc , char **argv){
          vector<string> args;
          copy(tok.begin(), tok.end(), back_inserter(args));
          // Parse the file and store the options
-         store(command_line_parser(args).options(desc).run(), vm);
+        try{
+            //store(command_line_parser(argc, argv).options(desc).positional(p).run(), vm);
+            store(command_line_parser(args).options(desc).style(
+            command_line_style::unix_style ^ command_line_style::allow_short
+            ).run(), vm);
+            notify(vm);
+        } catch (std::exception &e){
+            cout << endl << e.what() << endl;
+            cout << desc << endl;
+        }
+         //store(command_line_parser(args).options(desc).run(), vm);
     }
     if (vm.count("function")){
         functionName = vm["function"].as< string >();
@@ -153,7 +168,7 @@ int main(int argc , char **argv){
     if (vm.count("ep")){
         ep = vm["ep"].as< double>();
     }
-    if (vm.count("ep")){
+    if (vm.count("excpt")){
         vector<double> excptTemp = vm["excpt"].as< vector<double> >();
         if(excptTemp.size()%3==0){
             for(int i=0;i<excptTemp.size();i=i+3){
@@ -162,41 +177,39 @@ int main(int argc , char **argv){
             }
         }
     }
-    
+    if (vm.count("setexpt")){
+        vector<double> setExcptTemp = vm["setexpt"].as< vector<double> >();
+        if(setExcptTemp.size()%4==0){
+            for(int i=0; i<setExcptTemp.size(); i=i+4){
+                for(int j=setExcptTemp[i]; j<=setExcptTemp[i+1]; j++){
+                    l[j] = setExcptTemp[i+2];
+                    u[j] = setExcptTemp[i+3];
+                }
+            }
+        }
+    }
+    if (vm.count("seed")){
+        seedNumber = vm["seed"].as< int >();
+    }
     char *f = new char[functionName.length() + 1];
     strcpy(f, functionName.c_str());
     
-    //vector<int> pts_A;
-    //vector<double> pts_B;
-    //for(int i=1;i<=500;i++){
-    //    pts_A.push_back(i);
-    //}
-    //int dim;
-    //for(int dim=344;dim<=345;dim++){
-    //    printf("Dim = %d\n",dim );
-    //    vector<double> lL;
-    //    vector<double> uL;
-    //    for(int i=0; i<dim;i++){
-    //        lL.push_back(-10.0);
-    //        uL.push_back(10.0);
-    //    }
 
-        time_t start,end;
-        time (&start);
-        cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep);
-        time (&end);
-        double dif = difftime (end,start);
-        //pts_B.push_back(dif);
-        printf ("Elapsed time is %.2lf seconds.\n", dif );
-    //    lL.clear();
-    //    uL.clear();
-        //dim = 454;
-    //}
+    double fStarResult;
+    vector<double> storeResults;
+        
+    vector<double> userKnownVector;
+    vector<bool> marks;
+    std::mt19937 generator(seedNumber);
+    time_t start,end;
+    time (&start);
+    cgrasp(f,dimension,hs,he,l,u,ro,k,iterations,ep,&fStarResult,&storeResults,userKnownVector,marks,seedNumber,generator);
+    time (&end);
+    double dif = difftime (end,start);
+    printf ("Elapsed time is %.2lf seconds.\n", dif );
+
     delete [] f;
-    //ofstream myfilestream ("myfile_python");
-    //for(int i=0;i<pts_A.size();i++){
-    //    myfilestream << pts_A[i]<< "\t"<< pts_B[i]<<"\n";
-    //}
+
 
     
     return EXIT_SUCCESS;

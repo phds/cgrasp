@@ -1,1 +1,1 @@
---function ackley --dimension 10 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 0 2 4
+--function ackley --dimension 10 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1 --setexpt 1 5 -1 10 --seed 314563

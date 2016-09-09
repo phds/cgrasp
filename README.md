@@ -5,7 +5,7 @@ By following those steps, you'll install the application development environment
 1. Clone Git repository:
 
   ```bash
-  $ git clone git@github.com:phds/cgrasp.git
+  $ git clone https://github.com/rmf4/cgrasp.git
   ```
 2. Install [`Python`](https://www.python.org/) or open a Terminal and type the following:
   ```bash

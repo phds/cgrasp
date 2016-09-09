@@ -6,17 +6,16 @@
 #include <algorithm>
 #include <string.h>
 #include <fstream>
-#include "../src/ackley.h"
 #include <ctime>
 
 #define infinity 1000000000000.0
 
 
-#ifndef GRASPDATA_H
+#ifndef CGRASPDATA_H
 
-#define GRASPDATA_H
+#define CGRASPDATA_H
 
-struct graspData{
+struct cgraspData{
   std::vector<double> x;
   int n;
   double hs;
@@ -26,11 +25,7 @@ struct graspData{
   double ro;
   int k;
 };
-
-struct seedData{
-	int rd = time(NULL);
-	//std::random_device rd;
-};
+;
 
 
 #endif

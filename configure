@@ -632,6 +632,7 @@ ac_includes_default="\
 #endif"
 
 ac_unique_file="src/cgraspInterface.cpp"
+ac_default_prefix=/usr
 ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS

@@ -36,7 +36,7 @@ AC_PROG_CXX
 
 AC_PROG_LIBTOOL
 
-
+AC_PREFIX_DEFAULT(/usr)
 
 
 # Last line: actually generate all required output files.

@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
-\contentsline {section}{\numberline {2}Continuous Greedy Randomized Adaptive Search Procedure (C-GRASP)}{5}{section.2}
-\contentsline {section}{\numberline {3}GRASP with path-relinking (GRASP+PR)}{10}{section.3}

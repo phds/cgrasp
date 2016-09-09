@@ -5,12 +5,14 @@
 #define infinity 1000000000000.0
 using namespace std;
 
-vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
+vector<double> constructGreedyRandomizedCgrasp(struct cgraspData *data,bool* improvc,vector<bool> cgraspMarks,std::mt19937 &generator){
 
 
 	vector<double> s;
 	for (int i = 0; i < data->n; i++){
-		s.push_back(i);
+		if(cgraspMarks[i] == 1){
+			s.push_back(i);
+		}
 	}
 	bool reuse = false;
 
@@ -21,7 +23,9 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
 	mpfr_init2 (threshold, 200);
 	mpfr_init2 (thresholdTemp, 200);
 	mpfr_init2 (alfa, 200);
-	mpfr_set_d (alfa, ((double)rand() / ((double)RAND_MAX)), MPFR_RNDZ);
+	
+	uniform_real_distribution<double> dis_alfa (0,1);
+	mpfr_set_d (alfa, dis_alfa(generator), MPFR_RNDZ);
 
 
 	vector<double> g(data->n);
@@ -37,17 +41,19 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
 		double res;
 		for(int i = 0; i < data->n; i++){
 			if(find(s.begin(), s.end(), i) != s.end()){
-				if(reuse == false){
-					z[i] = lineSearch(data,i);//x,n,h,l,u,i);
-					g[i] = PythonInterface::objectiveFunction(z);
-					mpfr_set_d (gIndex,g[i], MPFR_RNDZ);
-				}
+				if(cgraspMarks[i] == 1){
+					if(reuse == false){
+						z[i] = lineSearchCgrasp(data,i,generator);
+						g[i] = PythonInterface::objectiveFunction(z);
+						mpfr_set_d (gIndex,g[i], MPFR_RNDZ);
+					}
 
-				if (mpfr_cmp(min,gIndex) > 0){
-					mpfr_set_d (min,g[i], MPFR_RNDZ);
-				}
-				if(mpfr_cmp(max,gIndex) < 0){
-					mpfr_set_d (max,g[i], MPFR_RNDZ);
+					if (mpfr_cmp(min,gIndex) > 0){
+						mpfr_set_d (min,g[i], MPFR_RNDZ);
+					}
+					if(mpfr_cmp(max,gIndex) < 0){
+						mpfr_set_d (max,g[i], MPFR_RNDZ);
+					}
 				}
 			}
 		}
@@ -56,21 +62,25 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
 		mpfr_sub(thresholdTemp,max,min,MPFR_RNDZ);
 		mpfr_mul(thresholdTemp,alfa,thresholdTemp,MPFR_RNDZ);
 		mpfr_add(threshold,min,thresholdTemp,MPFR_RNDZ);
-		//double threshold = min + alfa*(max-min);
+
 		for(int i=0; i< data->n; i++){
-			if(find(s.begin(), s.end(), i) != s.end() && mpfr_cmp(gIndex,threshold) <= 0){
+			if(find(s.begin(), s.end(), i) != s.end() && mpfr_cmp(gIndex,threshold) <= 0 && cgraspMarks[i] == 1){
 				rcl.push_back(i);
 			}
 		}
 		//Check if RCL size = 0
+		
+		
+
 		if(rcl.size() == 0){
 			break;
 		}else{
-			random_index = rand() % rcl.size();
+			uniform_int_distribution<int> dis_index (0,rcl.size()-1);
+			random_index = dis_index(generator);
 		}
 
 		j = rcl[random_index];
-		if(data->x[j] == z[j]){ // >= ?
+		if(data->x[j] == z[j]){
 			reuse = true;
 		}else{
 			data->x[j] = z[j];
@@ -93,5 +103,10 @@ vector<double> constructGreedyRandomized(struct graspData *data,bool* improvc){
 	g.clear();
 	z.clear();
 	rcl.clear();
+	s.clear();
+	vector<double>(g).swap(g);
+	vector<double>(z).swap(z);
+	vector<double>(rcl).swap(rcl);
+	vector<double>(s).swap(s);
 	return data->x;
 }

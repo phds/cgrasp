@@ -10,47 +10,70 @@ l is the lower bound vector
 u is the upper bound vector
 k is the index of the element being iterated
 */
-double lineSearch(struct graspData *data,int k){
-	//copy of x
-	//vector<double> t(x);
+double lineSearchCgrasp(struct cgraspData *data,int k,std::mt19937 &generator){
+
 
 	mpfr_t functionResult,minFunctionResult;
 	mpfr_init2 (functionResult, 200);
 	mpfr_init2 (minFunctionResult, 200);
 
-	//variable used to hold the function execution result
-	//double functionResult;
-	//save the initial value of x[k]
 
 	double zk = data->x[k];
-	
+	double tk;
 	
 	mpfr_set_d (minFunctionResult,PythonInterface::objectiveFunction(data->x) , MPFR_RNDZ);
 	
-	data->x[k] = data->l[k];
+	
 	double res;
+	
+	uniform_real_distribution<double> dis_real (0,1);
+	double coin = dis_real (generator);
+	if(coin >= 0.5){
+		tk = data->l[k];
+		while(tk <= data->u[k]){
+			res = PythonInterface::objectiveFunction(data->x);
+			mpfr_set_d (functionResult,res , MPFR_RNDZ);
+			if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
+				mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
+				zk = data->x[k];
+			}
 
-	while(data->x[k] <= data->u[k]){
+			tk = tk + data->hs;
+		}
+
+		tk = data->u[k];
 		res = PythonInterface::objectiveFunction(data->x);
 		mpfr_set_d (functionResult,res , MPFR_RNDZ);
 		if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
 			mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
-			zk = data->x[k];
+			zk = tk;
+
+		}
+	}else{
+		
+		tk = data->u[k];
+		while(tk >= data->l[k]){
+			res = PythonInterface::objectiveFunction(data->x);
+			mpfr_set_d (functionResult,res , MPFR_RNDZ);
+			if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
+				mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
+				zk = data->x[k];
+			}
+
+			tk = tk - data->hs;
 		}
 
-		data->x[k] = data->x[k] + data->hs;
+		tk = data->l[k];
+		res = PythonInterface::objectiveFunction(data->x);
+		mpfr_set_d (functionResult,res , MPFR_RNDZ);
+		if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
+			mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
+			zk = tk;
+
+		}
 	}
 
-	data->x[k] = data->u[k];
-	res = PythonInterface::objectiveFunction(data->x);
-	mpfr_set_d (functionResult,res , MPFR_RNDZ);
-	if(mpfr_cmp(functionResult,minFunctionResult) < 0 ){
-		//minFunctionResult = functionResult;
-		mpfr_set_d (minFunctionResult,res , MPFR_RNDZ);
-		zk = data->x[k];
 
-	}
-	
 	mpfr_clear(functionResult);
 	mpfr_clear(minFunctionResult);
 	return zk;

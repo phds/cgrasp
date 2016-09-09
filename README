@@ -32,59 +32,93 @@ Dependencies:
 							Building CGRASP
 						========================
 In the CGRASP directory, to detect your system, type:
+
+	$ autoreconf -i
 	$ mkdir build
 	$ cd build
 	$ ../configure
-Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path
-	$ make
-	$ make install
 
-Binary cgrasp will be created in build folder.
+Type 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path 'make' to build your programs and 'make install' to install the program in the usual or via the --prefix parameter of the configure-script defined install path.
 
+	$ [sudo] make
+	$ [sudo] make install
+
+Binary cgrasp will be created in /usr/bin.
+Cgrasp headers will be created in /usr/include for future includes in others programs.
+To run cgrasp you must be in build directory.
 
 
 =============================================================================
 Following is the menu and their program options
 
 Allowed arguments:
-  --function arg        Specifies function name.
-  --dimension arg       Specifies dimension.
-  --lowerbound arg      Specifies lower bound limits.
-  --upperbound arg      Specifies upper bound limits.
-  --startgrid arg       Specifies start grid dimension.
-  --endgrid arg         Specifies end grid dimension.
-  --ro arg              Specifies the portion of neighborhood.
-  --k arg               Specifies the number of samples rounds.
-  --it arg              Specifies the number of iterations.
-  --ep arg              Specifies the optimality gap.
-  --excpt 				Specifies the exception set.
+  --function arg        	 Specifies function name.
+  --dimension arg       	 Specifies dimension.
+  --lowerbound arg      	 Specifies lower bound limits.
+  --upperbound arg      	 Specifies upper bound limits.
+  --startgrid arg       	 Specifies start grid dimension.
+  --endgrid arg         	 Specifies end grid dimension.
+  --ro arg              	 Specifies the portion of neighborhood.
+  --k arg               	 Specifies the number of samples rounds.
+  --it arg              	 Specifies the number of iterations.
+  --ep arg              	 Specifies the optimality gap.
+  --excpt 					 Specifies the exception set.
+  --setexpt 				 Specifies another approach of exception set.
+  --seed 				 	 Specifies the seed to be used.
+  --config-file file_name    Specifies the file with command line
+
+ All program options are required. Unless you provide a config file where
+ the command line is present.
+
+=============================================================================
+
+=============================================================================
+					OUTPUT
+
+After running cgrasp binary a trace_log.txt will be provided to trace where
+the best solution was find.
+
 =============================================================================
 
 Examples:
 
-	$./cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+	$ cgrasp --function ackley --dimension 80 --lowerbound -10 --upperbound 10 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1 --setexpt 1 5 -1 10 --seed 3145633423
 
-	$./cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001
+	$ cgrasp --function schwefel --dimension 4 --lowerbound -500 --upperbound 500 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 20 --ep 0.0000000001 --excpt 0 -500 500 --setexpt 1 3 -1 10 --seed 3145633423
 
-	$./cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001
+	$ cgrasp --function branin --dimension 2 --lowerbound -5 --upperbound 15 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 1000 --it 20 --ep 0.0000000001 --excpt 0 -5 15 --setexpt 0 1 -1 10 --seed 3145633423
 
-Proffiling with Valgrind:
+	$ cgrasp --config-file response-file
 
-	$ valgrind --tool=memcheck --suppressions=valgrind-python.supp --show-reachable=yes ./cgrasp --function ackley --dimension 20 --lowerbound -5 --upperbound 5 --startgrid 0.5 --endgrid 0.25 --r 0.7 --k 100 --it 10 --ep 0.0000000001 --excpt 2 2 4 3 -3 -1
+=====================================================================================
+					PACKAGE-DATA
 
-Valgrind summary:
+If you wrote your own functions please move your files to /usr/share/cgrasp-package
 
-	==8296== HEAP SUMMARY:
-	==8296==     in use at exit: 20,674,263 bytes in 65,133 blocks
-	==8296==   total heap usage: 323,697 allocs, 258,564 frees, 436,467,440 bytes allocated
-	==8296== 
-	==8296== LEAK SUMMARY:
-	==8296==    definitely lost: 0 bytes in 0 blocks
-	==8296==    indirectly lost: 0 bytes in 0 blocks
-	==8296==      possibly lost: 0 bytes in 0 blocks
-	==8296==    still reachable: 20,674,263 bytes in 65,133 blocks
-	==8296==         suppressed: 0 bytes in 0 blocks
-	==8296== Rerun with --leak-check=full to see details of leaked memory
-	==8296== 
-	==8296== For counts of detected and suppressed errors, rerun with: -v
-	==8296== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 332 from 10)
+======================================================================================
+
+
+=====================================================================================
+					EXAMPLE-DATA
+
+For test purpose we wrote a example/example.cpp and fixed the continuous variables
+to try solve mixed problems. As the bounds limits goes from -inf to +inf, we decided
+to limit the bound with the lowest value within lowerbound and with the largest value
+within upperbound.The example contains a call to alan function with the following
+parameters:
+	n = 13
+	1-4 and 9-13 indexes are continuous variables
+	5-8 indexes are discrete variables.
+We expect to reach the best value of F Star known: 2.9250
+
+Compile and run:
+	$ g++ example.cpp -lgrasp -o example
+	$ ./example
+
+======================================================================================
+
+Aditional Notes:
+
+1) If you want to run valgrind to seek memory leaks you must run calling valgrind-python.supp file.
+2) If you have interest to write your own program and need use cgrasp it is necessary to include cgrasp into your code and compile using -lcgrasp flag. You can find a example in example folder:
+	$ g++ teste.cpp -lcgrasp -o teste

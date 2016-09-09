@@ -1,3 +1,3 @@
 #include <vector>
 using namespace std;
-double lineSearch(struct graspData *data,int k);
+double lineSearchCgrasp(struct cgraspData *data,int k,std::mt19937 &generator);
